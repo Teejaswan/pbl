@@ -1,11 +1,12 @@
 <script>
+  import { router } from "tinro";
   import headerBg from "../assets/header.jpg";
 </script>
 
 <header>
   <div class="title">
     <h1>TITLE</h1>
-    <button class="login">login</button>
+    <button class="login" on:click={(_) => router.goto("/login")}>login</button>
   </div>
   <div class="header">
     <div class="left">
@@ -47,7 +48,10 @@
   body {
     all: unset;
   }
-
+  h1,
+  .login {
+    margin-inline: 5em;
+  }
   button {
     padding: 0;
   }

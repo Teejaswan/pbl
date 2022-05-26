@@ -1,12 +1,18 @@
-<script></script>
+<script>
+  import { router } from "tinro";
+</script>
 
 <div>
   <nav>
     <div class="Outer">
       <div class="Inner">
-        <button class="Student">Student</button>
-        <button class="Mentor">Mentor</button>
-        <button class="HOD">HOD</button>
+        <button class="Student" on:click={(_) => router.goto("/login")}
+          >Student</button
+        >
+        <button class="Mentor" on:click={(_) => router.goto("/login")}
+          >Mentor</button
+        >
+        <button class="HOD" on:click={(_) => router.goto("/login")}>HOD</button>
       </div>
     </div>
   </nav>

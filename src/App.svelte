@@ -5,7 +5,7 @@
   import NavBar from "./components/NavBar.svelte";
   import Steps from "./components/steps.svelte";
   import Contact from "./components/contact.svelte";
-import Choice from "./components/Choice.svelte";
+  import Choice from "./components/Choice.svelte";
 
   router.mode.hash();
 
@@ -19,13 +19,14 @@ import Choice from "./components/Choice.svelte";
   <Contact />
 </Route>
 <Route path="/choice">
-  <Choice/>
-  
+  <Choice />
 </Route>
-<!--<Route path="/user/student">
+<Route path="/login">
+  <h1>Login page</h1>
+</Route>
+<Route path="/user/student">
   <h1>Student Page</h1>
 </Route>
 <Route path="/user/mentor">
   <h1>Mentor Page</h1>
 </Route>
--->

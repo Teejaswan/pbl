@@ -13,5 +13,42 @@
     "svelte": "^3.44.0",
     "tinro": "^0.6.12",
     "vite": "^2.9.9"
-  }
+  },
+  "description": "This template should help get you started developing with Svelte in Vite.",
+  "main": "vite.config.js",
+  "dependencies": {
+    "esbuild": "^0.14.39",
+    "deepmerge": "^4.2.2",
+    "debug": "^4.3.4",
+    "estree-walker": "^2.0.2",
+    "has": "^1.0.3",
+    "function-bind": "^1.1.1",
+    "esbuild-windows-64": "^0.14.39",
+    "is-core-module": "^2.9.0",
+    "kleur": "^4.1.4",
+    "ms": "^2.1.2",
+    "nanoid": "^3.3.4",
+    "picocolors": "^1.0.0",
+    "picomatch": "^2.3.1",
+    "magic-string": "^0.26.2",
+    "postcss": "^8.4.14",
+    "resolve": "^1.22.0",
+    "path-parse": "^1.0.7",
+    "rollup": "^2.74.1",
+    "sourcemap-codec": "^1.4.8",
+    "source-map-js": "^1.0.2",
+    "supports-preserve-symlinks-flag": "^1.0.0",
+    "svelte-hmr": "^0.14.11"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Teejaswan/pbl.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Teejaswan/pbl/issues"
+  },
+  "homepage": "https://github.com/Teejaswan/pbl#readme"
 }

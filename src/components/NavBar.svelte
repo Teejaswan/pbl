@@ -25,8 +25,8 @@
     display: flex;
     list-style-type: none;
     gap: 1em;
-    margin: 0;
-    padding: 0;
+    margin: 1em;
+    padding: 1em;
     justify-content: space-evenly;
   }
 </style>

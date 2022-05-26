@@ -6,7 +6,7 @@
 <header>
   <div class="title">
     <h1>TITLE</h1>
-    <button class="login" on:click={(_) => router.goto("/login")}>login</button>
+    <button class="login" on:click={(_) => router.goto("/choice")}>login</button>
   </div>
   <div class="header">
     <div class="left">

@@ -6,6 +6,7 @@
   import Steps from "./components/steps.svelte";
   import Contact from "./components/contact.svelte";
   import Choice from "./components/Choice.svelte";
+import Login from "./components/Login.svelte";
 
   router.mode.hash();
 
@@ -22,7 +23,7 @@
   <Choice />
 </Route>
 <Route path="/login">
-  <h1>Login page</h1>
+   <Login />
 </Route>
 <Route path="/user/student">
   <h1>Student Page</h1>

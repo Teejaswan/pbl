@@ -7,14 +7,14 @@
   {#each processes as process}
     {#if process % 2 != 0}
       <div class="inner">
-        <div class="circle">{process}</div>
-        <div class="rectangle">{process}</div>
+        <div class="circle"><div>text1</div></div>
+        <div class="rectangle"><div>text1</div></div>
       </div>
       <br />
     {:else}
-      <div class="inner" style="order: {process};">
-        <div class="rectangle">{process}</div>
-        <div class="circle">{process}</div>
+      <div class="inner">
+        <div class="rectangle"><div>text1</div></div>
+        <div class="circle"><div>text1</div></div>
       </div>
       <br />
     {/if}
@@ -26,22 +26,22 @@
     display: flex;
     align-items: center;
     justify-content: space-evenly;
-    margin: 5vw 0;
+    margin: 6vw 0;
   }
 
   .circle {
-    text-align: center;
-
-    height: 12em;
-    width: 12em;
+    align-items: center;
+    justify-content: center;
+    height: 11em;
+    width: 11em;
     background: rgb(211, 103, 103);
     border-radius: 50em;
   }
   .rectangle {
-    display: none;
     height: 15em;
     width: 25em;
-
+    align-items: center;
+    justify-content: center;
     border-radius: 2em;
     background: rgb(226, 169, 169);
     box-shadow: -5px 36px 75px -25px #db9bd3;
@@ -49,14 +49,7 @@
     -moz-box-shadow: -5px 36px 75px -25px #db9bd3;
     -o-box-shadow: -5px 36px 75px -25px #db9bd3;
   }
-  .inner:hover .rectangle {
-    display: block;
-  }
-  .inner:hover .circle {
-    height: 8em;
-    width: 8em;
-    opacity: 0.8;
-  }
+
   h1 {
     text-align: center;
     margin-bottom: 4em;

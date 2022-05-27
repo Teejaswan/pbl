@@ -41,20 +41,18 @@
     overflow: hidden;
     display: flex;
     height: 100vh;
-    font-family: "Lato", sans-serif;
-    font-weight: 700;
-    color: #555;
-    background-color: #ecf0f3;
+    background-color: #fff;
     justify-content: center;
     align-items: center;
   }
   .Login-div {
     display: grid;
-    background-color: #ecf0f3;
+    background-color:rgb(247, 198, 206);
     height: 700px;
-    width: 430px;
+    width: 55vh;
+    font-family:"Lato",sans-serif;
     padding: 60px 35px 35px 35px;
-    border-radius: 40px;
+    border-radius: 3em;
     box-shadow: 13px 13px 20px #cbced1, -13px -13px 20px #fff;
   }
   .Logo {
@@ -72,7 +70,7 @@
     letter-spacing: 0.5px;
   }
   .Fields {
-    width: 100%;
+    width: 47vh;
     padding: 75px 5px 5px 5px;
   }
   .Fields input {
@@ -80,43 +78,49 @@
     outline: none;
     background: none;
     font-size: 18px;
-    color: #555;
+    color: #fff;
     padding: 20px 10px 20px 5px;
   }
   .Username,
   .Password{
          margin-bottom: 30px;
-         border-radius: 25px;
-         box-shadow: inset 8px 8px 8px #cbced1,inset -8px -8px 8px #fff;
-  }
-  .Password {
-    margin-bottom: 30px;
-    border-radius: 25px;
-    box-shadow: inset 8px 8px 8px #cbced1, inset -8px -8px 8px #fff;
+         border-radius: 2em;
+         border:1px solid black;
+         box-shadow: 8px 8px 8px #bdbfc2;
+         background-color: #fff;
   }
   .Fields svg {
     height: 22px;
     margin: 0 10px -3px 25px;
   }
   .Signin {
-    outline: none;
+    display:grid;
+    place-items: center;
+    text-decoration: none;
+    padding: 0;
+    cursor:pointer;
     border: none;
-    cursor: pointer;
-    width: 100%;
-    height: 60px;
-    border-radius: 30px;
-    font-size: 20px;
-    font-weight: 700;
-    font-family: "Lato", sans-serif;
-    color: #fff;
-    text-align: center;
-    background-color: #02c8db;
-    box-shadow: 3px 3px 8px #b1b1b1, -3px -3px 8px #fff;
+    outline: none;
+    color:black;
+    background-color: rgb(87, 181, 123); 
+    width: 47vh;
+    height: 8vh;
+    padding: 2vh;
+
+    border-radius: 2em;
+
+    -webkit-box-shadow: 3px 3px 8px 0px rgba(111, 156, 127, 0.76);
+    -moz-box-shadow: 3px 3px 8px 0px rgba(111, 156, 127, 0.76);
+    box-shadow: 3px 3px 8px 0px rgba(111, 156, 127, 0.76);
+    transition: all 300ms ease-in-out;
   }
   .Signin:hover {
-    background-color: #50e5b9;
+    transform: translate(-2px, -2px);
+    cursor: pointer;
+    background-color: rgb(87, 181, 123);
   }
   .Signin:active {
-    background-color: #88ef9e;
+    transform: translateY(2px);
+    background-color: rgb(87, 181, 123);
   }
 </style>

@@ -32,7 +32,6 @@ body{
     margin:0;
     height:100vh;
     width:100vw;
-    overflow:hidden;
     display: flex;
     height: 100vh;
     font-family: "Lato" ,sans-serif;
@@ -81,7 +80,6 @@ body{
          margin-bottom: 30px;
          border-radius: 25px;
          box-shadow: inset 8px 8px 8px #cbced1,inset -8px -8px 8px #fff;
-
   }
   .Fields svg {
         height:22px;

@@ -51,8 +51,10 @@
   h1,
   .login {
     margin-inline: 5em;
+    
   }
   button {
     padding: 0;
+    cursor:pointer;
   }
 </style>

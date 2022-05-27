@@ -29,6 +29,7 @@
     width: 100%;
     padding: 75px 5px 5px 5px;
     font-size:18px;
+    cursor:pointer;
   }
   #Student,#Mentor,#HOD{
     margin-bottom: 30px;

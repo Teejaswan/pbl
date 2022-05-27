@@ -41,6 +41,9 @@
     overflow: hidden;
     display: flex;
     height: 100vh;
+    font-family:"Lato",sans-serif;
+    font-weight:700;
+    color:#555;
     background-color: #fff;
     justify-content: center;
     align-items: center;
@@ -50,7 +53,6 @@
     background-color:rgb(247, 198, 206);
     height: 700px;
     width: 55vh;
-    font-family:"Lato",sans-serif;
     padding: 60px 35px 35px 35px;
     border-radius: 3em;
     box-shadow: 13px 13px 20px #cbced1, -13px -13px 20px #fff;
@@ -77,8 +79,8 @@
     border: none;
     outline: none;
     background: none;
+    color: black;
     font-size: 18px;
-    color: #fff;
     padding: 20px 10px 20px 5px;
   }
   .Username,

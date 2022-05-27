@@ -1,25 +1,25 @@
 <script>
-  import { router } from "tinro";
 </script>
 
 <div>
   <nav>
     <div class="Outer">
       <div class="Inner">
-        <button class="Student" on:click={(_) => router.goto("/login")}
-          >Student</button
-        >
-        <button class="Mentor" on:click={(_) => router.goto("/login")}
-          >Mentor</button
-        >
-        <button class="HOD" on:click={(_) => router.goto("/login")}>HOD</button>
+        <a href="/login" class="Student"> Student</a>
+        <a href="/login" class="Mentor"> Mentor</a>
+        <a href="/login" class="HOD">HOD</a>
       </div>
     </div>
   </nav>
 </div>
 
 <style>
-  button {
+  a {
+    display: grid;
+    place-items: center;
+    text-decoration: none;
+    font-family: sans-serif;
+    color: rebeccapurple;
     border: none;
     outline: none;
     background-color: #fff;
@@ -32,12 +32,12 @@
     box-shadow: 0.8vh 0.8vh 0.8vh #cbced1, -0.8vh -0.8vh 0.8vh #fff;
     transition: all 300ms ease-in-out;
   }
-  button:hover {
+  a:hover {
     box-shadow: 0.8vh 0.8vh 2vh 0.5vh #cbced1, -0.8vh -0.8vh 2vh 0.5vh #fff;
     background-color: #fad9f1;
     transform: translate(-2px, -2px);
   }
-  button:active {
+  a:active {
     background-color: #e491cf;
     transform: translateY(2px);
   }

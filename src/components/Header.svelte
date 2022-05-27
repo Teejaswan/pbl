@@ -5,7 +5,7 @@
 
 <header>
   <div class="title">
-    <h1>TITLE</h1>
+    <h1>PROJECT-TITLE</h1>
     <button class="login" on:click={(_) => router.goto("/choice")}>login</button
     >
   </div>
@@ -27,6 +27,7 @@
 <body />
 
 <style>
+  @import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Kanit&family=Yeseva+One&display=swap");
   .header {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -39,36 +40,36 @@
   }
   .title {
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
 
-    background-color: rgb(255, 255, 255);
+    background-color: #eae7dc;
     height: 10em;
     /*border-radius: 0 0 60px 60px;*/
   }
   body {
     all: unset;
   }
-  h1,
+  /*h1,
   .login {
-    margin-inline: 5em;
-    
+    margin-;
+  }*/
+  h1 {
+    font-family: "Yeseva One", sans-serif;
   }
   button {
+    display: grid;
+    place-items: center;
     padding: 0;
-    cursor:pointer;
+    cursor: pointer;
     border: none;
     outline: none;
-    background-color: rgb(87, 181, 123);
-    width: 25vh;
-    height: 8vh;
-    padding: 2vh;
-
+    color: white;
+    background-color: #e85a4f;
+    width: 15vh;
+    height: 5vh;
     border-radius: 2em;
-
-    -webkit-box-shadow: 3px 3px 8px 0px rgba(111, 156, 127, 0.76);
-    -moz-box-shadow: 3px 3px 8px 0px rgba(111, 156, 127, 0.76);
-    box-shadow: 3px 3px 8px 0px rgba(111, 156, 127, 0.76);
+    box-shadow: 3px 3px 10px 0px #cb9a97;
     transition: all 300ms ease-in-out;
   }
   button:hover {

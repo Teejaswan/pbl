@@ -6,7 +6,7 @@
   import Steps from "./components/steps.svelte";
   import Contact from "./components/contact.svelte";
   import Choice from "./components/Choice.svelte";
-import Login from "./components/Login.svelte";
+  import Login from "./components/Login.svelte";
 
   router.mode.hash();
 
@@ -23,7 +23,7 @@ import Login from "./components/Login.svelte";
   <Choice />
 </Route>
 <Route path="/login">
-   <Login />
+  <Login />
 </Route>
 <Route path="/user/student">
   <h1>Student Page</h1>
@@ -31,3 +31,8 @@ import Login from "./components/Login.svelte";
 <Route path="/user/mentor">
   <h1>Mentor Page</h1>
 </Route>
+
+<style>
+  /* #EAE7DC (LIGHT GREY)  #D8C3A5 (SANDAL)  #8E8D8A (DARK GREY)    
+  #E98074 (LIGHT PINK)  #E85A4F (DARK PINK) */
+</style>

@@ -2,13 +2,13 @@
   import { Route, router } from "tinro";
   import Attribute from "./components/attribute.svelte";
   import Header from "./components/Header.svelte";
-  import NavBar from "./components/NavBar.svelte";
+
   import Steps from "./components/steps.svelte";
   import Contact from "./components/contact.svelte";
   import Choice from "./components/Choice.svelte";
   import Login from "./components/Login.svelte";
   import Todo from "./components/todo.svelte";
-  
+
   router.mode.hash();
 
   window["ab"] = (_) => router.goto("/user/student");
@@ -27,8 +27,7 @@
   <Login />
 </Route>
 <Route path="/user/student/todo">
-  <h1>todo</h1>
-  <Todo/>
+  <Todo />
 </Route>
 <Route path="/user/mentor">
   <h1>Mentor Page</h1>

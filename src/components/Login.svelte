@@ -31,9 +31,6 @@
 </body>
 
 <style>
-  * {
-    box-sizing: border-box;
-  }
   body {
     margin: 0;
     height: 100vh;
@@ -41,16 +38,16 @@
     overflow: hidden;
     display: flex;
     height: 100vh;
-    font-family:"Lato",sans-serif;
-    font-weight:700;
-    color:#555;
+    font-family: "Lato", sans-serif;
+    font-weight: 700;
+    color: #555;
     background-color: #fff;
     justify-content: center;
     align-items: center;
   }
   .Login-div {
     display: grid;
-    background-color:rgb(247, 198, 206);
+    background-color: rgb(247, 198, 206);
     height: 700px;
     width: 55vh;
     padding: 60px 35px 35px 35px;
@@ -84,27 +81,27 @@
     padding: 20px 10px 20px 5px;
   }
   .Username,
-  .Password{
-         margin-bottom: 30px;
-         border-radius: 2em;
-         border:1px solid black;
-         box-shadow: 8px 8px 8px #bdbfc2;
-         background-color: #fff;
+  .Password {
+    margin-bottom: 30px;
+    border-radius: 2em;
+    border: 1px solid black;
+    box-shadow: 8px 8px 8px #bdbfc2;
+    background-color: #fff;
   }
   .Fields svg {
     height: 22px;
     margin: 0 10px -3px 25px;
   }
   .Signin {
-    display:grid;
+    display: grid;
     place-items: center;
     text-decoration: none;
     padding: 0;
-    cursor:pointer;
+    cursor: pointer;
     border: none;
     outline: none;
-    color:black;
-    background-color: rgb(87, 181, 123); 
+    color: black;
+    background-color: rgb(87, 181, 123);
     width: 47vh;
     height: 8vh;
     padding: 2vh;

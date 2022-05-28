@@ -1,19 +1,21 @@
 <script>
 </script>
 
-<nav>
-  <ul>
-    <li>
-      <a href="#0">Home</a>
-    </li>
-    <li>
-      <a href="#0">Idea Submission</a>
-    </li>
-    <li>
-      <a href="#0">Team</a>
-    </li>
-  </ul>
-</nav>
+<div class="container">
+  <nav>
+    <ul>
+      <li>
+        <a href="#0">Home</a>
+      </li>
+      <li>
+        <a href="#0">Idea Submission</a>
+      </li>
+      <li>
+        <a href="#0">Team</a>
+      </li>
+    </ul>
+  </nav>
+</div>
 
 <style>
   nav {
@@ -28,5 +30,25 @@
     margin: 1em;
     padding: 1em;
     justify-content: space-evenly;
+  }
+
+  .container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    display: flex;
+
+    background-color: #eae7dc;
+    height: 4em;
+  }
+  a {
+    text-decoration: none;
+    color: black;
+    width: 5vw;
+    height: 10vw;
+  }
+  a:hover {
+    text-decoration: underline;
+    font-size: large;
   }
 </style>

@@ -25,8 +25,8 @@
 <Route path="/login">
   <Login />
 </Route>
-<Route path="/user/student">
-  <h1>Student Page</h1>
+<Route path="/user/student/todo">
+  <h1>todo</h1>
 </Route>
 <Route path="/user/mentor">
   <h1>Mentor Page</h1>

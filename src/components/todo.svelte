@@ -13,7 +13,6 @@
     <h3>Tasks to do</h3>
     <div class="box1">
       <div class="heading">
-        <h5 />
         <h5>Task</h5>
         <h5>Due-date</h5>
         <h5>Assignee</h5>
@@ -27,9 +26,31 @@
       </div>
     </div>
     <h3>Completed</h3>
-    <div class="box2" />
+    <div class="box2" >
+        <div class="heading">
+        <h5>Task</h5>
+        <h5>Completed-date</h5>
+        <h5>Assignee</h5>
+        </div>
+        <div class="content">
+            <input type="text" value="Creating layouts" />
+            <input type="date" />
+            <input type="text" />
+          </div> 
+    </div>   
+    
     <h3>Overdue</h3>
-    <div class="box3" />
+    <div class="box3" >
+        <div class="heading">
+            <h5>Task</h5>
+            <h5>Estimated-date</h5>
+            <h5>Assignee</h5>
+            </div>
+            <div class="content">
+                <input type="text" value="Creating layouts" />
+                <input type="date" />
+                <input type="text" />
+              </div>   
   </div>
 </body>
 

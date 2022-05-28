@@ -7,7 +7,8 @@
   import Contact from "./components/contact.svelte";
   import Choice from "./components/Choice.svelte";
   import Login from "./components/Login.svelte";
-
+  import Todo from "./components/todo.svelte";
+  
   router.mode.hash();
 
   window["ab"] = (_) => router.goto("/user/student");
@@ -27,6 +28,7 @@
 </Route>
 <Route path="/user/student/todo">
   <h1>todo</h1>
+  <Todo/>
 </Route>
 <Route path="/user/mentor">
   <h1>Mentor Page</h1>

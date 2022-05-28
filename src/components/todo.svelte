@@ -1,7 +1,16 @@
 <script>
+
+
 </script>
 
-<h1>Student project name</h1>
+<head>
+    <h1>teams project name</h1>
+    
+
+</head>
+
+
+
 
 <style>
 </style>

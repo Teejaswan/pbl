@@ -1,16 +1,9 @@
 <script>
-
-
 </script>
 
-<head>
-    <h1>teams project name</h1>
-    
-
-</head>
-
-
-
+<header>
+  <h1>teams project name</h1>
+</header>
 
 <style>
 </style>

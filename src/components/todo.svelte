@@ -25,10 +25,22 @@
       </div>
     </div>
     <h3>Completed</h3>
-    <div class="box2" />
+    <div class="box2">
+        <div class="heading">
+        <h5>Task</h5>
+        <h5>Completed-date</h5>
+        <h5>Assignee</h5>
+        </div>
+        <div class="content">
+            <h5>Creating layout</h5>
+            <input type="date" />
+            <input type="text" /> 
+        </div>
+      </div>
+      </div>
     <h3>Overdue</h3>
     <div class="box3" />
-  </div>
+
 </body>
 
 <style>

@@ -6,7 +6,8 @@
 <header>
   <div class="title">
     <h1>PROJECT-TITLE</h1>
-    <button class="login" on:click={(_) => router.goto("/choice")}>login</button
+    <button class="login" on:click={(_) => router.goto("/choice")}
+      ><strong>Login</strong></button
     >
   </div>
   <div class="header">
@@ -56,6 +57,7 @@
   }*/
   h1 {
     font-family: "Yeseva One", sans-serif;
+    color: #4a4747;
   }
   button {
     display: grid;
@@ -65,14 +67,15 @@
     border: none;
     outline: none;
     color: white;
-    background-color: #e85a4f;
+    background-color: #d36767;
     width: 15vh;
     height: 5vh;
     border-radius: 2em;
-    box-shadow: 3px 3px 10px 0px #cb9a97;
+    box-shadow: 5px 5px 10px 0px #a26868;
     transition: all 300ms ease-in-out;
   }
   button:hover {
+    background-color: #d28686;
     transform: translate(-2px, -2px);
     cursor: pointer;
   }

@@ -46,6 +46,7 @@
 </div>
 
 <style>
+  @import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Kanit&family=Yeseva+One&display=swap");
   .inner {
     display: flex;
     align-items: center;
@@ -62,7 +63,7 @@
     place-items: center;
     height: 11em;
     width: 11em;
-    background: rgb(211, 103, 103);
+    background: #d36767;
     border-radius: 50em;
   }
   .rectangle {
@@ -71,16 +72,19 @@
     display: grid;
     place-items: center;
     border-radius: 2em;
-    background: rgb(226, 169, 169);
+    background: #e2a9a9;
     box-shadow: -5px 36px 75px -25px #db9bd3;
     transition: height 0.5s ease-in-out;
   }
   h1 {
     text-align: center;
-    margin-bottom: 4em;
+    font-family: "Yeseva One", sans-serif;
+    color: rgb(74, 71, 71);
+    padding: 4em 0 2em 0;
   }
   .outer {
     margin-bottom: 5em;
+    background-color: #eae7dc;
   }
   @keyframes -global-scroll1 {
     0% {

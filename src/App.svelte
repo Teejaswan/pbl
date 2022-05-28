@@ -34,5 +34,7 @@
 
 <style>
   /* #EAE7DC (LIGHT GREY)  #D8C3A5 (SANDAL)  #8E8D8A (DARK GREY)    
-  #E98074 (LIGHT PINK)  #E85A4F (DARK PINK) */
+  #e2a9a9 (LIGHT PINK)  #d36767 (DARK PINK) 
+  
+  h1:    #4a4747  */
 </style>

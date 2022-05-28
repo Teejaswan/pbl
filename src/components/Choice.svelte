@@ -14,37 +14,37 @@
 </div>
 
 <style>
-  a{
-    display:grid;
+  a {
+    display: grid;
     place-items: center;
     text-decoration: none;
     padding: 0;
-    cursor:pointer;
+    cursor: pointer;
     border: none;
     outline: none;
-    color:black;
-    background-color: rgb(87, 181, 123); 
+    color: black;
+    background-color: rgb(87, 181, 123);
     width: 25vh;
     height: 8vh;
     padding: 2vh;
 
     border-radius: 2em;
 
-    -webkit-box-shadow: 3px 3px 8px 0px rgba(111, 156, 127, 0.76);
-    -moz-box-shadow: 3px 3px 8px 0px rgba(111, 156, 127, 0.76);
     box-shadow: 3px 3px 8px 0px rgba(111, 156, 127, 0.76);
     transition: all 300ms ease-in-out;
   }
   * {
     box-sizing: border-box;
-}
-#Student,#Mentor,#HOD{
+  }
+  #Student,
+  #Mentor,
+  #HOD {
     margin-bottom: 30px;
-    padding:20px 10px 20px 5px;
-    border-radius:25px;
+    padding: 20px 10px 20px 5px;
+    border-radius: 25px;
     box-shadow: 0.8vh 0.8vh 0.8vh #bdbfc2;
     transition: all 300ms ease-in-out;
-} 
+  }
   a:hover {
     transform: translate(-2px, -2px);
     cursor: pointer;
@@ -74,5 +74,3 @@
     align-items: center;
   }
 </style>
-
-

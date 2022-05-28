@@ -20,12 +20,12 @@
 </div>
 
 <style>
+  @import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Kanit&family=Yeseva+One&display=swap");
+
   .outer {
     justify-content: center;
     align-items: center;
     display: flex;
-    margin: 1vw;
-    margin-bottom: 10vw;
   }
   .upper,
   .lower {
@@ -33,6 +33,7 @@
     width: 15vw;
     margin: 1vw;
     background-color: blue;
+    transition: all 0.3s ease-in-out;
   }
   .lower {
     margin-top: 2em;
@@ -40,8 +41,11 @@
   h1 {
     margin-bottom: 4em;
     text-align: center;
+    font-family: "Yeseva One", sans-serif;
+    color: rgb(74, 71, 71);
   }
   h3 {
+    color: rgb(48, 47, 47);
     text-align: center;
   }
   .lower:hover,
@@ -49,5 +53,8 @@
     width: 17vw;
     height: 17vw;
     margin: 0;
+  }
+  .inner {
+    padding-bottom: 25vw;
   }
 </style>

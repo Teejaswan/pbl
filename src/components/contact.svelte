@@ -1,12 +1,11 @@
 <script>
 </script>
 
-<div>
+<div class="container">
   <h3 class="outer">Contact</h3>
   <div class="inner">
     <div>
       <h4>Email</h4>
-      
     </div>
     <div>
       <h4>phone number</h4>
@@ -29,10 +28,13 @@
   }
   .outer {
     padding: 2em;
-    border-top: 2px solid black;
+
     text-align: center;
   }
   h4 {
     padding-left: 25px;
+  }
+  .container {
+    background-color: #e2a9a9;
   }
 </style>

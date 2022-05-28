@@ -1,73 +1,57 @@
 <script>
-import NavBar from "./NavBar.svelte";
-
+  import NavBar from "./NavBar.svelte";
 </script>
 
 <header>
   <h1>teams project name</h1>
-  <NavBar/>
-
+  <NavBar />
 </header>
+
 <body>
-<div class="box1">
-
-</div>
-<p style="background-color:white;height:3em;"></p>
-<div class="box2">
-
-</div>
-<p style="background-color:white;height:3em;"></p>
-<div class="box3">
-
-</div>
-<p style="background-color:white;height:3em;"></p>
+  <div class="outer">
+    <h1>Quote-1</h1>
+    <h3>Tasks to do</h3>
+    <div class="box1">
+      <div class="heading">
+        <h5>Task</h5>
+        <h5>Due-date</h5>
+        <h5>Assignee</h5>
+      </div>
+      <div class="content">
+        <input type="radio" />
+        <h5>Creating layout</h5>
+        <input type="date" />
+        <input type="text" />
+      </div>
+    </div>
+    <h3>Completed</h3>
+    <div class="box2" />
+    <h3>Overdue</h3>
+    <div class="box3" />
+  </div>
 </body>
+
 <style>
-    * {
+  * {
     box-sizing: border-box;
   }
-    .box1{
-        margin: 0;
+  .outer {
+    display: flex;
+    flex-direction: column;
+  }
+  .box1,
+  .box2,
+  .box3 {
     height: 25vh;
     width: 100vw;
     overflow: hidden;
     display: flex;
     height: 30vh;
-    font-family:"Lato",sans-serif;
-    font-weight:700;
-    color:#555;
+    font-family: "Lato", sans-serif;
+    font-weight: 700;
+    color: #555;
     background-color: rgb(128, 19, 19);
     justify-content: center;
     align-items: center;
-    }
-    
-    .box2{
-        margin: 0;
-    height: 25vh;
-    width: 100vw;
-    overflow: hidden;
-    display: flex;
-    height: 30vh;
-    font-family:"Lato",sans-serif;
-    font-weight:700;
-    color:#555;
-    background-color: rgb(128, 19, 19);
-    justify-content: center;
-    align-items: center;
-    }
-    .box3{
-        margin: 0;
-    height: 25vh;
-    width: 100vw;
-    overflow: hidden;
-    display: flex;
-    height: 30vh;
-    font-family:"Lato",sans-serif;
-    font-weight:700;
-    color:#555;
-    background-color: rgb(128, 19, 19);
-    justify-content: center;
-    align-items: center;
-    }
-
+  }
 </style>

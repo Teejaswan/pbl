@@ -83,7 +83,6 @@
     padding: 4em 0 2em 0;
   }
   .outer {
-    margin-bottom: 5em;
     background-color: #eae7dc;
   }
   @keyframes -global-scroll1 {

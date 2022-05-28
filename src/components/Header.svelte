@@ -5,11 +5,12 @@
 
 <header>
   <div class="title">
-    <h1>PROJECT-TITLE</h1>
-    <button class="login" on:click={(_) => router.goto("/choice")}
-      ><strong>Login</strong></button
+    <h3>PROJECT-TITLE</h3>
+    <button class="login" on:click={(_) => router.goto("/choice")}>Login</button
     >
   </div>
+</header>
+<body>
   <div class="header">
     <div class="left">
       <h1>PBL Projects</h1>
@@ -24,8 +25,7 @@
       <img src={headerBg} alt="fiygbfijyfguy" />
     </div>
   </div>
-</header>
-<body />
+</body>
 
 <style>
   @import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Kanit&family=Yeseva+One&display=swap");
@@ -34,10 +34,14 @@
     grid-template-columns: 1fr 1fr;
     justify-content: center;
     align-items: center;
-    margin-top: 5em;
+    /*margin-top: em;
     margin-inline: 5em;
     margin-right: 2em;
-    margin-bottom: 10em;
+    margin-bottom: 10em;*/
+    overflow: auto;
+    width: 100%;
+    margin: 0;
+    background-color: #4a4747;
   }
   .title {
     display: flex;
@@ -45,11 +49,11 @@
     align-items: center;
 
     background-color: #eae7dc;
-    height: 10em;
+    height: 4em;
     /*border-radius: 0 0 60px 60px;*/
   }
   body {
-    all: unset;
+    max-width: 100%;
   }
   /*h1,
   .login {
@@ -59,7 +63,11 @@
     font-family: "Yeseva One", sans-serif;
     color: #4a4747;
   }
+  img {
+    width: 10vw;
+  }
   button {
+    font-size: small;
     display: grid;
     place-items: center;
     padding: 0;
@@ -68,8 +76,8 @@
     outline: none;
     color: white;
     background-color: #d36767;
-    width: 15vh;
-    height: 5vh;
+    width: 8vh;
+    height: 3vh;
     border-radius: 2em;
     box-shadow: 5px 5px 10px 0px #a26868;
     transition: all 300ms ease-in-out;
@@ -82,5 +90,12 @@
   button:active {
     background-color: #e491cf;
     transform: translateY(2px);
+  }
+  header {
+    height: 10vh;
+  }
+
+  body {
+    width: 100vw;
   }
 </style>

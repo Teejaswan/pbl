@@ -17,36 +17,22 @@
         <h5>Due-date</h5>
         <h5>Assignee</h5>
       </div>
+
       <div class="content">
-        <input type="radio" />
-        <h5>Creating layout</h5>
+        <input class="radio" type="radio" />
+        <input type="text" value="Creating layouts" />
         <input type="date" />
         <input type="text" />
       </div>
     </div>
     <h3>Completed</h3>
-    <div class="box2">
-        <div class="heading">
-        <h5>Task</h5>
-        <h5>Completed-date</h5>
-        <h5>Assignee</h5>
-        </div>
-        <div class="content">
-            <h5>Creating layout</h5>
-            <input type="date" />
-            <input type="text" /> 
-        </div>
-      </div>
-      </div>
+    <div class="box2" />
     <h3>Overdue</h3>
     <div class="box3" />
-
+  </div>
 </body>
 
 <style>
-  * {
-    box-sizing: border-box;
-  }
   .outer {
     display: flex;
     flex-direction: column;
@@ -56,14 +42,23 @@
   .box3 {
     height: 25vh;
     width: 100vw;
-    overflow: hidden;
     display: flex;
+    flex-direction: column;
     height: 30vh;
-    font-family: "Lato", sans-serif;
     font-weight: 700;
     color: #555;
     background-color: rgb(128, 19, 19);
     justify-content: center;
     align-items: center;
+  }
+  .heading,
+  .content {
+    display: grid;
+  }
+  .heading {
+    grid-template-columns: 10vw 10vw 10vw 10vw;
+  }
+  .content {
+    grid-template-columns: 8vw 8vw 8vw 8vw;
   }
 </style>

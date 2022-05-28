@@ -13,6 +13,7 @@
     <h3>Tasks to do</h3>
     <div class="box1">
       <div class="heading">
+        <h5 />
         <h5>Task</h5>
         <h5>Due-date</h5>
         <h5>Assignee</h5>
@@ -41,7 +42,7 @@
   .box2,
   .box3 {
     height: 25vh;
-    width: 100vw;
+    width: 70vw;
     display: flex;
     flex-direction: column;
     height: 30vh;
@@ -50,15 +51,30 @@
     background-color: rgb(128, 19, 19);
     justify-content: center;
     align-items: center;
+    max-width: 100%;
+  }
+  body {
+    all: unset;
   }
   .heading,
   .content {
-    display: grid;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
   }
-  .heading {
-    grid-template-columns: 10vw 10vw 10vw 10vw;
+  header {
+    background: red;
+    max-width: 100%;
   }
-  .content {
-    grid-template-columns: 8vw 8vw 8vw 8vw;
+  input {
+    height: 2vw;
+    width: 10vw;
+  }
+  h5 {
+    display: flex;
+    height: 2vw;
+    width: 10vw;
+    justify-content: center;
+    align-items: center;
   }
 </style>

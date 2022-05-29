@@ -21,6 +21,20 @@
         <h4>TEAM</h4>
         <input type="text" placeholder="Team number and Posted by"/>
     </div>
+    <table>
+        <tr>
+            <th>Problem Statement</th>
+            <td><input type="text" placeholder="Enter Statement"/></td>
+        </tr>
+        <tr>
+            <th>Ideas</th>
+            <td><input type="text" placeholder="Enter Statement"/></td>
+        </tr>
+        <tr>
+            <th>Team</th>
+            <td><input type="text" placeholder="Enter Statement"/></td>
+        </tr>
+    </table>
 </div>
 
 
@@ -54,6 +68,17 @@
     .team input{
         margin-left: 34vh;
         width:50%
+    }
+    table{
+        border-collapse:collapse;
+        width:75%;
+    }
+   th,td{
+        border: 1px solid black;
+    }
+    td input{
+        width:100%;
+        border:none;
     }
    
 </style>

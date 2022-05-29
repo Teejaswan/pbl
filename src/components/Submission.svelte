@@ -71,9 +71,21 @@
     }
     table{
         border-collapse:collapse;
-        width:75%;
+        width:100%;
+        margin-top: 5em;
+        margin-left: 2em;
+        margin-right: 2em;
+        
     }
-   th,td{
+    input, textarea{
+        outline:none;
+    }
+    
+    th{
+        width:25%;
+    }
+   th,td{ 
+        padding: 1em;
         border: 1px solid black;
     }
     td input{

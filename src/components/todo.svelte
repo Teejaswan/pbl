@@ -92,6 +92,8 @@
     width: 100%;
     display: flex;
     justify-content: space-evenly;
+    
+  
   }
   .header {
     background: #d36767;
@@ -118,7 +120,7 @@
     margin-top: 60px;
   }
   h6 {
-    color: rgb(128, 19, 19);
+    color:#d36767;
   }
   h2 {
     padding-top: 3vh;

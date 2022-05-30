@@ -48,7 +48,7 @@
         <h5>Assignee</h5>
       </div>
       <div class="content">
-        <input type="text" value="Creating layouts" />
+        <input type="text" value="Creating layouts"/>
         <input type="date" />
         <input type="text" />
       </div>
@@ -143,5 +143,8 @@
     color: rgb(48, 47, 47);
     margin: 9vw 4vw 9vw 4vw;
     width: 92vw;
+  }
+  input{
+    border-radius:30px;
   }
 </style>

@@ -119,10 +119,10 @@
     }*/
     table{
         /*border-collapse:collapse;*/
-        width:95vw;
+        width:195vh;
         margin-top: 6vh;
-        margin-left:2vw;
-        margin-right: 6vw;
+        margin-left:2vh;
+        margin-right: 6vh;
         border-radius:2em;
         
         
@@ -135,12 +135,12 @@
     }
     
     th{
-        width:25%;
+        width:20%;
         background-color: #EAE7DC ;
         border-radius:2em 0 0 2em;
     }
    th,td{ 
-        padding:1vw;
+        padding:2vh;
         border:1px solid black;
         border-collapse:collapse;
     }
@@ -151,24 +151,24 @@
     hr {
     outline: 0.01vw ridge grey;
 
-    width: 70vw;
-    margin-left: 14vw;
-    margin-top: 5vw;
+    width: 195vh;
+    margin-left:2.5vh;
+    margin-top: 5vh;
   }
   .submit{
     display: grid;
     place-items: center;
     text-decoration: none;
-    padding-top: 50vw;
+    padding-top: 50vh;
     cursor: pointer;
     border: none;
     outline: none;
     color: black;
     background-color: rgb(87, 181, 123);
-    width: 16vw;
-    height: 3vw;
-    padding: 1vw;
-    margin:0 0 0 78vw;
+    width: 31vh;
+    height: 7vh;
+    padding: 1vh;
+    margin:0 0 0 160vh;
     border-radius: 2em;
     /* font-size: clamp(0.65em, 50%, 3em); */
     -webkit-box-shadow: 3px 3px 8px 0px rgba(111, 156, 127, 0.76);
@@ -206,7 +206,7 @@
     } */
     #edit{
        border-radius: 1em;
-       padding: 0.5vw;
+       padding: 1vh;
        -webkit-box-shadow: 3px 3px 8px 0px rgba(111, 156, 127, 0.76);
         -moz-box-shadow: 3px 3px 8px 0px rgba(111, 156, 127, 0.76);
         box-shadow: 3px 3px 8px 0px rgba(111, 156, 127, 0.76);
@@ -226,7 +226,7 @@
     }
     #trash{
         border-radius: 1em;
-        padding: 0.5vw;
+        padding: 1vh;
         -webkit-box-shadow: 3px 3px 8px 0px rgba(111, 156, 127, 0.76);
         -moz-box-shadow: 3px 3px 8px 0px rgba(111, 156, 127, 0.76);
         box-shadow: 3px 3px 8px 0px rgba(111, 156, 127, 0.76);
@@ -244,23 +244,23 @@
         background-color: rgb(87, 181, 123);
     }
     .comment{
-        width:40vw;
-        height:3vw;
-        padding-left:2vw;
-        margin-left: 3vw;
+        width:70vh;
+        height:7vh;
+        padding-left:2vh;
+        margin-left: 3vh;
         }
     .submit2{
         
     text-decoration: none;
-    padding-top: 50vw;
+    padding-top: 50vh;
     cursor: pointer;
     border: none;
     outline: none;
     color: black;
     background-color: rgb(87, 181, 123);
-    width: 12vw;
-    height: 3vw;
-    padding: 1vw;
+    width: 20vh;
+    height: 6vh;
+    padding: 1vh;
     border-radius: 1em;
 
     -webkit-box-shadow: 3px 3px 8px 0px rgba(111, 156, 127, 0.76);

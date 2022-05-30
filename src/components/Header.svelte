@@ -8,6 +8,7 @@
     <h3>PROJECT-TITLE</h3>
     <button class="login" on:click={(_) => router.goto("/choice")}>Login</button
     >
+    <a href="/contact.svelte">contact</a>
   </div>
 </header>
 <body>

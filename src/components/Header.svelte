@@ -8,7 +8,7 @@
     <h3>PROJECT-TITLE</h3>
     <button class="login" on:click={(_) => router.goto("/choice")}>Login</button
     >
-    <a href="/contact">contact</a>
+    <a href="/contact">Contact</a>
   </div>
 </header>
 <body>
@@ -80,8 +80,8 @@
     outline: none;
     color: white;
     background-color: #d36767;
-    width: 8vh;
-    height: 3vh;
+    width: 8.5vh;
+    height: 4vh;
     border-radius: 2em;
     box-shadow: 5px 5px 10px 0px #a26868;
     transition: all 300ms ease-in-out;

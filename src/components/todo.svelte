@@ -48,7 +48,7 @@
         <h5>Assignee</h5>
       </div>
       <div class="content">
-        <input type="text" value="Creating layouts"/>
+        <input type="text" value="Creating layouts" />
         <input type="date" />
         <input type="text" />
       </div>
@@ -92,8 +92,6 @@
     width: 100%;
     display: flex;
     justify-content: space-evenly;
-    
-  
   }
   .header {
     background: #d36767;
@@ -120,7 +118,7 @@
     margin-top: 60px;
   }
   h6 {
-    color:#d36767;
+    color: #d36767;
   }
   h2 {
     padding-top: 3vh;
@@ -144,7 +142,7 @@
     margin: 9vw 4vw 9vw 4vw;
     width: 92vw;
   }
-  input{
-    border-radius:30px;
+  input {
+    border-radius: 30px;
   }
 </style>

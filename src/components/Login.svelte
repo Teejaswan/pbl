@@ -2,7 +2,7 @@
   import LoginImage from "../assets/Login.jpg";
 </script>
 
-<body>
+<div class="outer">
   <div class="Login-div">
     <!-- <div class="Logo"> -->
     <img src={LoginImage} alt="" class="Logo" />
@@ -15,7 +15,7 @@
             d="M12.075,10.812c1.358-0.853,2.242-2.507,2.242-4.037c0-2.181-1.795-4.618-4.198-4.618S5.921,4.594,5.921,6.775c0,1.53,0.884,3.185,2.242,4.037c-3.222,0.865-5.6,3.807-5.6,7.298c0,0.23,0.189,0.42,0.42,0.42h14.273c0.23,0,0.42-0.189,0.42-0.42C17.676,14.619,15.297,11.677,12.075,10.812 M6.761,6.775c0-2.162,1.773-3.778,3.358-3.778s3.359,1.616,3.359,3.778c0,2.162-1.774,3.778-3.359,3.778S6.761,8.937,6.761,6.775 M3.415,17.69c0.218-3.51,3.142-6.297,6.704-6.297c3.562,0,6.486,2.787,6.705,6.297H3.415z"
           />
         </svg>
-        <input type="username" class="user-input" placeholder="Username" />
+        <input type="username" class="user-input" />
       </div>
       <div class="Password">
         <svg class="svg-icon" viewBox="0 0 20 20">
@@ -26,33 +26,31 @@
         <input type="password" class="pass-input" placeholder="Password" />
       </div>
     </div>
-    <button class="Signin">Login</button>
+    <button class="Login">Login</button>
   </div>
-</body>
+</div>
 
 <style>
-  body {
-    
+  .outer {
     margin: 0;
     height: 100vh;
     width: 100vw;
-    overflow: hidden;
+
     display: flex;
-    height: 100vh;
-    font-family: "Lato", sans-serif;
-    font-weight: 700;
-    color: #555;
+
+    color: rgb(24, 12, 12);
     background-color: #fff;
     justify-content: center;
     align-items: center;
   }
   .Login-div {
     display: grid;
-    background-color: rgb(247, 198, 206);
-    height: 700px;
-    width: 55vh;
+    background-color: #eae7dc;
+    height: 70vh;
+    width: 60vw;
     padding: 60px 35px 35px 35px;
     border-radius: 3em;
+    place-items: center;
     box-shadow: 13px 13px 20px #cbced1, -13px -13px 20px #fff;
   }
   .Logo {
@@ -70,8 +68,7 @@
     letter-spacing: 0.5px;
   }
   .Fields {
-    width: 47vh;
-    padding: 75px 5px 5px 5px;
+    width: 40vw;
   }
   .Fields input {
     border: none;
@@ -79,7 +76,7 @@
     background: none;
     color: black;
     font-size: 18px;
-    padding: 20px 10px 20px 5px;
+    height: 30px;
   }
   .Username,
   .Password {
@@ -93,34 +90,29 @@
     height: 22px;
     margin: 0 10px -3px 25px;
   }
-  .Signin {
+  .Login {
+    font-size: small;
     display: grid;
     place-items: center;
-    text-decoration: none;
-    padding: 0;
+
     cursor: pointer;
     border: none;
     outline: none;
-    color: black;
-    background-color: rgb(87, 181, 123);
-    width: 47vh;
-    height: 8vh;
-    padding: 2vh;
-
+    color: white;
+    background-color: #d36767;
+    width: 25vh;
+    height: 5vh;
     border-radius: 2em;
-
-    -webkit-box-shadow: 3px 3px 8px 0px rgba(111, 156, 127, 0.76);
-    -moz-box-shadow: 3px 3px 8px 0px rgba(111, 156, 127, 0.76);
-    box-shadow: 3px 3px 8px 0px rgba(111, 156, 127, 0.76);
+    box-shadow: 5px 5px 10px 0px #a26868;
     transition: all 300ms ease-in-out;
   }
-  .Signin:hover {
+  .Login:hover {
+    background-color: #d28686;
     transform: translate(-2px, -2px);
     cursor: pointer;
-    background-color: rgb(87, 181, 123);
   }
-  .Signin:active {
+  .Login:active {
+    background-color: #e491cf;
     transform: translateY(2px);
-    background-color: rgb(87, 181, 123);
   }
 </style>

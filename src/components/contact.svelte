@@ -1,4 +1,5 @@
 <script>
+  import { Route } from "tinro";
 </script>
 
 <div class="container">

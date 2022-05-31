@@ -8,7 +8,6 @@
   import Choice from "./components/Choice.svelte";
   import Login from "./components/Login.svelte";
   import Todo from "./components/todo.svelte";
-import Submission from "./components/Submission.svelte";
 
   router.mode.hash();
 
@@ -19,8 +18,10 @@ import Submission from "./components/Submission.svelte";
   <Header />
   <Steps />
   <Attribute />
+
   <Contact />
 </Route>
+
 <Route path="/choice">
   <Choice />
 </Route>
@@ -29,9 +30,6 @@ import Submission from "./components/Submission.svelte";
 </Route>
 <Route path="/user/student/todo">
   <Todo />
-</Route>
-<Route path="/user/student/submission">
-  <Submission />
 </Route>
 <Route path="/user/mentor">
   <h1>Mentor Page</h1>

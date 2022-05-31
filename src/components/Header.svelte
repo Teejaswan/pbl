@@ -8,7 +8,7 @@
     <h3>PROJECT-TITLE</h3>
     <button class="login" on:click={(_) => router.goto("/choice")}>Login</button
     >
-    <a href="/contact.svelte">contact</a>
+    <a href="/contact">contact</a>
   </div>
 </header>
 <body>
@@ -33,8 +33,7 @@
   .header {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    justify-content: center;
-    align-items: center;
+    place-items: center;
     /*margin-top: em;
     margin-inline: 5em;
     margin-right: 2em;
@@ -42,7 +41,7 @@
     overflow: auto;
     width: 100%;
     margin: 0;
-    background-color: #4a4747;
+    height: 90vh;
   }
   .title {
     display: flex;
@@ -50,8 +49,11 @@
     align-items: center;
 
     background-color: #eae7dc;
-    height: 4em;
+    height: 100%;
     /*border-radius: 0 0 60px 60px;*/
+  }
+  .left {
+    margin-left: 2em;
   }
   body {
     max-width: 100%;
@@ -65,8 +67,9 @@
     color: #4a4747;
   }
   img {
-    width: 10vw;
+    width: 40vw;
   }
+
   button {
     font-size: small;
     display: grid;
@@ -98,5 +101,8 @@
 
   body {
     width: 100vw;
+  }
+  .right {
+    width: 40vw;
   }
 </style>

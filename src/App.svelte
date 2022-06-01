@@ -10,6 +10,7 @@
   import Todo from "./components/todo.svelte";
   import Submission from "./components/Submission.svelte";
   import Progress from "./components/progress.svelte";
+  import Studprofile from "./components/studprofile.svelte";
   router.mode.hash();
 
   window["ab"] = (_) => router.goto("/user/student");
@@ -40,6 +41,9 @@
 </Route>
 <Route path="/user/student/progress">
   <Progress />
+</Route>
+<Route path="/profile">
+  <Studprofile />
 </Route>
 
 <style>

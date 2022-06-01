@@ -69,18 +69,18 @@
   .box1,
   .box2,
   .box3 {
-    height: 25vh;
+    height: 30vh;
     width: 70vw;
     display: flex;
     flex-direction: column;
-    height: 30vh;
+  
     font-weight: 700;
     color: #555;
     background-color: #d36767;
     justify-content: center;
     align-items: center;
     max-width: 100%;
-    border-radius: 45px;
+    border-radius: 20px;
     box-shadow: -5px 36px 75px -25px #db9bd3;
   }
   .box3 {
@@ -143,6 +143,11 @@
     width: 92vw;
   }
   input {
-    border-radius: 30px;
+    border-radius: 10px;
   }
+  input[type=radio] {
+    border: 50px;
+    width: 15%;
+    height: 1.3em;
+}
 </style>

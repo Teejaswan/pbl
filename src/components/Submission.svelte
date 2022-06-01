@@ -12,7 +12,7 @@
 </nav>
 
 <div class="add">
-  <h1>Quote 2</h1>
+  <h2>Quote 2</h2>
   <!-- <add> -->
 </div>
 <hr />
@@ -20,19 +20,19 @@
   <div class="container-1">
     <div class="outer">
       <div class="inner">
-        <h3>Problem statement</h3>
+        <h3>Problem statement :</h3>
         <input type="text" />
       </div>
       <div class="inner">
-        <h3>Idea</h3>
+        <h3>Idea :</h3>
         <input type="text" />
       </div>
       <div class="inner">
-        <h3>Queries</h3>
+        <h3>Queries :</h3>
         <input type="text" />
       </div>
       <div class="inner">
-        <h3>Team</h3>
+        <h3>Team :</h3>
         <input type="text" />
       </div>
       <!-- <post>  -->
@@ -42,41 +42,52 @@
   <div class="container-2">
     <div class="outer">
       <div class="inner">
-        <h3>Problem statement</h3>
+        <h3>Problem statement :</h3>
         <input type="text" id="content" />
       </div>
       <div class="inner">
-        <h3>Idea</h3>
+        <h3>Idea :</h3>
         <input type="text" id="content" />
       </div>
       <div class="inner">
-        <h3>Queries</h3>
+        <h3>Queries :</h3>
         <input type="text" id="content" />
       </div>
       <div class="inner">
-        <h3>Team</h3>
+        <h3>Team :</h3>
         <input type="text" id="content" />
       </div>
       <!-- <edit> <delete> -->
     </div>
   </div>
+  <p>
+    <i
+      class="fa fa-edit"
+      id="edit"
+      style="font-size:34px;margin: 0 0 0 36.8em;"
+    />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+      class="fa fa-trash-o"
+      id="trash"
+      style="font-size:34px;"
+    />
+  </p>
 
   <div class="container-3">
     <div class="outer">
       <div class="inner">
-        <h3>Problem statement</h3>
+        <h3>Problem statement :</h3>
         <input type="text" id="content" />
       </div>
       <div class="inner">
-        <h3>Idea</h3>
+        <h3>Idea :</h3>
         <input type="text" id="content" />
       </div>
       <div class="inner">
-        <h3>Queries</h3>
+        <h3>Queries :</h3>
         <input type="text" id="content" />
       </div>
       <div class="inner">
-        <h3>Team</h3>
+        <h3>Team :</h3>
         <input type="text" id="content" />
       </div>
       <!-- <upvote> <comment> -->
@@ -167,8 +178,15 @@
   .container-2,
   .container-3 {
     width: 60vw;
-    background-color: brown;
+    background-color:#d36767;
     margin: 3em;
+    border-radius: 1em;
+    box-shadow: 0.8em 0.8em 2em -0.3em #cbced1;
+
+  }
+  .container-2 input,.container-3 input{ 
+       background-color: #d36767;
+
   }
   .outerContainer {
     display: flex;
@@ -185,11 +203,14 @@
   .inner h3 {
     width: 20vw;
     font-size: calc(0.75em + 1vmin);
-  }
+  } 
   .inner input {
     padding: 0.5em;
     width: 20vw;
     margin: 1vw;
+    border-radius: 0.5em;
+    border: none;
+    outline: none;
   }
   .outer {
     margin: 4em;
@@ -198,6 +219,52 @@
     justify-content: center;
     flex-direction: column;
   }
+  h1{
+    background: #d36767;
+    max-width: 100%;
+    text-align: center;
+    height: 2em;
+    padding-top: 1em;
+    margin:0;
+  }
+  h2{
+    margin-left: 102vh;
+  }
+  #edit {
+    border-radius: 1em;
+    padding: 1vh;
+    box-shadow: 3px 3px 8px 0px rgba(111, 156, 127, 0.76);
+    transition: all 300ms ease-in-out;
+    background-color: rgb(87, 181, 123);
+  }
+  #edit:hover {
+    transform: translate(-2px, -2px);
+    cursor: pointer;
+    background-color: #80ffbf;
+    
+  }
+  #edit:active {
+    transform: translateY(2px);
+    background-color: rgb(87, 181, 123);
+  }
+  #trash {
+    border-radius: 1em;
+    padding: 1vh;
+    box-shadow: 3px 3px 8px 0px rgba(111, 156, 127, 0.76);
+    transition: all 300ms ease-in-out;
+    background-color: rgb(87, 181, 123);
+  }
+  #trash:hover {
+    transform: translate(-2px, -2px);
+    cursor: pointer;
+    background-color: #80ffbf;
+   
+  }
+  #trash:active {
+    transform: translateY(2px);
+    background-color: rgb(87, 181, 123);
+  }
+  
 
   /*.head {
     display: flex;

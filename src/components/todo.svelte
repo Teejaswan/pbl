@@ -73,7 +73,6 @@
     width: 70vw;
     display: flex;
     flex-direction: column;
-  
     font-weight: 700;
     color: #555;
     background-color: #d36767;

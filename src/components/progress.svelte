@@ -1,4 +1,4 @@
-<script>
+<!--<script>
   import { DonutChart } from "@carbon/charts-svelte";
   import "@carbon/styles/css/styles.css";
   import "@carbon/charts/styles.css";
@@ -51,6 +51,5 @@
 <div class="table" />
 <div />
 
-<!-- <DonutChart {data} {options} /> -->
-<style>
-</style>
+<DonutChart {data} {options} 
+-->

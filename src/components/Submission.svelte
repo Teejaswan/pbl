@@ -272,7 +272,7 @@
   .submit2:hover {
     transform: translate(-2px, -2px);
     cursor: pointer;
-    background-color:#d28686; 
+    background-color:#d28686 ; 
   }
   .submit2:active {
     transform: translateY(2px);

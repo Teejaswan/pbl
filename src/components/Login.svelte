@@ -3,21 +3,20 @@
 </script>
 
 <div class="outer">
-  <div class="Login-div">
-    <!-- <div class="Logo"> -->
-    <img src={LoginImage} alt="" class="Logo" />
-    <!-- </div> -->
+  <div class="inner">
+    <!-- <img src={LoginImage} alt="" class="logo" /> -->
+
     <div class="title">Login Details</div>
-    <div class="Fields">
-      <div class="Username">
+    <div class="fields">
+      <div class="username">
         <svg class="svg-icon" viewBox="0 0 20 20">
           <path
             d="M12.075,10.812c1.358-0.853,2.242-2.507,2.242-4.037c0-2.181-1.795-4.618-4.198-4.618S5.921,4.594,5.921,6.775c0,1.53,0.884,3.185,2.242,4.037c-3.222,0.865-5.6,3.807-5.6,7.298c0,0.23,0.189,0.42,0.42,0.42h14.273c0.23,0,0.42-0.189,0.42-0.42C17.676,14.619,15.297,11.677,12.075,10.812 M6.761,6.775c0-2.162,1.773-3.778,3.358-3.778s3.359,1.616,3.359,3.778c0,2.162-1.774,3.778-3.359,3.778S6.761,8.937,6.761,6.775 M3.415,17.69c0.218-3.51,3.142-6.297,6.704-6.297c3.562,0,6.486,2.787,6.705,6.297H3.415z"
           />
         </svg>
-        <input type="username" class="user-input" />
+        <input type="username" class="user-input" placeholder="Username" />
       </div>
-      <div class="Password">
+      <div class="password">
         <svg class="svg-icon" viewBox="0 0 20 20">
           <path
             d="M17.308,7.564h-1.993c0-2.929-2.385-5.314-5.314-5.314S4.686,4.635,4.686,7.564H2.693c-0.244,0-0.443,0.2-0.443,0.443v9.3c0,0.243,0.199,0.442,0.443,0.442h14.615c0.243,0,0.442-0.199,0.442-0.442v-9.3C17.75,7.764,17.551,7.564,17.308,7.564 M10,3.136c2.442,0,4.43,1.986,4.43,4.428H5.571C5.571,5.122,7.558,3.136,10,3.136 M16.865,16.864H3.136V8.45h13.729V16.864z M10,10.664c-0.854,0-1.55,0.696-1.55,1.551c0,0.699,0.467,1.292,1.107,1.485v0.95c0,0.243,0.2,0.442,0.443,0.442s0.443-0.199,0.443-0.442V13.7c0.64-0.193,1.106-0.786,1.106-1.485C11.55,11.36,10.854,10.664,10,10.664 M10,12.878c-0.366,0-0.664-0.298-0.664-0.663c0-0.366,0.298-0.665,0.664-0.665c0.365,0,0.664,0.299,0.664,0.665C10.664,12.58,10.365,12.878,10,12.878"
@@ -26,51 +25,43 @@
         <input type="password" class="pass-input" placeholder="Password" />
       </div>
     </div>
-    <button class="Login">Login</button>
+    <button class="login">Login</button>
   </div>
 </div>
 
 <style>
   .outer {
-    margin: 0;
     height: 100vh;
     width: 100vw;
 
     display: flex;
 
     color: rgb(24, 12, 12);
-    background-color: #fff;
+
     justify-content: center;
     align-items: center;
   }
-  .Login-div {
-    display: grid;
+  .inner {
+    display: flex;
     background-color: #eae7dc;
-    height: 70vh;
-    width: 60vw;
-    padding: 60px 35px 35px 35px;
+
+    max-width: 50vh;
     border-radius: 3em;
-    place-items: center;
-    box-shadow: 13px 13px 20px #cbced1, -13px -13px 20px #fff;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: 0.8em 0.8em 2em -0.3em #cbced1;
+    gap: 2em;
+    padding-block: 6em;
   }
-  .Logo {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    margin: 0 auto;
-    box-shadow: 0 0 2px #5f5f5f, 0 0 0 5px #ecf0f3, 8px 8px 15px #a7aaaf,
-      -8px -8px 15px #fff;
-  }
+
   .title {
     text-align: center;
     font-size: 28px;
     padding-top: 24px;
     letter-spacing: 0.5px;
   }
-  .Fields {
-    width: 40vw;
-  }
-  .Fields input {
+  input {
     border: none;
     outline: none;
     background: none;
@@ -78,20 +69,31 @@
     font-size: 18px;
     height: 30px;
   }
-  .Username,
-  .Password {
-    margin-bottom: 30px;
+  .username,
+  .password {
     border-radius: 2em;
     border: 1px solid black;
     box-shadow: 8px 8px 8px #bdbfc2;
     background-color: #fff;
+    display: flex;
+    padding: 0.5em;
+    height: 1.5em;
+    width: 35vh;
+    justify-content: center;
+    align-items: center;
   }
-  .Fields svg {
-    height: 22px;
-    margin: 0 10px -3px 25px;
+  .fields svg {
+    height: 1em;
+    padding-right: 1em;
   }
-  .Login {
-    font-size: small;
+  .fields {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    padding-inline: 2em;
+  }
+  .login {
+    font-size: 400;
     display: grid;
     place-items: center;
 
@@ -106,12 +108,12 @@
     box-shadow: 5px 5px 10px 0px #a26868;
     transition: all 300ms ease-in-out;
   }
-  .Login:hover {
+  .login:hover {
     background-color: #d28686;
     transform: translate(-2px, -2px);
     cursor: pointer;
   }
-  .Login:active {
+  .login:active {
     background-color: #e491cf;
     transform: translateY(2px);
   }

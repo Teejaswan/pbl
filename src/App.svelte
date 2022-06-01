@@ -9,7 +9,7 @@
   import Login from "./components/Login.svelte";
   import Todo from "./components/todo.svelte";
   import Submission from "./components/Submission.svelte";
-  
+  import Progress from "./components/progress.svelte";
   router.mode.hash();
 
   window["ab"] = (_) => router.goto("/user/student");
@@ -33,10 +33,13 @@
   <Todo />
 </Route>
 <Route path="/user/student/submission">
-<Submission/>
+  <Submission />
 </Route>
 <Route path="/user/mentor">
   <h1>Mentor Page</h1>
+</Route>
+<Route path="/user/student/progress">
+  <Progress />
 </Route>
 
 <style>

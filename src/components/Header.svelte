@@ -3,42 +3,35 @@
   import headerBg from "../assets/header.jpg";
 </script>
 
-<header>
+<nav>
   <div class="title">
     <h3>PROJECT-TITLE</h3>
     <button class="login" on:click={(_) => router.goto("/choice")}>Login</button
     >
     <a href="/contact">Contact</a>
   </div>
-</header>
-<body>
-  <div class="header">
-    <div class="left">
-      <h1>PBL Projects</h1>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique
-        perferendis autem rem reiciendis provident odio, voluptatem quae ut
-        repudiandae doloribus natus, magnam quis! Ea blanditiis adipisci non
-        fugit ratione eum?
-      </p>
-    </div>
-    <div class="right">
-      <img src={headerBg} alt="fiygbfijyfguy" />
-    </div>
+</nav>
+<div class="outer">
+  <div class="left">
+    <h1>PBL Projects</h1>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique
+      perferendis autem rem reiciendis provident odio, voluptatem quae ut
+      repudiandae doloribus natus, magnam quis! Ea blanditiis adipisci non fugit
+      ratione eum?
+    </p>
   </div>
-</body>
+  <div class="right">
+    <img src={headerBg} alt="fiygbfijyfguy" />
+  </div>
+</div>
 
 <style>
   @import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Kanit&family=Yeseva+One&display=swap");
-  .header {
+  .outer {
     display: grid;
     grid-template-columns: 1fr 1fr;
     place-items: center;
-    /*margin-top: em;
-    margin-inline: 5em;
-    margin-right: 2em;
-    margin-bottom: 10em;*/
-    overflow: auto;
     width: 100%;
     margin: 0;
     height: 90vh;
@@ -55,13 +48,7 @@
   .left {
     margin-left: 2em;
   }
-  body {
-    max-width: 100%;
-  }
-  /*h1,
-  .login {
-    margin-;
-  }*/
+
   h1 {
     font-family: "Yeseva One", sans-serif;
     color: #4a4747;
@@ -95,13 +82,7 @@
     background-color: #e491cf;
     transform: translateY(2px);
   }
-  header {
-    height: 10vh;
-  }
 
-  body {
-    width: 100vw;
-  }
   .right {
     width: 40vw;
   }

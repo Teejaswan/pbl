@@ -25,24 +25,18 @@
         <h4>TEAM</h4>
         <input type="text" placeholder="Team number and Posted by"/>
     </div>-->
-    <table>
-        <tr>
-            <th>Problem Statement</th>
-            <td><input type="text" placeholder="Enter Statement"/></td>
-        </tr>
-        <tr>
-            <th>Ideas</th>
-            <td><input type="text" placeholder="Enter Statement"/></td>
-        </tr>
-        <tr>
-            <th>Team</th>
-            <td><input type="text" placeholder="Enter Statement"/></td>
-        </tr>
-        <tr>
-            <th>Queries</th>
-            <td><input type="text" placeholder="Enter Queries"></td>
-        </tr>
-    </table>
+    <div class="Outer">
+        <div class="Inner">
+            <h2>Problem Statement</h2>
+            <input type="text" placeholder="Enter Statement"/>
+            <h2>Ideas</h2>
+            <input type="text" placeholder="Enter Statement"/>
+            <h2>Team Name and Memeber Name</h2>
+            <input type="text" placeholder="Enter Statement"/>
+            <h2>Queries</h2>
+            <input type="text" placeholder="Enter Queries">
+        </div>
+    </div>
     <br>
     <button class ="submit" type="submit"><b>Submit</b></button>
     <p><i class="fa fa-edit" id="edit" style="font-size:34px;margin: 0 0 0 36.8em;"></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa fa-trash-o" id="trash" style="font-size:34px;"></i></p>
@@ -56,7 +50,7 @@
             <path d="M19.404,6.65l-5.998-5.996c-0.292-0.292-0.765-0.292-1.056,0l-2.22,2.22l-8.311,8.313l-0.003,0.001v0.003l-0.161,0.161c-0.114,0.112-0.187,0.258-0.21,0.417l-1.059,7.051c-0.035,0.233,0.044,0.47,0.21,0.639c0.143,0.14,0.333,0.219,0.528,0.219c0.038,0,0.073-0.003,0.111-0.009l7.054-1.055c0.158-0.025,0.306-0.098,0.417-0.211l8.478-8.476l2.22-2.22C19.695,7.414,19.695,6.941,19.404,6.65z M8.341,16.656l-0.989-0.99l7.258-7.258l0.989,0.99L8.341,16.656z M2.332,15.919l0.411-2.748l4.143,4.143l-2.748,0.41L2.332,15.919z M13.554,7.351L6.296,14.61l-0.849-0.848l7.259-7.258l0.423,0.424L13.554,7.351zM10.658,4.457l0.992,0.99l-7.259,7.258L3.4,11.715L10.658,4.457z M16.656,8.342l-1.517-1.517V6.823h-0.003l-0.951-0.951l-2.471-2.471l1.164-1.164l4.942,4.94L16.656,8.342z"></path>
         </svg>
    </div> -->
-    <table>
+    <!--<table>
         <tr>
             <th>Problem Statement</th>
             <td><input type="text" placeholder="Enter Statement"/></td>
@@ -73,7 +67,7 @@
             <th>Queries</th>
             <td><input type="text" placeholder="Enter Queries"></td>
         </tr>
-    </table>
+    </table>-->
     <p><input class="comment" type= "text" placeholder= "Enter your comments"/>&nbsp;<button class ="submit2" type="submit"><b>Submit</b></button><i class="fa fa-thumbs-o-up" id="edit" style="font-size:34px;margin: -5em 0 0 39em;"></i></p>
     
     
@@ -117,15 +111,17 @@
         margin-left: 34vh;
         width:50%
     }*/
-    table{
+    outer{
         /*border-collapse:collapse;*/
         width:195vh;
         margin-top: 6vh;
         margin-left:2vh;
         margin-right: 6vh;
-        border-radius:2em;
-        
-        
+        border-radius:2em; 
+    }
+    inner{
+        display:flex;
+        flex-direction:column;
     }
     input, textarea{
         outline:none;
@@ -134,17 +130,17 @@
 
     }
     
-    th{
+    h2{
         width:20%;
         background-color: #EAE7DC ;
         border-radius:2em 0 0 2em;
     }
-   th,td{ 
+   h2,input{ 
         padding:2vh;
         border:1px solid black;
         border-collapse:collapse;
     }
-    td input{
+    input{
         width:100%;
         border:none;
     }

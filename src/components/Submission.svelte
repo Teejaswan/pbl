@@ -43,19 +43,19 @@
     <div class="outer">
       <div class="inner">
         <h3>Problem statement</h3>
-        <input type="text" />
+        <input type="text" id="content" />
       </div>
       <div class="inner">
         <h3>Idea</h3>
-        <input type="text" />
+        <input type="text" id="content" />
       </div>
       <div class="inner">
         <h3>Queries</h3>
-        <input type="text" />
+        <input type="text" id="content" />
       </div>
       <div class="inner">
         <h3>Team</h3>
-        <input type="text" />
+        <input type="text" id="content" />
       </div>
       <!-- <edit> <delete> -->
     </div>
@@ -65,19 +65,19 @@
     <div class="outer">
       <div class="inner">
         <h3>Problem statement</h3>
-        <input type="text" />
+        <input type="text" id="content" />
       </div>
       <div class="inner">
         <h3>Idea</h3>
-        <input type="text" />
+        <input type="text" id="content" />
       </div>
       <div class="inner">
         <h3>Queries</h3>
-        <input type="text" />
+        <input type="text" id="content" />
       </div>
       <div class="inner">
         <h3>Team</h3>
-        <input type="text" />
+        <input type="text" id="content" />
       </div>
       <!-- <upvote> <comment> -->
     </div>

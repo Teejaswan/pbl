@@ -5,9 +5,9 @@
   <nav>
     <div class="Outer">
       <div class="Inner">
-        <a href="/login" class="Choice" id="Student"> Student</a>
-        <a href="/login" class="Choice" id="Mentor"> Mentor</a>
-        <a href="/login" class="Choice" id="HOD">HOD</a>
+        <a href="/login" class="choice"> Student</a>
+        <a href="/login" class="choice"> Mentor</a>
+        <a href="/login" class="choice">HOD</a>
       </div>
     </div>
   </nav>
@@ -15,30 +15,26 @@
 
 <style>
   a {
+    font-size: 400;
     display: grid;
-
-    text-decoration: none;
-    cursor: pointer;
     place-items: center;
-    color: black;
+    padding: 0;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    color: white;
     background-color: #d36767;
-    width: 20vh;
+    width: 25vh;
     height: 5vh;
-
+    text-decoration: none;
     border-radius: 2em;
+    box-shadow: 5px 5px 10px 0px #a26868;
+    transition: all 300ms ease-in-out;
+    margin: 1em;
+  }
 
-    box-shadow: 3px 3px 8px 0px rgba(111, 156, 127, 0.76);
-    transition: all 300ms ease-in-out;
-  }
-  #Student,
-  #Mentor,
-  #HOD {
-    margin-bottom: 30px;
-    border-radius: 25px;
-    box-shadow: 0.8vh 0.8vh 0.8vh #bdbfc2;
-    transition: all 300ms ease-in-out;
-  }
   a:hover {
+    background-color: #d28686;
     transform: translate(-2px, -2px);
     cursor: pointer;
   }
@@ -49,14 +45,14 @@
   .Inner {
     display: flex;
     background-color: #eae7dc;
-    height: 60vh;
-    width: 50vh;
+    height: 58vh;
+    width: 45.5vh;
 
     justify-content: center;
     align-items: center;
     flex-direction: column;
     border-radius: 40px;
-    box-shadow: 0.8em 0.8em 1.25em #cbced1;
+    box-shadow: 0.8em 0.8em 2em -0.3em #cbced1;
   }
   .Outer {
     display: flex;

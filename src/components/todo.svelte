@@ -13,14 +13,16 @@
     <h3>Tasks to do</h3>
     <div class="box1">
       <div class="heading">
-        <h6>dummy</h6>
+        <h5 class="dummy">dummy</h5>
         <h5>Task</h5>
         <h5>Due-date</h5>
         <h5>Assignee</h5>
       </div>
 
       <div class="content">
-        <input class="radio" type="radio" />
+        <div class="radio">
+          <input class="radio" type="radio" />
+        </div>
         <input type="text" value="Creating layouts" />
         <input type="date" />
         <input type="text" />
@@ -62,10 +64,9 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    padding: 2em;
   }
-  .container {
-    margin: 0;
-  }
+
   .box1,
   .box2,
   .box3 {
@@ -73,6 +74,7 @@
     width: 70vw;
     display: flex;
     flex-direction: column;
+
     font-weight: 700;
     color: #555;
     background-color: #d36767;
@@ -91,6 +93,7 @@
     width: 100%;
     display: flex;
     justify-content: space-evenly;
+    margin: 1em;
   }
   .header {
     background: #d36767;
@@ -99,13 +102,17 @@
   }
   input {
     height: 2vw;
-    width: 10vw;
+    width: 9vw;
+    border-radius: 0.7vw;
+    padding: 0.1vw;
+    font-size: calc(0.5em + 0.4vmin);
+    padding-inline: 0.8em;
   }
-  h5,
-  h6 {
+  h5 {
     display: flex;
     height: 2vw;
     width: 10vw;
+    border: none;
     justify-content: center;
     align-items: center;
   }
@@ -116,8 +123,9 @@
     margin-left: 14vw;
     margin-top: 60px;
   }
-  h6 {
+  .dummy {
     color: #d36767;
+    width: 2vw;
   }
   h2 {
     padding-top: 3vh;
@@ -141,12 +149,16 @@
     margin: 9vw 4vw 9vw 4vw;
     width: 92vw;
   }
-  input {
-    border-radius: 10px;
-  }
-  input[type=radio] {
+
+  input[type="radio"] {
     border: 50px;
-    width: 15%;
+    width: 2vw;
     height: 1.3em;
-}
+  }
+
+  .radio {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 </style>

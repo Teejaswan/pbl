@@ -4,10 +4,11 @@
 
 <div class="header">
   <h2 style="text-align:center;">Teams project name</h2>
+  <h3>Crew </h3>
   <NavBar />
 </div>
-<div class="outer">
-  <table class="full">
+<div class="Details">
+  <!--<table class="full">
     <tr>
       <th>Column 1</th>
       <th>Column 2</th>
@@ -18,14 +19,15 @@
       <td>Column 2</td>
       <td>Column 3</td>
     </tr>
-  </table>
+  </table>-->
+  
 </div>
 
 <style>
-  .outer {
+  /* .outer {
     margin: 5em;
   }
   .full {
     width: 100%;
-  }
+  } */
 </style>

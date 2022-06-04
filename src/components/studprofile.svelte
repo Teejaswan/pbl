@@ -69,7 +69,7 @@
   .outer {
     margin: 4em;
     display: flex;
-    
+
     flex-direction: column;
   }
   h2{

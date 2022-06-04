@@ -38,11 +38,11 @@
     </div>
   </div>
 
-  <h1>Hello</h1>   
+   
   
  
  <style>
-   .container{
+   .container{ 
     width: 60vw;
     background-color: #d36767;
     margin: 5em;

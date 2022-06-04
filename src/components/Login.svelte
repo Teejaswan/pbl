@@ -5,14 +5,14 @@
   let user = {
     name: "",
     password: "",
-    type: "student",
+    type: "mentor",
   };
 
   const inputs = [];
 
   function login() {
     if (user.name === "mentor" && user.password === "mentor") {
-      router.goto("/" + user.type);
+      router.goto("/user/" + user.type);
     } else {
       alert("username or password is incorrect");
       user.name = user.password = "";

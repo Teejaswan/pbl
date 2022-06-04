@@ -11,6 +11,7 @@
   import Submission from "./components/Submission.svelte";
   import Progress from "./components/progress.svelte";
   import Studprofile from "./components/studprofile.svelte";
+  import Mentor from "./components/Mentor.svelte";
   router.mode.hash();
 
   window["ab"] = (_) => router.goto("/user/student");
@@ -37,7 +38,7 @@
   <Submission />
 </Route>
 <Route path="/user/mentor">
-  <h1>Mentor Page</h1>
+  <Mentor />
 </Route>
 <Route path="/user/student/progress">
   <Progress />

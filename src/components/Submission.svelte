@@ -1,4 +1,5 @@
 <script>
+  import Icon from "./icon.svelte";
   import NavBar from "./NavBar.svelte";
 </script>
 
@@ -6,10 +7,6 @@
   <nav>
     <h2>Teams project name</h2>
 
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-    />
     <NavBar />
   </nav>
 </div>
@@ -17,7 +14,7 @@
 <div class="add">
   <h1>Quote 2</h1>
   <div class="iconContainer">
-    <i class="fa fa-plus-square-o" id="add" />
+    <Icon icon="add" />
   </div>
 </div>
 <hr />
@@ -67,11 +64,11 @@
   </div>
   <div class="iconDiv">
     <div class="iconContainer">
-      <i class="fa fa-edit" id="edit" />
+      <Icon icon="edit" />
     </div>
 
     <div class="iconContainer">
-      <i class="fa fa-trash-o" id="trash" />
+      <Icon icon="delete" />
     </div>
   </div>
   <div class="container-3">
@@ -97,10 +94,10 @@
 
   <div class="iconDiv">
     <div class="iconContainer">
-      <i class="fa fa-comments-o" id="comment1" />
+      <Icon icon="chat" />
     </div>
     <div class="iconContainer">
-      <i class="fa fa-thumbs-o-up" id="upvote" />
+      <Icon icon="upgrade" />
     </div>
   </div>
   <div class="commentSection">
@@ -141,7 +138,7 @@
     height: 2em;
     width: 2em;
     margin: 0.3em;
-    font-size: larger;
+
     display: grid;
     place-content: center;
     transition: background 0.4s ease;

@@ -30,6 +30,7 @@
     "is-core-module": "^2.9.0",
     "kleur": "^4.1.4",
     "magic-string": "^0.26.2",
+    "material": "^0.4.3",
     "material-symbols": "^0.2.0",
     "ms": "^2.1.2",
     "nanoid": "^3.3.4",
@@ -42,7 +43,8 @@
     "source-map-js": "^1.0.2",
     "sourcemap-codec": "^1.4.8",
     "supports-preserve-symlinks-flag": "^1.0.0",
-    "svelte-hmr": "^0.14.11"
+    "svelte-hmr": "^0.14.11",
+    "symbols": "^0.0.6"
   },
   "repository": {
     "type": "git",

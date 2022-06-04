@@ -34,6 +34,14 @@
           <h3>Member6:</h3>
           
         </div>
+        <div class="inner">
+          <h3>Faculty Mentor:</h3>
+          
+        </div>
+        <div class="inner">
+          <h3>Industry Mentor:</h3>
+          
+        </div>
       </div>
     </div>
   </div>

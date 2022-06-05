@@ -115,35 +115,6 @@ const teams = [
         id: 2,
       },
     ],
-    proposals: [
-      {
-        title: "proposal1",
-        description: "description1",
-        upVotes: 2,
-        comments: [
-          {
-            comment: "comment1",
-            by: 0,
-          },
-          {
-            comment: "comment2",
-            by: 8,
-          },
-        ],
-        queries: "dku hdjy gduyg dj du fytdjbkduy du",
-      },
-      {
-        title: "proposal2",
-        description: "description2",
-        upVotes: 1,
-        comments: [
-          {
-            comment: "comment3",
-            by: 1,
-          },
-        ],
-      },
-    ],
   },
   {
     no: 2,
@@ -163,20 +134,51 @@ const teams = [
     //     assignees: [1, 7],
     //   },
     // ],
-    proposals: [
+  },
+];
+
+const proposals = [
+  {
+    title: "proposal1",
+    description: "description1",
+    upVotes: 2,
+    comments: [
       {
-        title: "proposal-1",
-        description: "description-1",
-        upVotes: 2,
-        comments: [
-          {
-            comment: "comment-1",
-            by: 0,
-          },
-        ],
-        queries: "dkugdkjdbjdg uduy gduy udy gudyg duy gduy dyt ",
+        comment: "comment1",
+        by: 0,
+      },
+      {
+        comment: "comment2",
+        by: 8,
       },
     ],
+    teamId: 1,
+    queries: "dku hdjy gduyg dj du fytdjbkduy du",
+  },
+  {
+    title: "proposal2",
+    description: "description2",
+    upVotes: 1,
+    comments: [
+      {
+        comment: "comment3",
+        by: 1,
+      },
+    ],
+    teamId: 1,
+  },
+  {
+    title: "proposal-1",
+    description: "description-1",
+    upVotes: 2,
+    comments: [
+      {
+        comment: "comment-1",
+        by: 0,
+      },
+    ],
+    teamId: 2,
+    queries: "dkugdkjdbjdg uduy gduy udy gudyg duy gduy dyt ",
   },
 ];
 
@@ -214,8 +216,8 @@ function findUser(id) {
 function findTeam(id) {
   const team = teams.find((team) => team.members.includes(id));
   team.mentor = findUser(team.mentor);
-  team.members = team.members.map((member) => findUser(member));
   team.tasks = groupTasks(team.tasks, team.projects);
+  team.members = team.members.map((member) => findUser(member));
   return team;
 }
 
@@ -248,6 +250,10 @@ app.get("/users/:name/:password", (req, res) => {
   } else {
     res.send({ error: `Username ${name} not found` });
   }
+});
+
+app.get("/proposals", (req, res) => {
+  res.send({ proposals });
 });
 
 // listen to the port

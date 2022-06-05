@@ -3,8 +3,6 @@
 
   const user = JSON.parse(localStorage.getItem("user"));
   const team = JSON.parse(localStorage.getItem("team"));
-
-  console.log(team);
 </script>
 
 <div class="container">
@@ -170,10 +168,6 @@
     width: 70vw;
     margin-left: 14vw;
     margin-top: 60px;
-  }
-  .dummy {
-    color: #d36767;
-    width: 2vw;
   }
   h2 {
     padding-top: 3vh;

@@ -1,6 +1,9 @@
 <script>
   import Icon from "./icon.svelte";
   import NavBar from "./NavBar.svelte";
+
+  const user = JSON.parse(localStorage.getItem("user"));
+  const team = JSON.parse(localStorage.getItem("team"));
 </script>
 
 <div class="header">
@@ -42,64 +45,61 @@
   <div class="submit1Button">
     <button class="submit1" type="submit"><b>Submit</b></button>
   </div>
-  <div class="container-2">
-    <div class="outer">
-      <div class="inner">
-        <h3>Problem statement :</h3>
-        <input type="text" id="content" />
-      </div>
-      <div class="inner">
-        <h3>Idea :</h3>
-        <input type="text" id="content" />
-      </div>
-      <div class="inner">
-        <h3>Queries :</h3>
-        <input type="text" id="content" />
-      </div>
-      <div class="inner">
-        <h3>Team :</h3>
-        <input type="text" id="content" />
-      </div>
-    </div>
-  </div>
-  <div class="iconDiv">
-    <div class="iconContainer">
-      <Icon icon="edit" />
-    </div>
 
-    <div class="iconContainer">
-      <Icon icon="delete" />
-    </div>
-  </div>
-  <div class="container-3">
-    <div class="outer">
-      <div class="inner">
-        <h3>Problem statement :</h3>
-        <input type="text" id="content" />
-      </div>
-      <div class="inner">
-        <h3>Idea :</h3>
-        <input type="text" id="content" />
-      </div>
-      <div class="inner">
-        <h3>Queries :</h3>
-        <input type="text" id="content" />
-      </div>
-      <div class="inner">
-        <h3>Team :</h3>
-        <input type="text" id="content" />
-      </div>
-    </div>
-  </div>
+  {#await fetch("/api/proposals") then data}
+    {#await data.json() then data}
+      {@const { proposals } = data}
 
-  <div class="iconDiv">
-    <div class="iconContainer">
-      <Icon icon="chat" />
-    </div>
-    <div class="iconContainer">
-      <Icon icon="upgrade" />
-    </div>
-  </div>
+      {#each proposals as proposal}
+        <div class="container">
+          <div class="outer">
+            <div class="inner">
+              <h3>Problem statement :</h3>
+              <span>{proposal.title}</span>
+            </div>
+            <div class="inner">
+              <h3>Idea :</h3>
+              <span>{proposal.description}</span>
+            </div>
+            <div class="inner">
+              <h3>Queries :</h3>
+              <span>{proposal.queries}</span>
+            </div>
+            <div class="inner">
+              <h3>Team : {proposal.teamId}</h3>
+
+              {#if proposal.teamId == team.no}
+                <div>
+                  {#each team.members as member}
+                    <span>{member.name}</span>
+                  {/each}
+                </div>
+              {/if}
+            </div>
+          </div>
+        </div>
+        <div class="iconDiv">
+          {#if proposal.teamId == team.no}
+            <div class="iconContainer">
+              <Icon icon="edit" />
+            </div>
+
+            <div class="iconContainer">
+              <Icon icon="delete" />
+            </div>
+          {:else}
+            <div class="iconContainer">
+              <Icon icon="chat" />
+            </div>
+            <div class="iconContainer">
+              <Icon icon="upgrade" />
+            </div>
+          {/if}
+        </div>
+      {/each}
+    {/await}
+  {/await}
+
   <div class="commentSection">
     <input class="comment2" type="text" placeholder="Enter your comments" />
     <div class="submitButton">
@@ -160,16 +160,14 @@
     margin-top: 60px;
   }
   .container-1,
-  .container-2,
-  .container-3 {
+  .container {
     width: 60vw;
     background-color: #d36767;
     margin: 3em;
     border-radius: 1em;
     box-shadow: -5px 36px 75px -25px #db9bd3;
   }
-  .container-2 input,
-  .container-3 input {
+  .container input {
     background-color: #d36767;
   }
   .outerContainer {

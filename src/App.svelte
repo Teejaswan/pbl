@@ -12,6 +12,7 @@
   import Progress from "./components/progress.svelte";
   import Studprofile from "./components/studprofile.svelte";
   import Mentor from "./components/Mentor.svelte";
+  import User from "./components/User.svelte";
   router.mode.hash();
 
   window["ab"] = (_) => router.goto("/user/student");
@@ -30,6 +31,9 @@
 </Route>
 <Route path="/login">
   <Login />
+</Route>
+<Route path="/user/:username" let:meta>
+  <User username={meta.params.username}/>
 </Route>
 <Route path="/user/student/todo">
   <Todo />

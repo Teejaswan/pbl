@@ -190,20 +190,27 @@ const teams = [
 ]
 
 function findTeam(user) {
-
-
-    let t = null;
+    let t = teams.filter(team => team.members.includes(user.id));
     teams.forEach(
         team => {
             if (team.members.includes(user.id)) {
-                t = team
+                t = team;
+                team.members.forEach(
+                    (member, index) => {
+                        t.members[index] = findUser(member);
+                    }
+                )
             }
         }
     )
     return t
 }
 
-// user authentication
+function findUser(id) {
+    return users.find(user => user.id === id);
+}
+
+// retrieve user data
 app.get('/users/:name/:password', (req, res) => {
 
     let name = req.params.name;
@@ -213,12 +220,20 @@ app.get('/users/:name/:password', (req, res) => {
 
     if (user) {
         if (pass[user.id] === password) {
-            let team = findTeam(user)
-            if (team) {
-                res.send({ user, team })
-            }
-            else {
-                res.send({ user })
+
+            switch (user.type) {
+                case "mentor":
+                    let teams = findTeam(user);
+                    break;
+
+                case "hod":
+                    break;
+
+                case "student":
+                    let team = findTeam(user)
+                    if (team) res.send({ user, team })
+                    else res.send({ user })
+                    break;
             }
         }
         else {
@@ -231,6 +246,7 @@ app.get('/users/:name/:password', (req, res) => {
 
 
 })
+
 
 // listen to the port
 app.listen(port, () => {

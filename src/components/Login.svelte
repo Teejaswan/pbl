@@ -5,19 +5,19 @@
   let user = {
     name: "",
     password: "",
-    type: "mentor",
   };
 
   const inputs = [];
 
-  function login() {
-    if (user.name === "mentor" && user.password === "mentor") {
-      router.goto("/user/" + user.type);
-    } else {
-      alert("username or password is incorrect");
-      user.name = user.password = "";
-      inputs[0].focus();
-    }
+  async function login() {
+    const { name, password } = user;
+    await fetch("/api/users/" + name + "/" + password)
+      .then((res) => res.json())
+      .then((res) => {
+        localStorage.setItem("user", JSON.stringify(res.user));
+        localStorage.setItem("team", JSON.stringify(res.team));
+        router.goto("/user/" + res.user.name);
+      });
   }
 </script>
 

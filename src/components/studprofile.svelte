@@ -13,15 +13,12 @@
 <div class="outerContainer">
   <div class="container">
     <div class="outer">
+      <div class="inner">
+        <h3>Mentor: {team.mentor.name}</h3>
+      </div>
       {#each team.members as member, index}
         <div class="inner">
           <h3>Member{index + 1}: {member.name}</h3>
-        </div>
-        <div class="inner">
-          <h3>Faculty Mentor:</h3>
-        </div>
-        <div class="inner">
-          <h3>Industry Mentor:</h3>
         </div>
       {/each}
     </div>

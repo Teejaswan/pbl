@@ -786,11 +786,6 @@ material-symbols@^0.2.0:
   resolved "https://registry.yarnpkg.com/material-symbols/-/material-symbols-0.2.0.tgz#f642495a0785fcbdf4108a67dc6a1fafd8ce4794"
   integrity sha512-zsnN7G8QLMNQhYfGIhdku5B6RyMZmdwyNvAHoi2Gy6NzKJ/XtVBhHMSjYCgU1x26ntpnh+RZhOg4/4IR17EdRA==
 
-material@^0.4.3:
-  version "0.4.3"
-  resolved "https://registry.yarnpkg.com/material/-/material-0.4.3.tgz#312d087fadf08210bd79dd3c36d0e0d51384d82d"
-  integrity sha512-uZM0D1V6rNNuiKsKKEY+Tf+2i+9FDcl1+eW10Wlta34ILPW3IiLqEZTLNHzq7bVkQFQBMvG8rLl0gmdmwyknkw==
-
 ms@2.1.2:
   version "2.1.2"
   resolved "https://registry.yarnpkg.com/ms/-/ms-2.1.2.tgz#d09d1f357b443f493382a8eb3ccd183872ae6009"
@@ -949,11 +944,6 @@ svelte@^3.44.0:
   version "3.48.0"
   resolved "https://registry.yarnpkg.com/svelte/-/svelte-3.48.0.tgz#f98c866d45e155bad8e1e88f15f9c03cd28753d3"
   integrity sha512-fN2YRm/bGumvjUpu6yI3BpvZnpIm9I6A7HR4oUNYd7ggYyIwSA/BX7DJ+UXXffLp6XNcUijyLvttbPVCYa/3xQ==
-
-symbols@^0.0.6:
-  version "0.0.6"
-  resolved "https://registry.yarnpkg.com/symbols/-/symbols-0.0.6.tgz#3185a494e5cc7bf82b0ef0ec412a6bbedb6ccfbf"
-  integrity sha512-0ZKKf3NMufUsozLyCegt0A6BGdRCqoy5LSFufZtJFjsvEQoHAEqAXJH5b3yBda0zNlR4AuXQ7PIF1Lma5Z3Dng==
 
 tinro@^0.6.12:
   version "0.6.12"

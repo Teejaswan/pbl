@@ -232,7 +232,7 @@ app.get("/users/:name/:password", (req, res) => {
     if (pass[user.id] === password) {
       switch (user.type) {
         case "mentor":
-          let teams = findTeam(user.id);
+          res.send({ user })
           break;
 
         case "hod":
@@ -265,4 +265,3 @@ Server running at http://localhost:${port}
 `
   );
 });
-n 

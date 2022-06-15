@@ -3,14 +3,24 @@
   import Studprofile from "./studprofile.svelte";
 
   export let username;
+  export let type;
 
   const user = JSON.parse(localStorage.getItem("user"));
 
   if (username === user.name) {
-    router.goto("/profile");
-  }
-  else {
-      router.goto("/login")
-  }
+    switch (type) {
+      case "mentor":
+        router.goto("/mentor");
+        break;
 
+      case "hod":
+        break;
+
+      default:
+        router.goto("/profile");
+        break;
+    }
+  } else {
+    router.goto("/login");
+  }
 </script>

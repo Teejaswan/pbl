@@ -16,7 +16,9 @@
       .then((res) => {
         localStorage.setItem("user", JSON.stringify(res.user));
         localStorage.setItem("team", JSON.stringify(res.team));
-        router.goto("/user/" + res.user.name);
+        console.log(res);
+        debugger;
+        router.goto(`/user/${res.user.type}/${res.user.name}`);
       });
   }
 </script>

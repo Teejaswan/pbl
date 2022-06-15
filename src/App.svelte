@@ -32,8 +32,8 @@
 <Route path="/login">
   <Login />
 </Route>
-<Route path="/user/:username" let:meta>
-  <User username={meta.params.username}/>
+<Route path="/user/:type/:username" let:meta>
+  <User username={meta.params.username} type={meta.params.type} />
 </Route>
 <Route path="/user/student/todo">
   <Todo />
@@ -41,14 +41,14 @@
 <Route path="/user/student/submission">
   <Submission />
 </Route>
-<Route path="/user/mentor">
-  <Mentor />
-</Route>
 <Route path="/user/student/progress">
   <Progress />
 </Route>
 <Route path="/profile">
   <Studprofile />
+</Route>
+<Route path="/mentor">
+  <Mentor />
 </Route>
 
 <style>

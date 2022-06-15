@@ -1,9 +1,12 @@
 <script>
   import Icon from "./icon.svelte";
   import NavBar from "./NavBar.svelte";
+  
+  const user = JSON.parse(localStorage.getItem("user"));
 </script>
 
 <div class="container">
+  <h1>{user.name}</h1>
   <div class="header">
     <h2>Teams project name</h2>
     <NavBar />

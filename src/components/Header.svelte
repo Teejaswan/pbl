@@ -4,15 +4,14 @@
 </script>
 
 <nav>
-  <div class="title">
-    <div class="content">
+  <div class="title"></div>
+  <div class="content">
     <h3>PBL MADE EASY</h3>
     <h4>Stuck with project?</h4>
     <h4>Why PME?</h4>
     <a href="/contact">Contact</a>
     <button class="login" on:click={(_) => router.goto("/choice")}>Login</button>
     </div>
-  </div>
 </nav>
 <div class="outer">
   <div class="left">
@@ -39,27 +38,30 @@
     margin: 0;
     height: 100vh;
   }
-  .title {
-    clip-path:polygon(0 0, 100% 0%, 100% 21%, 0 11%);
-    
+  .title{
     width: 100vw;
     background-color:#E1FF27;
     display: flex;
+    flex-direction:row;
     justify-content: space-around;
     align-items: center;
     margin: 0;
     height: 20vh;
-    position: absolute;
-    z-index: 1;
+    top:-3vh;
+    position:absolute;
+    transform: matrix(1, 0.03, -0.06, 1, 0, 0);
+    z-index:-2; 
     /*border-radius: 0 0 60px 60px;*/
   }
   .content{
-    background: black;
-    z-index: 2;
-  }
-  nav{
-    height: 90vh;
-  }
+
+   display: flex;
+   flex-direction:row;
+   justify-content: space-around;
+   align-items: center;
+   width:100vw;
+   height: 13vh; 
+  } 
   .left {
     margin-left: 2em; 
   }
@@ -72,9 +74,8 @@
     width: 40vw;
   }
   h3,h4{
-     color:black;
+    color:black;
   }
-  
 
   button {
     font-size: small;
@@ -82,27 +83,25 @@
     place-items: center;
     padding: 0;
     cursor: pointer;
-    border: none;
-    outline: none;
-    color: #6273CB;
+    color:#6273CB;
+    border:0.2em solid #6273CB;
     background-color: #E1FF27;
-    border-color: 6273CB;
     width: 8.5vh;
     height: 4vh;
-    border-radius: 2em;
-    box-shadow: 5px 5px 10px 0px #a26868;
+    padding:0 4.5em 0 2em;
+    border-radius: 1em;
     transition: all 300ms ease-in-out;
   }
-  button:hover {
-    background-color: #d28686;
-    transform: translate(-2px, -2px);
-    cursor: pointer;
-  }
+ 
   button:active {
-    background-color: #e491cf;
+    background-color:#E1FF27 ;
     transform: translateY(2px);
   }
-
+  
+  a{
+    text-decoration:none;
+    color:black;
+  }
   .right {
     width: 40vw;
   }

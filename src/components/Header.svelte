@@ -5,10 +5,13 @@
 
 <nav>
   <div class="title">
-    <h3>PROJECT-TITLE</h3>
-    <button class="login" on:click={(_) => router.goto("/choice")}>Login</button
-    >
+    <div class="content">
+    <h3>PBL MADE EASY</h3>
+    <h4>Stuck with project?</h4>
+    <h4>Why PME?</h4>
     <a href="/contact">Contact</a>
+    <button class="login" on:click={(_) => router.goto("/choice")}>Login</button>
+    </div>
   </div>
 </nav>
 <div class="outer">
@@ -34,19 +37,31 @@
     place-items: center;
     width: 100%;
     margin: 0;
-    height: 90vh;
+    height: 100vh;
   }
   .title {
+    clip-path:polygon(0 0, 100% 0%, 100% 21%, 0 11%);
+    
+    width: 100vw;
+    background-color:#E1FF27;
     display: flex;
     justify-content: space-around;
     align-items: center;
-
-    background-color: #eae7dc;
-    height: 100%;
+    margin: 0;
+    height: 20vh;
+    position: absolute;
+    z-index: 1;
     /*border-radius: 0 0 60px 60px;*/
   }
+  .content{
+    background: black;
+    z-index: 2;
+  }
+  nav{
+    height: 90vh;
+  }
   .left {
-    margin-left: 2em;
+    margin-left: 2em; 
   }
 
   h1 {
@@ -56,6 +71,10 @@
   img {
     width: 40vw;
   }
+  h3,h4{
+     color:black;
+  }
+  
 
   button {
     font-size: small;
@@ -65,8 +84,9 @@
     cursor: pointer;
     border: none;
     outline: none;
-    color: white;
-    background-color: #d36767;
+    color: #6273CB;
+    background-color: #E1FF27;
+    border-color: 6273CB;
     width: 8.5vh;
     height: 4vh;
     border-radius: 2em;

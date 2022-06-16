@@ -1,6 +1,6 @@
 <script>
   import { router } from "tinro";
-  import LoginImage from "../assets/Login.jpg";
+  import Login1 from "../assets/login1.jpg";
 
   let user = {
     name: "",
@@ -155,41 +155,41 @@
 
 <div class="outer">
   <div class="inner">
-<div class="container1">
-  <div class="content">
-    <h3>WELCOME TO A PLATFORM FOR MAKING YOUR PROJECT WORK EASIER</h3>
-    <!--img-->
-  </div>
-</div>
-  <div class="container2">
-    <div class="header"></div>
+    <div class="container1">
+      <div class="content">
+        <h3>WELCOME TO A PLATFORM FOR MAKING YOUR PROJECT WORK EASIER</h3>
+        <!--img-->
+      </div>
+    </div>
+    <div class="container2">
+      <div class="header"></div>
       <h4>Login</h4> 
-   <div class="username">
-    <h2>Username</h2>
+      <div class="username">
+        <h2>Username</h2>
+      <div class="space"></div>
+      <input
+      type="username"
+      class="user-input"
+      bind:this={inputs[0]}
+      bind:value={user.name}
+      autofocus
+      />
+    </div>
+    <div class="password">
+      <h2>Password</h2>
     <div class="space"></div>
-    <input
-    type="username"
-    class="user-input"
-    bind:this={inputs[0]}
-    bind:value={user.name}
-    autofocus
-    />
-  </div>
-  <div class="password">
-    <h2>Password</h2>
-    <div class="space"></div>
-    <input
+        <input
           type="password"
           class="pass-input"
           bind:this={inputs[1]}
           bind:value={user.password}
         />
         
-  </div>
-  <div class="Button">
-  <button class="login" on:click={login}>Login</button>
-  <button class="cancel">Cancel</button>
-  </div> 
+    </div>
+    <div class="Button">
+      <button class="login" on:click={login}>Login</button>
+      <button class="cancel">Cancel</button>
+    </div> 
   </div> 
 </div>
 </div>
@@ -205,101 +205,117 @@
     }
     .inner{
       display:flex;
-      box-shadow: 0.8em 0.8em 2em -0.3em black;
+      width: 40vw;
+      height:55.6vh;
+      border-radius:1em;
+      box-shadow: 0.8em 0.8em 2em -0.3em rgb(104, 103, 103);
     }
     .container1{
       display:flex;
-      width:20vw;
-      height:50vh;
+      width:40vw;
+      height:51vh;
       background-color:#E1FF27;
       flex:wrap;
       justify-content:center;
       padding: 2em 1em 0 1em;
-      border-radius:0.5em;
-      
+      border-radius:1em 0 0 1em;
+    
     }
     .container2{
       display:flex;
-      padding: 3em 3em 0 3em;
+      width:60vw;
+      height:51vh;
       flex-direction: column;
-      flex:start;
+      padding:3em 0 0 1em;
       gap:2em;
       margin:0;
+      
 
     }
     h4{
       font-family: 'Lato',sans-serif;
       display:flex;
+      font-size: calc(0.75em + 1vmin);
       background-color:#6273CB ;
-      width:16vw;
+      width:8vw;
       height:6vh;
       margin:0;
       align-items:center;
       justify-content:left;
-      padding-left: 0.6em;
+      padding-left: 0.6vw;
       z-index:3;
-      box-shadow: 3.49524px 0px 8.7381px rgba(0, 0, 0, 0.62);
+      /* box-shadow: 0.2em 0.3em 2em -0.3em rgb(104, 103, 103); */
       
     }
     h3{
       font-family: 'Lato',sans-serif;
       color:black;
-      font-size:1.8em;
+      font-size: calc(0.75em + 1vmin);
       
     }
     .header{
       background-color:#E1FF27;
-      width:18vw;
+      width:10vw;
       height:6vh;
       margin:0;
       position:absolute;
-      box-shadow: 3.49524px 0px 8.7381px rgba(0, 0, 0, 0.62);
+      /* box-shadow: 0.4em 0.5em 2em -0.3em rgb(104, 103, 103); */
+      
     }
     h2{
       margin:0;
       outline-color:#6273CB;
       font-family:'Lato',sans-serif;
+      font-size: calc(0.75em + 1vmin);
     }
     input{
       border:0.25em solid #6273CB;
       border-radius:0.7em;
       outline:none;
       height:3.5vh;
-      width:16vw;
+      width:15vw;
     }
     .login{
-       width:8em;
-       height:2.5em;
-       margin-right:2em;
+       width:12vw;
+       height:5vh;
+       margin-right:2vw;
        outline:none;
        border-radius:1.2em;
+       font-size: calc(0.75em + 0.5vmin);
        background-color: #6273CB;
        border:0.25em solid #6273CB;
        color:white;
+       cursor: pointer;
+       transition: all 300ms ease-in-out;
     }
     .cancel{
-      width:8em;
-      height:2.5em;
+      width:12vw;
+      height:5vh;
       outline:none;
       color:#6273CB;
       border:0.25em solid #6273CB;
+      font-size: calc(0.75em + 0.5vmin);
       border-radius:1.2em;
+      cursor: pointer;
+      transition: all 300ms ease-in-out;
+    }
+    .cancel:active{
+      background-color:none;
+      transform: translateY(2px);
+    }
+    .login:active{
+      background-color: #6273CB;
+      transform: translateY(2px);
     }
     .Button{
       display:flex;
-      height:4em;
-      width: 16em;
+      height:5vh;
+      width: 15vw;
       justify-content:space-evenly;
+    
     }
     .space{
-      height:0.5em;
+      height:0.5vw;
     }
-    
-    
   
-
-  
-    
-    
-    
   </style>

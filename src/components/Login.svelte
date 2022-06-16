@@ -154,6 +154,7 @@
 </style> -->
 
 <div class="outer">
+  <div class="inner">
 <div class="container1">
   <div class="content">
     <h3>WELCOME TO A PLATFORM FOR MAKING YOUR PROJECT WORK EASIER</h3>
@@ -165,6 +166,7 @@
       <h4>Login</h4> 
    <div class="username">
     <h2>Username</h2>
+    <div class="space"></div>
     <input
     type="username"
     class="user-input"
@@ -175,6 +177,7 @@
   </div>
   <div class="password">
     <h2>Password</h2>
+    <div class="space"></div>
     <input
           type="password"
           class="pass-input"
@@ -183,8 +186,12 @@
         />
         
   </div>
+  <div class="Button">
   <button class="login" on:click={login}>Login</button>
-  </div>
+  <button class="cancel">Cancel</button>
+  </div> 
+  </div> 
+</div>
 </div>
 
   <style>
@@ -195,7 +202,10 @@
     color: black;
     justify-content: center;
     align-items: center;
-    
+    }
+    .inner{
+      display:flex;
+      box-shadow: 0.8em 0.8em 2em -0.3em black;
     }
     .container1{
       display:flex;
@@ -206,10 +216,11 @@
       justify-content:center;
       padding: 2em 1em 0 1em;
       border-radius:0.5em;
+      
     }
     .container2{
       display:flex;
-      padding: 0 1em 0 3em;
+      padding: 3em 3em 0 3em;
       flex-direction: column;
       flex:start;
       gap:2em;
@@ -227,6 +238,7 @@
       justify-content:left;
       padding-left: 0.6em;
       z-index:3;
+      box-shadow: 3.49524px 0px 8.7381px rgba(0, 0, 0, 0.62);
       
     }
     h3{
@@ -241,17 +253,51 @@
       height:6vh;
       margin:0;
       position:absolute;
+      box-shadow: 3.49524px 0px 8.7381px rgba(0, 0, 0, 0.62);
     }
     h2{
       margin:0;
       outline-color:#6273CB;
+      font-family:'Lato',sans-serif;
     }
     input{
-      border:0.3em solid #6273CB;
-      border-radius:2em;
+      border:0.25em solid #6273CB;
+      border-radius:0.7em;
+      outline:none;
       height:3.5vh;
       width:16vw;
     }
+    .login{
+       width:8em;
+       height:2.5em;
+       margin-right:2em;
+       outline:none;
+       border-radius:1.2em;
+       background-color: #6273CB;
+       border:0.25em solid #6273CB;
+       color:white;
+    }
+    .cancel{
+      width:8em;
+      height:2.5em;
+      outline:none;
+      color:#6273CB;
+      border:0.25em solid #6273CB;
+      border-radius:1.2em;
+    }
+    .Button{
+      display:flex;
+      height:4em;
+      width: 16em;
+      justify-content:space-evenly;
+    }
+    .space{
+      height:0.5em;
+    }
+    
+    
+  
+
   
     
     

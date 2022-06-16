@@ -184,12 +184,12 @@
           bind:this={inputs[1]}
           bind:value={user.password}
         />
-        
+        <div class="button">
+          <button class="login" on:click={login}>Login</button>
+          <button class="cancel">Cancel</button>
+        </div>
     </div>
-    <div class="Button">
-      <button class="login" on:click={login}>Login</button>
-      <button class="cancel">Cancel</button>
-    </div> 
+     
   </div> 
 </div>
 </div>
@@ -205,37 +205,42 @@
     }
     .inner{
       display:flex;
-      width: 40vw;
+      align-items:center;
+      width: 50vw;
       height:55.6vh;
-      border-radius:1em;
-      box-shadow: 0.8em 0.8em 2em -0.3em rgb(104, 103, 103);
+      border-radius:0 1em 0 0 ;
+      padding:0 6em 0 0;
+      box-shadow: 0.8em 0.8em 2em -0.3em rgb(189, 188, 188);
+    }
+    h3{
+     font-family: 'Lato',sans-serif;
+     color:black;
+     font-size: calc(1em + 1vmin);
     }
     .container1{
       display:flex;
-      width:40vw;
-      height:51vh;
+      width:35vw;
+      height:51.5vh;
       background-color:#E1FF27;
       flex:wrap;
       justify-content:center;
       padding: 2em 1em 0 1em;
-      border-radius:1em 0 0 1em;
-    
+      border-radius:0 0 0 1em;
     }
     .container2{
       display:flex;
       width:60vw;
       height:51vh;
       flex-direction: column;
-      padding:3em 0 0 1em;
-      gap:2em;
-      margin:0;
-      
-
+      margin: 2em 0 0 2em;
+      justify-content: left;
+      align-items:left;
+      gap:1.5em;
     }
     h4{
       font-family: 'Lato',sans-serif;
       display:flex;
-      font-size: calc(0.75em + 1vmin);
+      font-size: calc(0.75em + 0.5vmin);
       background-color:#6273CB ;
       width:8vw;
       height:6vh;
@@ -245,14 +250,8 @@
       padding-left: 0.6vw;
       z-index:3;
       /* box-shadow: 0.2em 0.3em 2em -0.3em rgb(104, 103, 103); */
-      
     }
-    h3{
-      font-family: 'Lato',sans-serif;
-      color:black;
-      font-size: calc(0.75em + 1vmin);
-      
-    }
+    
     .header{
       background-color:#E1FF27;
       width:10vw;
@@ -260,25 +259,22 @@
       margin:0;
       position:absolute;
       /* box-shadow: 0.4em 0.5em 2em -0.3em rgb(104, 103, 103); */
-      
     }
     h2{
-      margin:0;
       outline-color:#6273CB;
       font-family:'Lato',sans-serif;
-      font-size: calc(0.75em + 1vmin);
+      font-size: calc(0.75em + 0.5vmin);
     }
     input{
       border:0.25em solid #6273CB;
       border-radius:0.7em;
       outline:none;
       height:3.5vh;
-      width:15vw;
+      width:20vw;
     }
     .login{
-       width:12vw;
+       width:12vh;
        height:5vh;
-       margin-right:2vw;
        outline:none;
        border-radius:1.2em;
        font-size: calc(0.75em + 0.5vmin);
@@ -289,10 +285,11 @@
        transition: all 300ms ease-in-out;
     }
     .cancel{
-      width:12vw;
+      width:12vh;
       height:5vh;
       outline:none;
       color:#6273CB;
+      margin-left:1em;
       border:0.25em solid #6273CB;
       font-size: calc(0.75em + 0.5vmin);
       border-radius:1.2em;
@@ -307,12 +304,14 @@
       background-color: #6273CB;
       transform: translateY(2px);
     }
-    .Button{
-      display:flex;
+    .button{
+      display:inline-flex;
       height:5vh;
-      width: 15vw;
-      justify-content:space-evenly;
-    
+      width: 10vw;
+      padding-top:1em;
+      justify-content:space-around;
+     
+      
     }
     .space{
       height:0.5vw;

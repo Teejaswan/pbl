@@ -20,7 +20,5 @@
         router.goto("/profile");
         break;
     }
-  } else {
-    router.goto("/login");
   }
 </script>

@@ -55,10 +55,10 @@
   /* #EAE7DC (LIGHT GREY)  #D8C3A5 (SANDAL)  #8E8D8A (DARK GREY)    
   #e2a9a9 (LIGHT PINK)  #d36767 (DARK PINK) 
   
-  h1:    #4a4747  */
+  h1:    #4a4747  
   * {
     margin: 0;
     padding: 0;
     overflow-y: none;
-  }
+  }*/
 </style>

@@ -184,10 +184,10 @@
           bind:this={inputs[1]}
           bind:value={user.password}
         />
-        <div class="button">
-          <button class="login" on:click={login}>Login</button>
-          <button class="cancel">Cancel</button>
-        </div>
+    </div>
+    <div class="button">
+      <button class="login" on:click={login}>Login</button>
+      <button class="cancel">Cancel</button>
     </div>
      
   </div> 
@@ -305,10 +305,10 @@
       transform: translateY(2px);
     }
     .button{
-      display:inline-flex;
+      display:flex;
+      flex-direction:row;
       height:5vh;
-      width: 10vw;
-      padding-top:1em;
+      width: 20vw;
       justify-content:space-around;
      
       

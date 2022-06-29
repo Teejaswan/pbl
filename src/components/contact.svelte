@@ -29,13 +29,13 @@
   }
   .outer {
     padding: 2em;
-
-    text-align: center;
+    text-align: left;
+    
   }
   h4 {
     padding-left: 25px;
   }
   .container {
-    background-color: #e2a9a9;
+    background-color: #E9ECFD;
   }
 </style>

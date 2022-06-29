@@ -14,14 +14,19 @@
     </div>
 </nav>
 <div class="outer">
+  <div class="shadow">
   <div class="left">
-    <h1>PBL Projects</h1>
+  <div class="innerleft">
+    <div class="container">
+      <h1>PBL Projects</h1>
     <p>
       Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique
       perferendis autem rem reiciendis provident odio, voluptatem quae ut
-      repudiandae doloribus natus, magnam quis! Ea blanditiis adipisci non fugit
-      ratione eum?
+      repudiandae doloribus natus!
     </p>
+    </div>
+  </div>
+</div>
   </div>
   <div class="right">
     <img src={headerBg} alt="fiygbfijyfguy" />
@@ -38,6 +43,9 @@
     margin: 0;
     height: 100vh;
   }
+  .shadow{
+    filter: drop-shadow(1.25em .75em 2em rgba(87, 87, 88, 0.41));
+  }
   .title{
     width: 100vw;
     background-color:#E1FF27;
@@ -49,7 +57,7 @@
     height: 20vh;
     top:-3vh;
     position:absolute;
-    transform: matrix(1, 0.03, -0.06, 1, 0, 0);
+    clip-path: polygon(0 1%, 100% 0, 100% 100%, 0 75%);
     z-index:-2; 
     /*border-radius: 0 0 60px 60px;*/
   }
@@ -62,13 +70,28 @@
    width:100vw;
    height: 13vh; 
   } 
-  .left {
-    margin-left: 2em; 
+  .left{
+    clip-path: polygon(0 0, 100% 0, 80% 100%, 0% 100%);
+    background-color:#E1FF27;
+    width:51vw;
+    
+  }
+  .innerleft {
+    clip-path: polygon(0 0, 100% 0, 80% 100%, 0% 100%);
+    background-color:#6273CB; 
+    width:44vw;
+    height:40vh;
+    padding:2rem 0 2rem 1rem;
+  }
+  p{
+    margin-right:5em;
+    font-size: calc(0.75em + 0.5vmin);
   }
 
   h1 {
     font-family: "Yeseva One", sans-serif;
     color: #4a4747;
+    font-size: calc(0.75em + 2vmin);
   }
   img {
     width: 40vw;

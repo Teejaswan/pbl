@@ -7,8 +7,8 @@
   <div class="title"></div>
   <div class="content">
     <h3>PBL MADE EASY</h3>
-    <h4>Stuck with project?</h4>
-    <h4>Why PME?</h4>
+    <h4><a href="/steps">STUCK UP WITH PROJECT?</a></h4>
+    <h4><a href="/attribute">Why PME?</a></h4>
     <a href="/contact">Contact</a>
     <button class="login" on:click={(_) => router.goto("/choice")}>Login</button>
     </div>
@@ -18,11 +18,11 @@
   <div class="left">
   <div class="innerleft">
     <div class="container">
-      <h1>PBL Projects</h1>
+    <h1>PBL Projects</h1>
     <p>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique
-      perferendis autem rem reiciendis provident odio, voluptatem quae ut
-      repudiandae doloribus natus!
+      Problem-Based Learning is a method of learning in which complex real-world 
+      problems are used to promote learning of concepts and 
+      principles as opposed to direct presentation of facts and concepts.
     </p>
     </div>
   </div>
@@ -79,19 +79,22 @@
   .innerleft {
     clip-path: polygon(0 0, 100% 0, 80% 100%, 0% 100%);
     background-color:#6273CB; 
+    display:flex;
+    flex:wrap;
     width:44vw;
     height:40vh;
-    padding:2rem 0 2rem 1rem;
+    padding:0.5rem 0 2rem 1rem;
   }
   p{
-    margin-right:5em;
-    font-size: calc(0.75em + 0.5vmin);
+    padding:0 2em 0 1em;
+    font-size: calc(0.85rem + 0.5vmin);
   }
 
   h1 {
     font-family: "Yeseva One", sans-serif;
+    padding-left:0.7em;
     color: #4a4747;
-    font-size: calc(0.75em + 2vmin);
+    font-size: calc(1rem + 1vmin);
   }
   img {
     width: 40vw;
@@ -124,6 +127,7 @@
   a{
     text-decoration:none;
     color:black;
+    font-weight:700;
   }
   .right {
     width: 40vw;

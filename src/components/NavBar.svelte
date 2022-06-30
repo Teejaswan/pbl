@@ -5,13 +5,13 @@
   <nav>
     <ul>
       <li>
-        <a href="#0">Home</a>
+        <a href="/">Home</a>
       </li>
       <li>
-        <a href="#0">Idea Submission</a>
+        <a href="/Submission">Idea Submission</a>
       </li>
       <li>
-        <a href="#0">Team</a>
+        <a href="/studprofile">Team</a>
       </li>
     </ul>
   </nav>

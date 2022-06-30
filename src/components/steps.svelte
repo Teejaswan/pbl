@@ -1,32 +1,34 @@
 <script>
+// @ts-nocheck
+
   import Saos from "saos";
 
   let processes = [
     {
-      title: "this is title 1",
-      description: "this is the description for title 1",
+      title: "Is there a Problem?",
+      description: "The student must form a team of 4 or 5 and identify their problem statement. They must clear about the problem that is being faced and a rough idea on the solution for the problem.",
     },
     {
-      title: "this is title 2",
-      description: "this is the description for title 2",
+      title: "Do you need Help?",
+      description: "The team will be allocated an industry/faculty/student mentor who can guide them through their project and develop a realistic solution for the problem. The might also get an idea on what major domain they are going to work on.",
     },
     {
-      title: "this is title 3",
-      description: "this is the description for title 3",
+      title: "Is it Ready?",
+      description: "The team can get ready for their project along with the requirements. Once they complete their project they can check for concepts used and refine their project.",
     },
     {
-      title: "this is title 4",
-      description: "this is the description for title 4",
+      title: "Is it so good?",
+      description: "The team can present their final working prototype and they can collabrate with industry mentors to match their project with industry standards.",
     },
     {
-      title: "this is title 5",
-      description: "this is the description for title 5",
+      title: "What work have you done?",
+      description: "The team can prepare a research paper based on various facts,information and innovative ideas found in the process and quote the research gap if any.",
     },
   ];
 </script>
 
 <div class="outer">
-  <h1>STEPS IN A PROJECT</h1>
+  <h1>STUCK UP WITH PROJECT?</h1>
   {#each processes as process}
     {@const { title, description } = process}
     <div class="inner">
@@ -38,7 +40,12 @@
         once
       >
         <div class="rectangle">
-          {description}
+          <div class="inner1">
+            <div class="inner2">
+             <div class="content">
+              {description}
+             </div>
+          </div>
         </div>
       </Saos>
     </div>
@@ -63,18 +70,37 @@
     place-items: center;
     height: 11em;
     width: 11em;
-    background: #d36767;
+    background: #6273CB;
+    color:#dafc00;
     border-radius: 50em;
+    padding:1em;
   }
-  .rectangle {
+  .inner1{
     height: 15em;
     width: 25em;
     display: grid;
     place-items: center;
     border-radius: 2em;
-    background: #e2a9a9;
-    box-shadow: -5px 36px 75px -25px #db9bd3;
+    background: #E1FF27;
+    padding:0 1em 0 1em;
+    box-shadow: -5px 36px 75px -25px rgba(42, 42, 43, 0.41);
     transition: height 0.5s ease-in-out;
+  }
+  .inner2{
+    transform: matrix(1, 0, -0.20, 1, 0, 0);
+    border-radius:2em;
+    background-color:#6273CB;
+    width:25em;
+    height:15.5em;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    font-size: calc(0.75em + 0.5vmin);
+  }
+  .content{
+    display:flex;
+    justify-content: center;
+    padding:1em;
   }
   h1 {
     text-align: center;

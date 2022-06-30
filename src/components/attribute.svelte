@@ -8,13 +8,29 @@
     {#each attributes as attribute}
       {#if attribute % 2 != 0}
         <div class="inner">
-          <div class="upper">{attribute}</div>
+          <div class="upper">
+            <div class="inner1">
+              <div class="inner2">
+                <div class="content">
+                  {attribute}
+                </div>
+              </div>
+            </div>
+          </div>
           <h3>title</h3>
         </div>
       {:else}
         <div class="inner">
           <h3>title</h3>
-          <div class="lower">{attribute}</div>
+          <div class="lower">
+            <div class="inner1">
+              <div class="inner2">
+                <div class="content">
+                  {attribute}
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       {/if}
     {/each}
@@ -38,7 +54,7 @@
     height: 15vw;
     width: 15vw;
     margin: 1vw;
-    background-color: blue;
+    background-color: #6273CB;
     transition: all 0.3s ease-in-out;
     border-radius: 20px;
   }
@@ -67,4 +83,12 @@
     justify-content: center;
     align-items: center;
   }
+  .inner1{
+    
+    border-radius:1rem 1rem 0 0;
+    height:4vw;
+    background-color: #E1FF27;
+  }
+  
+  
 </style>

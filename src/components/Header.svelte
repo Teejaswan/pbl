@@ -10,7 +10,7 @@
     <h4><a href="/steps">STUCK UP WITH PROJECT?</a></h4>
     <h4><a href="/attribute">Why PME?</a></h4>
     <a href="/contact">Contact</a>
-    <button class="login" on:click={(_) => router.goto("/choice")}>Login</button>
+    <button class="login" on:click={(_) => router.goto("/login")}>Login</button>
     </div>
 </nav>
 <div class="outer">

@@ -1,32 +1,34 @@
 <script>
-  let attributes = [1, 2, 3, 4, 5];
+  let attributes = [{ id : 1, content :"gh"},
+                   {id :2, content :"as "},
+                    {id : 3, content : "gfg"},
+                    {id : 4, content : "fg"}, 
+                    {id : 5, content : "hdv" }];
 </script>
 
 <div class="container">
   <h1>Multiple work.One workspace</h1>
   <div class="outer">
     {#each attributes as attribute}
-      {#if attribute % 2 != 0}
+      {#if attribute.id % 2 != 0}
         <div class="inner">
           <div class="upper">
             <div class="inner1">
               <div class="inner2">
                 <div class="content">
-                  {attribute}
+                  {attribute.content}
                 </div>
               </div>
             </div>
           </div>
-          <h3>title</h3>
         </div>
       {:else}
         <div class="inner">
-          <h3>title</h3>
           <div class="lower">
             <div class="inner1">
               <div class="inner2">
                 <div class="content">
-                  {attribute}
+                  {attribute.content}
                 </div>
               </div>
             </div>

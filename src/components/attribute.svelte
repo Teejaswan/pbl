@@ -46,8 +46,11 @@
     justify-content: center;
     align-items: center;
     display: flex;
+    flex-wrap:wrap;
     height: 40vh;
+    width:100vw;
   }
+
   .container {
     height: 100vh;
   }
@@ -61,7 +64,7 @@
     border-radius: 20px;
   }
   .lower {
-    margin-top: 2em;
+    margin-top: 6em;
   }
   h1 {
     padding: 15vh 0;
@@ -86,10 +89,18 @@
     align-items: center;
   }
   .inner1{
-    
     border-radius:1rem 1rem 0 0;
     height:4vw;
     background-color: #E1FF27;
+  }
+  @media only screen and (max-width:700px){
+    .container{
+      height:80vh;
+      transition: all 50ms ease-in;
+    }
+    h1{
+      padding:10vh 0;
+    }
   }
   
   

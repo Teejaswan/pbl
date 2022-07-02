@@ -62,13 +62,13 @@
     /*border-radius: 0 0 60px 60px;*/
   }
   .content{
-
    display: flex;
    flex-direction:row;
    justify-content: space-around;
    align-items: center;
    width:100vw;
    height: 13vh; 
+   font-size: calc(0.75rem + 0.5vmin);
   } 
   .left{
     clip-path: polygon(0 0, 100% 0, 80% 100%, 0% 100%);
@@ -131,5 +131,22 @@
   }
   .right {
     width: 40vw;
+  }
+  @media only screen and (max-width:700px){
+    .right{
+      display:none;
+    }
+    .left{
+      width:100vw;
+      transition: all 50ms ease-in;
+    }
+    .innerleft{
+      width:90vw;
+      transition: all 50ms ease-in;
+    }
+    .outer{
+      height:65vh;
+      transition: all 50ms ease-in;
+    }
   }
 </style>

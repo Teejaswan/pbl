@@ -58,7 +58,7 @@
     display: flex;
     align-items: center;
     justify-content: space-evenly;
-    height: 68vh;
+    height: 74vh;
   }
 
   .inner:nth-child(even) {
@@ -113,11 +113,7 @@
     padding: 4rem 0 2rem 0;
   }
   .outer {
-<<<<<<< HEAD
     background-color: #eee;
-=======
-    background-color:#eee;
->>>>>>> 2846f91e5c0b1aca2d59943e5f61218f6f0d5a82
   }
   @keyframes -global-scroll1 {
     0% {

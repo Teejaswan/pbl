@@ -68,7 +68,7 @@
    align-items: center;
    width:100vw;
    height: 13vh; 
-   font-size: calc(0.75rem + 0.5vmin);
+   font-size: calc(1vh + 0.5vmin);
   } 
   .left{
     clip-path: polygon(0 0, 100% 0, 80% 100%, 0% 100%);
@@ -114,7 +114,7 @@
     background-color: #E1FF27;
     width: 8.5vh;
     height: 4vh;
-    padding:0 4.5em 0 2em;
+    padding:0 5.5vw 0 2vw;
     border-radius: 1em;
     transition: all 300ms ease-in-out;
   }
@@ -147,6 +147,12 @@
     .outer{
       height:65vh;
       transition: all 50ms ease-in;
+    }
+    .title{
+      height:16vh;
+    }
+    .content{
+      height:10vh;
     }
   }
 </style>

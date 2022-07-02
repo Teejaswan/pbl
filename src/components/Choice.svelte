@@ -1,13 +1,19 @@
-<script>
+<!-- <script>
 </script>
 
 <div>
   <nav>
-    <div class="Outer">
-      <div class="Inner">
+    <div class="outer">
+      <div class="inner1">
+        <div class="inner2">
+          <h1>Which One Are You</h1>
+          <h4>A common workspace</h4>
+        </div>
+        <div class="inner3">
         <a href="/login" class="choice"> Student</a>
         <a href="/login" class="choice"> Mentor</a>
         <a href="/login" class="choice">HOD</a>
+        </div>      
       </div>
     </div>
   </nav>
@@ -42,11 +48,12 @@
     background-color: #e491cf;
     transform: translateY(2px);
   }
-  .Inner {
+  .inner2{
     display: flex;
+    flex-direction:column;
     background-color: #eae7dc;
     height: 58vh;
-    width: 45.5vh;
+    width: 50vw;
 
     justify-content: center;
     align-items: center;
@@ -54,7 +61,7 @@
     border-radius: 40px;
     box-shadow: 0.8em 0.8em 2em -0.3em #cbced1;
   }
-  .Outer {
+  .outer {
     display: flex;
     height: 100vh;
     width: 100vw;
@@ -62,4 +69,4 @@
     justify-content: center;
     align-items: center;
   }
-</style>
+</style> -->

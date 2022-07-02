@@ -109,7 +109,7 @@
     padding: 4em 0 2em 0;
   }
   .outer {
-    background-color: #eae7dc;
+    background-color: #eee;
   }
   @keyframes -global-scroll1 {
     0% {

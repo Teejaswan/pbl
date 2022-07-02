@@ -10,7 +10,7 @@
     },
     {
       title: "Do you need Help?",
-      description: "The team will be allocated an industry/faculty/student mentor who can guide them through their project and develop a realistic solution for the problem. The might also get an idea on what major domain they are going to work on.",
+      description: "The team will be allocated an industry /faculty /student mentor who can guide them,develop a realistic solution and get an idea on what major domain they are going to work on.",
     },
     {
       title: "Is it Ready?",
@@ -21,8 +21,8 @@
       description: "The team can present their final working prototype and they can collabrate with industry mentors to match their project with industry standards.",
     },
     {
-      title: "What work have you done?",
-      description: "The team can prepare a research paper based on various facts,information and innovative ideas found in the process and quote the research gap if any.",
+      title: "Is the work complete?",
+      description: "The team can prepare a research paper based on various facts, information and innovative ideas found in the process and quote the research gap if any.",
     },
   ];
 </script>
@@ -58,7 +58,7 @@
     display: flex;
     align-items: center;
     justify-content: space-evenly;
-    height: 50vh;
+    height: 68vh;
   }
 
   .inner:nth-child(even) {
@@ -66,23 +66,25 @@
   }
 
   .circle {
-    display: grid;
-    place-items: center;
-    height: 11em;
-    width: 11em;
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    text-align: center;
+    height: 16vw;
+    width: 16vw;
     background: #6273CB;
     color:#dafc00;
     border-radius: 50em;
-    padding:1em;
+    padding:1rem;
   }
   .inner1{
-    height: 15em;
-    width: 25em;
+    height: 50vh;
+    width: 36vw;
     display: grid;
     place-items: center;
     border-radius: 2em;
     background: #E1FF27;
-    padding:0 1em 0 1em;
+    padding:0 1rem 0 1rem;
     box-shadow: -5px 36px 75px -25px rgba(42, 42, 43, 0.41);
     transition: height 0.5s ease-in-out;
   }
@@ -90,26 +92,32 @@
     transform: matrix(1, 0, -0.20, 1, 0, 0);
     border-radius:2em;
     background-color:#6273CB;
-    width:25em;
-    height:15.5em;
+    width:35vw;
+    height:50vh;
     display:flex;
     justify-content: center;
     align-items: center;
-    font-size: calc(0.75em + 0.5vmin);
+    box-shadow: -5px 36px 75px -25px rgba(42, 42, 43, 0.41);
+    font-size: calc(0.75rem + 0.5vmin);
   }
   .content{
     display:flex;
     justify-content: center;
-    padding:1em;
+    align-items:center;
+    padding:1rem;
   }
   h1 {
     text-align: center;
     font-family: "Yeseva One", sans-serif;
     color: rgb(74, 71, 71);
-    padding: 4em 0 2em 0;
+    padding: 4rem 0 2rem 0;
   }
   .outer {
+<<<<<<< HEAD
     background-color: #eee;
+=======
+    background-color:#eee;
+>>>>>>> 2846f91e5c0b1aca2d59943e5f61218f6f0d5a82
   }
   @keyframes -global-scroll1 {
     0% {
@@ -129,4 +137,18 @@
       height: 15em;
     }
   }
+  /* @media screen and (max-width:740px){
+    .circle{
+      display:flex;
+      flex-direction:column;
+      justify-content: center;
+      align-items: center;
+    }
+    .rectangle{
+      display:flex;
+      flex-direction:column;
+      justify-content: center;
+      align-items: center;
+    }
+  } */
 </style>

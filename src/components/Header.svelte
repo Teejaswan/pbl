@@ -144,6 +144,7 @@
     }
     .innerleft{
       width:90vw;
+      height:25vh;
       transition: all 50ms ease-in;
     }
     .outer{

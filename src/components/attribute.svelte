@@ -14,7 +14,8 @@
         <div class="inner">
           <div class="upper">
             <div class="inner1">
-              <div class="inner2"><div class="content">
+              <div class="inner2">
+                <div class="content">
                 {attribute.content}
               </div>
               <div class="inner3">
@@ -55,7 +56,6 @@
     justify-content: center;
     align-items: center;
     display: flex;
-    flex-wrap:wrap;
     height: 40vh;
     width:100vw;
   }
@@ -67,7 +67,7 @@
   .lower {
     height: 15vw;
     width: 15vw;
-    margin: 1vw;
+    margin: 2vw;
     background-color: #6273CB;
     transition: all 0.3s ease-in-out;
     border-radius: 20px;
@@ -77,7 +77,9 @@
   }
   h1 {
     padding: 15vh 0;
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     font-family: "Yeseva One", sans-serif;
     color: rgb(74, 71, 71);
     margin-block: 0;
@@ -88,62 +90,71 @@
   }
   .lower:hover,
   .upper:hover {
-    width: 15vw;
-    height: 15vw;
-    margin: 0;
+    width: 17vw;
+    height: 17vw;
+    margin: 1vw;
     box-shadow: 0 2vw 5vw -1vw rgb(89, 87, 87);
   }
   .inner {
     justify-content: center;
     align-items: center;
+    flex-wrap:wrap;
     
   }
   .inner1{
-    border-radius:1rem 1rem 1rem 1rem;
-    height:15vw;
-    
-    
+    border-radius:1em 1em 1em 1em;
+    height:17vw;
+    width:17vw;
     background-color: #6273CB;
   }
   .inner2{
     height:4vw;
-    border-radius:1rem 1rem 0 0;
+    width:17vw;
+    border-radius:1em 1em 0 0;
     background-color: #E1FF27;
     font-size: calc(0.75rem + 0.5vmin);
 
   }
   .inner3{
     display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left:1em;
     height:11vw;
-    margin-top:0.5rem;
+    width:15vw;
     font-size: calc(0.5vw + 0.5vmin);
   }
   .content{
-    font-size: calc(0.75rem + 0.5vmin);
+    font-size: calc(1vw + 0.5vmin);
     display:flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     height:4vw;
+    width:15vw;
+    
     
   }
   .content2{
-    font-size: calc(0.75rem + 0.5vmin);
+    font-size: calc(0.75vw + 0.5vmin);
     display:flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
-    height:100%;
+    height:4vh;
+    width:15vw;
+    padding-right:3vw;
   }
   @media only screen and (max-width:700px){
     .container{
-      height:80vh;
+      height:60vh;
       transition: all 50ms ease-in;
     }
     h1{
-      padding:10vh 0;
+      padding:2vh 0;
+    }
+    .lower{
+      margin-top:4em;
     }
   }
-  
-  
+ 
 </style>

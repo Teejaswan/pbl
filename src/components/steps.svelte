@@ -97,7 +97,7 @@
     display:flex;
     justify-content: center;
     align-items: center;
-    box-shadow: -5px 36px 75px -25px rgba(42, 42, 43, 0.41);
+    box-shadow: 5px 36px 75px 25px rgba(42, 42, 43, 0.41);
     font-size: calc(0.75rem + 0.5vmin);
   }
   .content{

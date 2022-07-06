@@ -1,9 +1,9 @@
 <script>
-  let attributes = [{ id : 1, content :"gh"},
-                   {id :2, content :"as "},
-                    {id : 3, content : "gfg"},
-                    {id : 4, content : "fg"}, 
-                    {id : 5, content : "hdv" }];
+  let attributes = [{ id : 1, content :"Project",content2 :"The best day to start your project is today.Consistency is the key to successfully completing the project. "},
+                   {id :2, content :"Management",content2 :"A go-to place to manage all your projects in a standardardised format that you will be able to understand in a jiffy. "},
+                    {id : 3, content : "Idea",content2 :"A place where you can submit all your ideas and get valuable suggestions in order to improve your project. "},
+                    {id : 4, content : "Progress",content2 :"A single platform which takes count of each progress that you make in your project ... You need not worry. "}, 
+                    {id : 5, content : "Suggestions",content2 :"A  single phrase is of greater value than a page of reviews. So gather them and keep it safe." }];
 </script>
 
 <div class="container">
@@ -14,9 +14,13 @@
         <div class="inner">
           <div class="upper">
             <div class="inner1">
-              <div class="inner2">
-                <div class="content">
-                  {attribute.content}
+              <div class="inner2"><div class="content">
+                {attribute.content}
+              </div>
+              <div class="inner3">
+                  <div class="content2">
+                  {attribute.content2}
+                  </div>
                 </div>
               </div>
             </div>
@@ -27,8 +31,13 @@
           <div class="lower">
             <div class="inner1">
               <div class="inner2">
-                <div class="content">
-                  {attribute.content}
+                <div class="content"> 
+                {attribute.content}
+              </div>
+              <div class="inner3">
+                  <div class="content2">
+                  {attribute.content2}
+                </div>
                 </div>
               </div>
             </div>
@@ -79,19 +88,52 @@
   }
   .lower:hover,
   .upper:hover {
-    width: 17vw;
-    height: 17vw;
+    width: 15vw;
+    height: 15vw;
     margin: 0;
     box-shadow: 0 2vw 5vw -1vw rgb(89, 87, 87);
   }
   .inner {
     justify-content: center;
     align-items: center;
+    
   }
   .inner1{
-    border-radius:1rem 1rem 0 0;
+    border-radius:1rem 1rem 1rem 1rem;
+    height:15vw;
+    
+    
+    background-color: #6273CB;
+  }
+  .inner2{
     height:4vw;
+    border-radius:1rem 1rem 0 0;
     background-color: #E1FF27;
+    font-size: calc(0.75rem + 0.5vmin);
+
+  }
+  .inner3{
+    display: flex;
+    height:11vw;
+    margin-top:0.5rem;
+    font-size: calc(0.5vw + 0.5vmin);
+  }
+  .content{
+    font-size: calc(0.75rem + 0.5vmin);
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height:4vw;
+    
+  }
+  .content2{
+    font-size: calc(0.75rem + 0.5vmin);
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height:100%;
   }
   @media only screen and (max-width:700px){
     .container{

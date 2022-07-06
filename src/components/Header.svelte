@@ -1,6 +1,6 @@
 <script>
   import { router } from "tinro";
-  import pbl from "../assets/pbl.jpg";
+  import PBL from "../assets/PBL.svg";
 </script>
 
 <nav>
@@ -29,7 +29,7 @@
 </div>
   </div>
   <div class="right">
-    <img src={pbl} alt="fiygbfijyfguy" />
+    <img src={PBL} alt="fiygbfijyfguy" />
   </div>
 </div>
 

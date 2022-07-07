@@ -1,6 +1,6 @@
 <script>
   import { router } from "tinro";
-  import headerBg from "../assets/header.jpg";
+  import PBL from "../assets/PBL.svg";
 </script>
 
 <nav>
@@ -29,7 +29,7 @@
 </div>
   </div>
   <div class="right">
-    <img src={headerBg} alt="fiygbfijyfguy" />
+    <img src={PBL} alt="fiygbfijyfguy" />
   </div>
 </div>
 
@@ -101,6 +101,7 @@
   }
   h3,h4{
     color:black;
+    font-size: calc(0.5rem + 1vmin);
   }
 
   button {
@@ -114,7 +115,7 @@
     background-color: #E1FF27;
     width: 8.5vh;
     height: 4vh;
-    padding:0 5.5vw 0 2vw;
+    padding:0 4vw 0 2vw;
     border-radius: 1em;
     transition: all 300ms ease-in-out;
   }
@@ -128,6 +129,7 @@
     text-decoration:none;
     color:black;
     font-weight:700;
+    font-size: calc(0.5rem + 1vmin);
   }
   .right {
     width: 40vw;
@@ -142,6 +144,7 @@
     }
     .innerleft{
       width:90vw;
+      height:25vh;
       transition: all 50ms ease-in;
     }
     .outer{

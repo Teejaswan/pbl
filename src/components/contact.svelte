@@ -112,6 +112,7 @@
   }
   h4{
     padding-bottom:2em;
+    font-size:1.2em;
   }
   .container2{
     display:flex;
@@ -126,5 +127,14 @@
     color:black;
     text-decoration: none;
     font-size:1.2em;
+  }
+  @media only screen and (max-width:360px){
+   .container{
+    display:block;
+    height:55vh;
+   }
+   a{
+    margin:1.6vw;
+   }
   }
 </style>

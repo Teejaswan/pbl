@@ -8,11 +8,12 @@
   import Choice from "./components/Choice.svelte";
   import Login from "./components/Login.svelte";
   import Todo from "./components/todo.svelte";
-  import Submission from "./components/Submission.svelte";
+
   import Progress from "./components/progress.svelte";
   import Studprofile from "./components/studprofile.svelte";
   import Mentor from "./components/Mentor.svelte";
   import User from "./components/User.svelte";
+  import Posts from "./components/Posts.svelte";
   router.mode.hash();
 
   window["ab"] = (_) => router.goto("/user/student");
@@ -32,15 +33,16 @@
 <Route path="/login">
   <Login />
 </Route>
+<Route path="/posts">
+  <Posts />
+</Route>
 <Route path="/user/:type/:username" let:meta>
   <User username={meta.params.username} type={meta.params.type} />
 </Route>
 <Route path="/user/student/todo">
   <Todo />
 </Route>
-<Route path="/user/student/submission">
-  <Submission />
-</Route>
+
 <Route path="/user/student/progress">
   <Progress />
 </Route>

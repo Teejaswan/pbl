@@ -6,12 +6,125 @@
 </script>
 
 <div class="container">
-  <h1>{user.name}</h1>
-  <div class="header">
-    <h2>Teams project name</h2>
-    <NavBar />
+   <div class="head">
+    <!--<h1>{user.name}</h1>-->
+    <div class="title">
+       <h2>PROFILE</h2>
+    </div>
+    <div class="link">
+      <h3>HOME</h3>
+      <h3>POSTS</h3>
+    </div>
   </div>
-  <div class="myteams">
+  <div class="box">
+  <div class="box1">
+    <div class="box2">
+      <h4>PBL TEAMS</h4>
+      </div>
+</div>
+</div>
+<div class="total">
+<div class="count">
+  <div class="content">
+    <div class="id">
+        <h3>TEAM 1</h3>
+    </div>
+    <div class="detail">
+      <div class="n1">
+        <h4>Number 1</h4>
+        <h5>Roll number</h5>
+      </div>
+      <div class="n2">
+        <h4>Number 2</h4>
+        <h5>Roll number</h5>
+      </div>
+      <div class="n3">
+        <h4>Number 3</h4>
+        <h5>Roll number</h5>
+      </div>
+      <div class="n4">
+        <h4>Number 4</h4>
+        <h5>Roll number</h5>
+      </div>
+    </div>
+    <div class="icon">
+    </div>
+  </div>
+</div>
+<div class="profile">
+  <div class="teams">
+  </div>
+  <div class="name">
+   <div class="name1" >
+    <h3>NAME:</h3>
+   </div>
+   <div class="name2">
+    <h4>Mentor1</h4>
+   </div>
+  </div>
+  <div class="email">
+    <div class="email1">
+      <h3>EMAIL:</h3>
+    </div>
+    <div class="email2">
+      <a href="mentor@gmail.com">mentor@gmail.com</a>
+    </div>
+  </div>
+  <div class="phone">
+    <div class="phone1">
+      <h3>MOBILE:</h3>
+    </div>
+    <div class="phone2">
+       <h4>1234567890</h4>
+    </div>
+  </div>
+  <div class="info">
+    <div class="info1">
+      <h3>INFO:</h3>
+    </div>
+    <div class="info2">
+      <h4>Information</h4>
+    </div>
+  </div>
+  <div class="choice">
+    <div class="myteam">
+      <h3>MY TEAMS</h3>
+    </div>
+    <div class="teamnumber">
+      <div class="team1">
+        <div class="number">
+          <h3>TEAM 1</h3>
+          </div>
+          <div class="links">
+            <a href="GO TO PROFILE">GO TO PROFILE</a>
+          </div>
+       </div>
+      <div class="team2">
+        <div class="number">
+          <h3>TEAM 2</h3>
+          </div>
+          <div class="links">
+            <a href="GO TO PROFILE">GO TO PROFILE</a>
+          </div>
+        </div>
+       <div class="team3">
+        <div class="number">
+          <h3>TEAM 3</h3>
+          </div>
+          <div class="links">
+            <a href="GO TO PROFILE">GO TO PROFILE</a>
+          </div>
+        </div>
+    </div>
+  </div>
+  </div>
+  </div>
+</div>
+
+
+
+
+  <!--<div class="myteams">
     <h1>My Teams</h1>
     <div class="outer1">
       <div class="inner1">
@@ -25,6 +138,7 @@
         </div>
       </div>
     </div>
+  
   </div>
   <div class="teams">
     <div class="header2">
@@ -65,24 +179,167 @@
       </div>
     </div>
   </div>
-</div>
+</div>-->
 
 <style>
   * {
     margin: 0;
   }
-
-  h2 {
-    padding-top: 3vh;
-    margin-bottom: 4vh;
-    color: #413d3d;
-
+  .total{
+    display:flex;
+    flex-direction: row;
+  }
+  .title{
+    color: black;
+    padding:1em;
+    margin-left:1.5em;
+    width:60vw;
+  }
+  .head{
+    width: 100vw;
+    background-color:#E1FF27;
+    display: flex;
+    margin: 0;
+    height: 20vh;
+    clip-path: polygon(0 2%, 100% 0%, 100% 90%, 0 60%);
+    z-index:-1;
+  }
+  .name,.email,.phone,.info{
+    background-color: #E9ECFD;
+    border-bottom:0.1em solid #a6a49d;
+    height:9vh;
+    display:flex;
+    flex-direction: row;
+    width:25vw;
+  }
+  .name1,.email1,.phone1,.info1{
+    width:10vw;
+  }
+  .name2,.email2,.phone2,.info2{
+    width:15vw;
+    padding:1em 0 1em 0;
+  }
+  .box{
+    margin:2em;
+  }
+  .box1{
+    clip-path: polygon(0 0, 100% 0%, 80% 100%, 0% 100%);
+    background-color: #E1FF27;
+    width:28vh;
+  }
+  .box2{
+    clip-path: polygon(0 0, 100% 0%, 80% 100%, 0% 100%);
+    background-color: #6273CB;
+    width:26vh;
+  }
+  .box2 h4{
+    padding:1em;
+    color:white;
+  }
+  .profile{
+    height:87.5vh;
+    width:25vw;
+    background-color:#E9ECFD;
+    margin-right:8vw;
+    display:flex;
+    border-radius:1em 1em 0 0;
+    float:right;
+    flex-direction: column;
+    margin-left:2em;
+    
+  }
+  h3{
+    color:#4f4d4c;
+    padding:1em;
+    font-size: calc(0.75rem + 0.6vmin);
+  }
+  h4{
+    font-size: calc(0.75rem + 0.6vmin);
+  }
+  .link{
+    display: flex;
+    flex-direction: row;
+    margin:1em;
+  }
+  .teams{
+    background-color: #6273CB;
+    border-radius: 1em 1em 0 0;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    height:14vh;
+  }
+  .myteam{
+    background-color:#6273CB;
     text-align: center;
+    border-bottom:0.1em solid #a6a49d;
   }
-  .header {
-    background-color: #d36767;
+  .myteam h3{
+    color:white;
   }
-  .myteams {
+  .team1,.team2,.team3{
+    border-bottom:0.1em solid #a6a49d;
+    text-align: center;
+    color:black;
+    display:flex;
+    flex-direction: row;
+    width:32vw;
+    background-color: #E9ECFD;
+    border-radius:0 0.5em 0.5em 0;
+    height:9vh;
+  }
+  .number{
+    width:25vw;
+    height:9vh;
+    
+  }
+  .links{
+    background-color: #E1FF27;
+    width:7vw;
+    border-radius:0 0.5em 0.5em 0;
+  }
+  a{
+    font-size:0.9rem;
+  }
+  .count{
+    height:90vh;
+    width:60vw;
+  }
+  .content{
+    background-color:#E9ECFD;
+    height:11vh;
+    display:flex;
+    flex-direction: row;
+    width:60vw;
+    margin-left:1em;
+    border-radius: 1em;
+  }
+  .id{
+    background-color: #6273CB;
+    width:11vw;
+    padding:0.5em;
+    border-radius: 0.5em 0 0 0.5em;
+  }
+  .id h3{
+    color:black;
+  }
+  .detail{
+    display:flex;
+    flex-direction: row;
+    width:37vw;
+    flex-wrap: wrap;
+  }
+  .icon{
+    background-color: #E1FF27;
+    width:12vw;
+    border-radius: 0 0.5em 0.5em 0;
+  }
+  .n1,.n2,.n3,.n4{
+    display: flex;
+    flex-direction:column;
+    padding:1em;
+  }
+  /*.myteams {
     display: flex;
     flex-direction: column;
     padding-bottom: 2em;
@@ -288,5 +545,5 @@
     width: 50vw;
     margin-left: 1em;
     margin-top: 2em;
-  }
+  }*/
 </style>

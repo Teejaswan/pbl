@@ -12,7 +12,7 @@
 
 <div class="container">
    <div class="head">
-    <!--<h1>{user.name}</h1>-->
+    <!-- <h1>{user.name}</h1> -->
     <div class="title">
        <h2>PROFILE</h2>
     </div>
@@ -400,7 +400,7 @@
     border-radius:1em 1em 0 0;
     flex-direction: column;
     justify-content: space-around;
-    margin:0 2em 0 2em;
+    margin:0 6em 0 2em;
   }
   .profile h3{
     color:#4f4d4c;
@@ -490,14 +490,13 @@
   }
   .content{
     background-color:#E9ECFD;
-    height:11vh;
+    height:12vh;
     display:flex;
     flex-direction: row;
     width:60vw;
-    margin-left:5rem;
+    /*margin-left:5rem;*/
     border-radius: 1em;
-    margin-top:1.5rem;
-  
+    margin-top:1.5rem; 
   }
   .id{
     background-color: #6273CB;
@@ -512,6 +511,9 @@
     display:flex;
     flex-direction: row;
     width:37vw;
+    margin:1em;
+
+    
   }
   .icon{
     background-color: #E1FF27;
@@ -521,7 +523,7 @@
   .n1,.n2,.n3,.n4{
     display: flex;
     flex-direction:column;
-    padding:1em;
+    padding:0 1em 1em 1em;
   }
   .icons{
     display: flex;
@@ -534,7 +536,10 @@
       display:flex;
       flex-direction: column;
       align-items: center;
-      margin:1em 0 1em 0;
+      justify-content: center;
+      }
+      .profile{
+        margin:0 1em 2em 0;
       }
       .profile,.team1,.team2,.team3,.name,.email,.phone,.info{
         width:290px;
@@ -561,6 +566,9 @@
      .link h3{
       padding: 1em;
      }
+     .content{
+      height:100px;
+     }
   
      
     }
@@ -576,7 +584,7 @@
     justify-content: center;
     height:350px;
     width:390px;
-    margin:1.5em;
+    /* margin:1.5em; */
   }
   .id{
     width:372px;
@@ -589,9 +597,11 @@
   
 }
 @media only screen and (max-width:560px){
+ 
   .content{
     width:300px;
-    margin-left:-1.5em;
+    
+    
   }
   .icon{
     width:300px;

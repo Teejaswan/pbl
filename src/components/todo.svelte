@@ -10,8 +10,6 @@ let links = [{name:"Home",link:"/home"},
 
  
 
-  const user = JSON.parse(localStorage.getItem("user"));
-  const team = JSON.parse(localStorage.getItem("team"));
 </script>
 <NavBar {title} {links}/>
 <!-- <div class="container">
@@ -400,6 +398,7 @@ let links = [{name:"Home",link:"/home"},
   flex-direction: column;
   width:70%;
   height:100%;
+  border-right:1px solid;
 }
 .left1{
   display: flex;

@@ -4,52 +4,52 @@ const port = 4000;
 
 const users = [
   {
-    name: "rajM1",
+    name: "M1",
     type: "mentor",
     id: 0,
   },
   {
-    name: "tej",
+    name: "HOD",
     type: "hod",
     id: 1,
   },
   {
-    name: "raj2",
+    name: "S1",
     type: "student",
     id: 2,
   },
   {
-    name: "raj3",
+    name: "S2",
     type: "student",
     id: 3,
   },
   {
-    name: "raj4",
+    name: "S3",
     type: "student",
     id: 4,
   },
   {
-    name: "raj5",
+    name: "S4",
     type: "student",
     id: 5,
   },
   {
-    name: "raj6",
+    name: "S5",
     type: "student",
     id: 6,
   },
   {
-    name: "raj7",
+    name: "S6",
     type: "student",
     id: 7,
   },
   {
-    name: "rajM2",
+    name: "M2",
     type: "mentor",
     id: 8,
   },
   {
-    name: "raj8",
+    name: "S7",
     type: "student",
     id: 9,
   },
@@ -232,7 +232,7 @@ app.get("/users/:name/:password", (req, res) => {
     if (pass[user.id] === password) {
       switch (user.type) {
         case "mentor":
-          res.send({ user })
+          res.send({ user });
           break;
 
         case "hod":

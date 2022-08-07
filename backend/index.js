@@ -207,7 +207,7 @@ function groupTasks(tasks, projects) {
 
   return tasks;
 }
-
+console.log(groupTasks(teams[0].tasks, teams[0].projects));
 function findUser(id) {
   return users.find((user) => user.id === id);
 }
@@ -253,9 +253,11 @@ app.get("/users/:name/:password", (req, res) => {
 });
 
 app.get("/proposals", (req, res) => {
-  res.send({ proposals });
+  res.json({ proposals });
 });
-
+app.get("/user/student", (req, res) => {
+  res.send("Hello");
+});
 // listen to the port
 app.listen(port, () => {
   console.log(

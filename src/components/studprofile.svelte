@@ -318,8 +318,9 @@ h3{
 .outer{
   display:flex;
   padding:4em;
+  width:100vw;
   height:20vh;
-  justify-content:space-between;
+  justify-content:space-evenly;
   align-items:center;
   background-color:#E9ECFD;
 }
@@ -348,7 +349,7 @@ h3{
     font-weight:700;
     font-size: 3vh;
     font-family:sans-serif ;
-    width:40vw;
+    width:50vw;
     margin-top:220px;
   }
   .left2{
@@ -357,7 +358,7 @@ h3{
     align-items:center;    
     flex-direction:row;
     font-size: clamp(1em 2em 3em);
-    width:40vw;
+    width:50vw;
   }
   .container2{
     display:grid;
@@ -404,6 +405,9 @@ h3{
   font-size: clamp(1em 2em 3em);
 }
 @media only screen and (max-width:960px){
+  .body1{
+    height:120vh;
+  }
   .container{
     display:flex;
     flex-direction:column;
@@ -428,6 +432,7 @@ h3{
     display:flex;
     justify-content:center;
     align-items:center;
+    font-size:2vh;
   }
   .right1{
     width:45vh;
@@ -465,18 +470,42 @@ h3{
     .content{
       height:10vh;
     }
+
+.body2{
+  height:120vh;
+}
 .outer{
   display:flex;
   flex-direction:column;
-  padding:4em;
-  justify-content:space-between;
+  padding:0;
+  padding-top:4em;
+  height:40vh;
+  width:100vw;
+  justify-content:center;
   align-items:center;
   background-color:#E9ECFD;
-  
 }
+.inner2{
+    display:flex;
+    flex-direction:column;
+    font-weight:700;
+    font-size: 1em;
+    font-family:sans-serif ;
+    width:100vw;
+    margin-top:20px;
+  }
+  .left2{
+    display:flex;
+    justify-content:space-around;
+    align-items:center;    
+    flex-direction:column;
+    font-size: clamp(1em 2em 3em);
+    width:100vw;
+    height:70vh;
+  }
 }
 @media only screen and (max-width:550px){
-  .body{
+  .body1{
     height:120vh;
   }
   .title{
@@ -491,6 +520,45 @@ h3{
     .left{
       font-size:2.2vw;
     }
+  .top{
+    width:40vh;
+  }
+  .bottom{
+    width:40vh;
+  }
+  .m1,.m2{
+    width:20vh;
+    font-size:2vh;
+  }
+  .right1{
+    width:40vh;
+    margin-top:20px;
+  }
+  .one{
+    width:20vh;
+  }
+  .two{
+  width:20vh;
+}
+    .outer{
+  padding-top:0;
+}
+    .inner2{
+    font-weight:700;
+    font-size: 0.8em;
+    font-family:sans-serif ;
+  }
+  .inner3{
+    
+    width:28vh;
+    margin:0;
+  }
+  .inner4{
+    
+    width:22vh;
+    padding:10px;
+    margin:0;
+  }
 }
 </style>
 

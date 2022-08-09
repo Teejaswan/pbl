@@ -1,5 +1,10 @@
 <script>
 import NavBar from "./NavBar.svelte";
+
+// Picture imports 
+import CheckImg from "../assets/check.png";
+import ProImg from "../assets/pro.svg"
+
 let title = "Progress";
 let links = [{name:"Home",link:"/home"},
              {name:"Profile",link:"/profile"},
@@ -13,7 +18,7 @@ let links = [{name:"Home",link:"/home"},
         <div class="b1l">
             <p style="font-size:2.5vw;text-align:center;">A LITTLE PROGRESS<br>EACH DAY SUMS UP TO<br>GREAT SUCCESS.</p>
             <p style="font-size:1.5vw;text-align:center;">A single place to manage and keep track<br>of all your projects </p>
-            <img src="pro.svg" alt="pro">
+            <img src={ProImg} alt="pro" style="height:50%;width:80%;">
         </div>
         <div class="b1r">
             <div class="b1rcon">
@@ -103,6 +108,8 @@ let links = [{name:"Home",link:"/home"},
     </div>
 </body>
 <style>
+    
+
     body{
         display: flex;
         align-items: center;
@@ -117,15 +124,14 @@ let links = [{name:"Home",link:"/home"},
         width:80%;
         height:60vh;
         margin: auto;
-        background-color: aqua;
     }
     .b1l{
         display: flex;
         flex-direction: column;
         align-items: center;
-        justify-content: center;
+        justify-content: space-between;
         width:50%;
-        background-color: brown;
+        height: 100%;
     }
     .b1r{
         display: flex;
@@ -133,6 +139,7 @@ let links = [{name:"Home",link:"/home"},
         align-items: center;
         justify-content: center;
         width:50%;
+        height: 100%;
         margin: auto;
     }
     .b1rcon{
@@ -160,7 +167,7 @@ let links = [{name:"Home",link:"/home"},
         width:80%;
         height:40vh;
         margin: auto;
-        background-color: red;
+        margin-top:2vw;
     }
     h4{
         font-family: "Lato", sans-serif;

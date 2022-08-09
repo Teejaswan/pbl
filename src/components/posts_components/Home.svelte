@@ -31,7 +31,7 @@
   <div class="idea">
     <h2>PROPOSED IDEAS</h2>
     <div class="table">
-      <div class="name">
+      <button class="name">
         <div class="number">
           <h3>Team 6</h3>
           </div>
@@ -40,7 +40,7 @@
         </div>
         <div class="icon">
           </div>
-      </div>
+        </button>
         <div class="post">
           <div class="display">
           <div class="statement">
@@ -150,7 +150,9 @@
     margin:2em 2em 0 2em;
     box-shadow: 0 0 10px 0 black;
     border-radius: 0.5em 0.5em 0 0;
+    
    }
+   
    .number{
     background-color: #6273cb;
     width:12vw;

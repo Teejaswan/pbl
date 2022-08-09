@@ -26,9 +26,11 @@
 
   import Progress from "./components/progress.svelte";
   import Studprofile from "./components/studprofile.svelte";
+  import Teamprofile from "./components/teamprofile.svelte";
   import Mentor from "./components/Mentor.svelte";
   import User from "./components/User.svelte";
   import Posts from "./components/Posts.svelte";
+  import Report from "./components/Report.svelte";
   router.mode.hash();
 
   window["ab"] = (_) => router.goto("/user/student");
@@ -45,6 +47,9 @@
 <Route path="/choice">
   <Choice />
 </Route>
+<Route path="/user/teamprofile">
+  <Teamprofile />
+  </Route>
 <Route path="/login">
   <Login />
 </Route>
@@ -64,8 +69,12 @@
 <Route path="/profile">
   <Studprofile />
 </Route>
+
 <Route path="/mentor">
   <Mentor />
+</Route>
+<Route path="/report">
+  <Report />
 </Route>
 
 <style>

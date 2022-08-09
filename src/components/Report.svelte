@@ -77,8 +77,21 @@ let links = [{name:"Home",link:"/home"},
             </div>
         </div>
     </div>
+    <div class="progress">
+        <div class="p1">
+            <div class="pcon"></div>
+            <div class="pcon"></div>
+            <div class="pcon"></div>
+        </div>
+        <div class="p2"></div>
+    </div>
 </body>
 <style>
+    body{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
     .b1{
         display: flex;
         justify-content: center;
@@ -235,5 +248,41 @@ let links = [{name:"Home",link:"/home"},
         background-color: #E9ECFD ;
         border-bottom:1px solid;
     }
-
+    .progress{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 3vw;
+        width:80vw;
+        height:100vh;
+        background: #FFFFFF;
+        box-shadow: 0px 0px 20.5751px rgba(0, 0, 0, 0.25);
+        padding:auto;
+    }
+    .p1{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        width:50%;
+        height:100%;
+        background-color: #e1ff27;
+    }
+    .p2{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        width:50%;
+        height:100%;
+        background-color: red;
+    }
+    .pcon{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width:35%;
+        height:30%;
+        filter: drop-shadow(0px 0px 20px rgba(0, 0, 0, 0.5));
+    }
 </style>

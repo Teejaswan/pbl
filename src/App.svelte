@@ -1,4 +1,19 @@
 <script>
+  let data = fetch("http://localhost:3000/api/proposals")
+    .then((json) => json.json())
+    .then((a) => {
+      return a.proposals;
+    });
+
+  /*  async function data() {
+    let json = await (
+      await fetch("http://localhost:3000/api/proposals")
+    ).json();
+    console.log(json);
+  }
+  let json = data();
+//  console.log(JSON.stringify(json));*/
+
   import { Route, router } from "tinro";
   import Attribute from "./components/attribute.svelte";
   import Header from "./components/Header.svelte";
@@ -34,7 +49,7 @@
   <Login />
 </Route>
 <Route path="/posts">
-  <Posts />
+  <Posts {data} />
 </Route>
 <Route path="/user/:type/:username" let:meta>
   <User username={meta.params.username} type={meta.params.type} />

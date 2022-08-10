@@ -136,36 +136,98 @@
 </div>
 </div>
 <div class="body2">
-<div class="outer">
-<div class="inne1">
- <div class="inner3">
-   <div class="inner4">
-    <h3>Projects</h3> 
-   </div>
+  <div class="outer">
+    <div class="inne1">
+      <div class="inner3">
+        <div class="inner4">
+          <h3>PROJECTS</h3> 
+        </div>
+      </div>
+    </div>
+    <div class="inner2">
+      <h2 id="quote1">DREAM BIGGER.</h2>
+      <h2 id="quote1">DO BIGGER.</h2>
+      <h4 id="lines3">A single place to manage and keep track</h4>
+      <h4 id="lines4"> of all your projects</h4>
+    </div>
+  </div>
+  <div class="container2">
+    <div class="left2">
+      <div class="box1">
+        <h3>PROJECT-NAME</h3>
+        <h3>started on:05-06-2021</h3>
+      </div>
+      <div class="box2">
+        <!-- svg -->
+      </div>
+    </div>
+    <div class="right2">
+      <!-- svg -->
+    </div>
+  </div>
+</div>
+<div class="ideas">
+  <div class="idea">
+    <div class="Outer">
+      <div class="l">
+        <div class="inner3">
+          <div class="inner4">
+            <h3>PROPOSALS</h3>
+          </div>
+        </div>
+      </div>
+      <div class="r">
+        <a href="/posts">Go to Posts Page</a>
+      </div>
+    </div>
+    <div class="table">
+      <button class="name">
+        <div class="proposal">
+          <h3>PROPOSAL-1</h3>
+        </div>
+        </button>
+        <div class="post">
+          <div class="display">
+          <div class="statement">
+            <h3>PROBLEM STATEMENT</h3>
+          </div>
+          <div class="space">
+          </div>
+          </div>
+          <div class="display">
+          <div class="solution">
+            <h3>PROPOSED SOLUTION</h3>
+          </div>
+          <div class="space">
+          </div>
+          </div>
+          <div class="display">
+          <div class="queries">
+            <h3>QUERIES</h3>
+          </div>
+          <div class="space">
+          </div>
+          </div>
+        </div>
+        <div class="comment">
+          <div class="head">
+          <h3>Comments</h3>
+          </div>
+          <div class="suggestions">
+            <div class="nice">
+              <h3>Nice one</h3>
+              <h4>HOD</h4>
+            </div>
+            <hr>
+            <div class="good">
+              <h3>Good</h3>
+              <h4>Mentor</h4>
+            </div>
+          </div>
+        </div>
+      </div>
+  </div>
  </div>
-</div>
-<div class="inner2">
-  <h2 id="quote1">DREAM BIGGER.</h2>
-  <h2 id="quote1">DO BIGGER.</h2>
-  <h4 id="lines3">A single place to manage and keep track</h4>
-  <h4 id="lines4"> of all your projects</h4>
- </div>
-</div>
-<div class="container2">
-<div class="left2">
-  <div class="box1">
-   <h3>PROJECT-NAME</h3>
-   <h3>started on:05-06-2021</h3>
-  </div>
-  <div class="box2">
-    <!-- svg -->
-  </div>
-</div>
-  <div class="right2">
-    <!-- svg -->
-  </div>
-</div>
-</div>
 <style>
   .body1{
     height:110vh;
@@ -317,10 +379,10 @@ h3{
 }
 .outer{
   display:flex;
-  padding:4em;
+  padding:5em;
   width:100vw;
   height:20vh;
-  justify-content:space-evenly;
+  justify-content:space-between;
   align-items:center;
   background-color:#E9ECFD;
 }
@@ -329,69 +391,69 @@ h3{
   background-color:#E9ECFD;
 }
 .inner3{
-    clip-path: polygon(0 0, 100% 0%, 80% 100%, 0% 100%);
-    background-color: #E1FF27;
-    width:34vh;
-    margin:10px;
-  }
-  .inner4{
-    clip-path: polygon(0 0, 100% 0%, 80% 100%, 0% 100%);
-    background-color: #6273CB;
-    width:24vh;
-    padding:20px;
-    margin:2px;
-  }
-  .inner2{
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
-    align-items:center;
-    font-weight:700;
-    font-size: 3vh;
-    font-family:sans-serif ;
-    width:50vw;
-    margin-top:220px;
-  }
-  .left2{
-    display:flex;
-    justify-content:space-evenly;
-    align-items:center;    
-    flex-direction:row;
-    font-size: clamp(1em 2em 3em);
-    width:50vw;
-  }
-  .container2{
-    display:grid;
-    place-items:center;
-    grid-template-columns:1fr 1fr;
-    overflow:hidden;
-    height:70vh;
-  }
-  .box1{
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    flex-direction:column;
-    width:25vh;
-    height:25vh;
-    background-color:#fff;
-    padding:1em;
-    border-radius:1em;
-    box-shadow:0 0 1.5em 0 #a8a9a8;
-  }
-  .box2{
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    flex-direction:column;
-    width:25vh;
-    height:25vh;
-    background-color:#fff;
-    padding:1em;
-    border-radius:1em;
-    box-shadow:0 0 1.5em 0 #a8a9a8;
-  }
-  #lines3{
+  clip-path: polygon(0 0, 100% 0%, 80% 100%, 0% 100%);
+  background-color: #E1FF27;
+  width:34vh;
+  margin:10px;
+}
+.inner4{
+  clip-path: polygon(0 0, 100% 0%, 80% 100%, 0% 100%);
+  background-color: #6273CB;
+  width:24vh;
+  padding:20px;
+  
+}
+.inner2{
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  font-weight:700;
+  font-size: 3vh;
+  font-family:sans-serif ;
+  width:50vw;
+  margin-top:220px;
+}
+.left2{
+  display:flex;
+  justify-content:space-evenly;
+  align-items:center;    
+  flex-direction:row;
+  font-size: clamp(1em 2em 3em);
+  width:50vw;
+}
+.container2{
+  display:grid;
+  place-items:center;
+  grid-template-columns:1fr 1fr;
+  overflow:hidden;
+  height:70vh;
+}
+.box1{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  flex-direction:column;
+  width:25vh;
+  height:25vh;
+  background-color:#fff;
+  padding:1em;
+  border-radius:1em;
+  box-shadow:0 0 1.5em 0 #a8a9a8;
+}
+.box2{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  flex-direction:column;
+  width:25vh;
+  height:25vh;
+  background-color:#fff;
+  padding:1em;
+  border-radius:1em;
+  box-shadow:0 0 1.5em 0 #a8a9a8;
+}
+#lines3{
   margin-block-start:2em;
   margin-block-end:0.1em;
   font-size: clamp(1em 2em 3em); 
@@ -404,6 +466,103 @@ h3{
 #quote1{
   font-size: clamp(1em 2em 3em);
 }
+.Outer{
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
+  padding:2em 8em 0 8em;
+}
+.table{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+   }
+   .name{
+    display: flex;
+    flex-direction:row;
+    padding:0;
+    margin-top:2em;
+    border:0;
+    width:80vw;
+    height:12vh;
+    box-shadow:0 0 2em 0 #4f4f4f;
+    border-radius:1em;
+   }
+   .proposal{
+    background-color: #E9ECFD;
+    width:80vw;
+    height:12vh;
+    border-radius:1em;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+   }
+   .post{
+    background-color: #e1ff27;
+    width:80vw;
+    display:flex;
+    flex-direction: column;
+  }
+   .display{
+    display: flex;
+    flex-direction: row;
+    width:70vw;
+    align-items: center;
+    margin:0.5em 2em 0 2em;
+   }
+   .statement,.solution,.queries{
+    background-color: #6273cb;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    border-radius:1em 0 0 1em;
+    width:15vw;
+    height:14vh;
+    margin:2em 0 2em 2em;
+    padding:0.5em;
+   }
+   .statement,.solution,.queries h3{
+    color:white;
+   }
+   .space{
+    background-color: white;
+    border-radius: 0 0.5em 0.5em 0;
+    width:55vw;
+    height:14vh;
+    margin:2em 0 2em 0;
+    padding:0.5em;
+   }
+   /* h3{
+    font-size: calc(0.75em+1vmin);
+   } */
+   .comment{
+    background-color: #6273cb;
+    display: flex;
+    flex-direction:column;
+    width:80vw;
+   }
+   .nice,.good{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-around;
+   }
+   .head{
+    margin:1em 1em 0 3em;
+   }
+   .suggestions{
+       display:flex;
+       flex-direction: column;
+       margin-left:1em;
+   }
+   hr{
+    border:1.5px solid black;
+    width:80%;
+   }
+   a{
+    text-decoration:none;
+    color:black;
+   }
+
 @media only screen and (max-width:960px){
   .body1{
     height:120vh;
@@ -412,7 +571,6 @@ h3{
     display:flex;
     flex-direction:column;
     justify-content:space-evenly;
-    height:100vh;
     margin-top:50px;
   }
   .top{
@@ -458,34 +616,41 @@ h3{
     border-right:solid #9d9e9d 0.1vh;
   }
   .two{
-  display:flex;
-  flex-direction:column;
-  justify-content:center;
-  align-items:center;
-  width:22.5vh;
-}
-.title{
-      height:16vh;
-    }
-    .content{
-      height:10vh;
-    }
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    width:22.5vh;
+  }
+  .inner3{
+    width:30vh;
+  }
+  .inner4{
+    width:20vh;
+    padding:15px;
+  }
+  .title{
+    height:16vh;
+  }
+  .content{
+    height:10vh;
+  }
 
-.body2{
-  height:120vh;
-}
-.outer{
-  display:flex;
-  flex-direction:column;
-  padding:0;
-  padding-top:4em;
-  height:40vh;
-  width:100vw;
-  justify-content:center;
-  align-items:center;
-  background-color:#E9ECFD;
-}
-.inner2{
+  .body2{
+    height:120vh;
+  }
+  .outer{
+    display:flex;
+    flex-direction:column;
+    padding:0;
+    padding-top:4em;
+    height:40vh;
+    width:100vw;
+    justify-content:center;
+    align-items:center;
+    background-color:#E9ECFD;
+  }
+  .inner2{
     display:flex;
     flex-direction:column;
     font-weight:700;
@@ -503,9 +668,32 @@ h3{
     width:100vw;
     height:70vh;
   }
+  .Outer{
+    padding:2em 2em 0 1em;
+    justify-content: space-evenly;
+  }
+  .statement,.solution,.queries{
+    flex-direction:column;
+    border-radius:1em;
+    width:55vw;
+    height:10vh;
+    margin:0;
+   }
+   .display{
+    flex-direction: column;
+    margin:1em 2em 0 2em;
+   }
+   .space{
+    border-radius:1em;
+    margin:1em 0 1em 0;
+    height:10vh;
+   }
 }
 @media only screen and (max-width:550px){
   .body1{
+    height:120vh;
+  }
+  .body2{
     height:120vh;
   }
   .title{
@@ -549,17 +737,40 @@ h3{
     font-family:sans-serif ;
   }
   .inner3{
-    
-    width:28vh;
+    width:20vh;
     margin:0;
   }
   .inner4{
-    
-    width:22vh;
-    padding:10px;
+    width:16vh;
+    padding:5px;
     margin:0;
+    font-size: 2vh;
   }
-}
+  .Outer{
+    padding:0 0 0 1em;
+    justify-content: space-evenly;
+  }
+  .statement,.solution,.queries{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction:column;
+    border-radius:1em;
+    width:25vh;
+    height:10vh;
+    margin:0;
+    font-size:1.8vh;
+   }
+   .display{
+    flex-direction: column;
+    margin:1em;
+   }
+   .space{
+    border-radius:1em;
+    margin:1em 0 0 0;
+    height:10vh;
+   }
+  }
 </style>
 
 

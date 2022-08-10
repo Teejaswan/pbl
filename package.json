@@ -23,6 +23,7 @@
   "description": "This template should help get you started developing with Svelte in Vite.",
   "main": "vite.config.js",
   "dependencies": {
+    "chart.js": "^3.9.1",
     "fetch": "^1.1.0",
     "material-symbols": "^0.2.0",
     "yarn": "^1.22.19"

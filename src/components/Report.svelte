@@ -1,6 +1,6 @@
 <script>
 import NavBar from "./NavBar.svelte";
-
+import Pie from "./pie.svelte"
 // Picture imports 
 import CheckImg from "../assets/check.png";
 import ProImg from "../assets/pro.svg"
@@ -11,7 +11,9 @@ let links = [{name:"Home",link:"/home"},
              {name:"Posts",link:"/posts"},
              {name:"Workspace",link:"/user/student/todo"}
             ];
+            // @ts-ignore
 </script> 
+
 <NavBar {title} {links}/>
 <body>
     <div class="b1">
@@ -98,8 +100,14 @@ let links = [{name:"Home",link:"/home"},
             </div>
         </div>
         <div class="p2">
-            <div class="pie"></div>
-            <div class="piebottom"></div>
+            <div class="pie">
+                <div style="height:80%;width:80%;">
+                    <Pie />
+                </div>
+            </div>
+            <div class="piebottom">
+              
+            </div>
         </div>
     </div>
     <div class="last">
@@ -364,17 +372,20 @@ let links = [{name:"Home",link:"/home"},
     }
     .pie{
         display: flex;
-        border-radius:100%;
-        height:50%;
-        width:60%;
-        background-color: #D969DB;
+        align-items: center;
+        justify-content: center;
+        height:60%;
+        width:80%;
+        background-color: #FFFFFF;
+        border-radius: 1.5vw;
+        filter: drop-shadow(0px 0px 20px rgba(0, 0, 0, 0.5));
     }
     .piebottom{
         display: flex;
         justify-content: center;
         align-items: center;
         width:85%;
-        height:40%;
+        height:30%;
         background-color: #D9D9D9;
     }
     .last{

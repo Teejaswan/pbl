@@ -8,7 +8,7 @@ import { onMount } from 'svelte';
             datasets: [
                 {
                     label: 'My First Dataset',
-                    data: [100, 300, 500],
+                    data: [20, 30, 50],
                     backgroundColor: ['#7000e1', '#fc8800', '#00b0e8'],
                     // hoverOffset: 4,
                     borderWidth: 0

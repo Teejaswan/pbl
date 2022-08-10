@@ -25,15 +25,19 @@ let links = [{name:"Home",link:"/home"},
         <div class="b1r">
             <div class="b1rcon">
                 <div class="con1">
+                    <img src={CheckImg} alt="pro" style="height:40%;width:10%;">
                     <p>See your overall progress</p>
                 </div>
                 <div class="con1">
+                    <img src={CheckImg} alt="pro" style="height:40%;width:10%;">
                     <p>Get your personalized report</p>
                 </div>
                 <div class="con1">
+                    <img src={CheckImg} alt="pro" style="height:40%;width:10%;">
                     <p>Get your personalized report</p>
                 </div>
                 <div class="con1">
+                    <img src={CheckImg} alt="pro" style="height:40%;width:10%;">
                     <p>Get your personalized report</p>
                 </div>
             </div>
@@ -166,14 +170,15 @@ let links = [{name:"Home",link:"/home"},
         width:80%;
         justify-content: space-between;
         align-items: center;
-        font-size: 1.5vw;
+        font-size: 1.3vw;
+        height:100%;
     }
     .b2{
         display: flex;
-        justify-content: space-between;
+        justify-content: left;
         align-items: center;
-        width:80%;
-        height:40vh;
+        width:90%;
+        height:60vh;
         margin: auto;
         margin-top:2vw;
     }

@@ -109,9 +109,6 @@ let links = [{name:"Home",link:"/home"},
                     <Pie />
                 </div>
             </div>
-            <div class="piebottom">
-              
-            </div>
         </div>
     </div>
     <div class="last">
@@ -338,7 +335,7 @@ let links = [{name:"Home",link:"/home"},
         display: flex;
         flex-direction: column;
         align-items: center;
-        justify-content: space-evenly;
+        justify-content: center;
         flex-direction: column;
         width:50%;
         height:100%;
@@ -384,14 +381,6 @@ let links = [{name:"Home",link:"/home"},
         background-color: #FFFFFF;
         border-radius: 1.5vw;
         filter: drop-shadow(0px 0px 20px rgba(0, 0, 0, 0.5));
-    }
-    .piebottom{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width:85%;
-        height:30%;
-        background-color: #D9D9D9;
     }
     .last{
         display: flex;

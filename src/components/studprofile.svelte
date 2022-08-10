@@ -215,12 +215,12 @@
           </div>
           <div class="suggestions">
             <div class="nice">
-              <h3>Nice one</h3>
+              <h4>Nice one</h4>
               <h4>HOD</h4>
             </div>
             <hr>
             <div class="good">
-              <h3>Good</h3>
+              <h4>Good</h4>
               <h4>Mentor</h4>
             </div>
           </div>
@@ -552,7 +552,8 @@ h3{
    .suggestions{
        display:flex;
        flex-direction: column;
-       margin-left:1em;
+       justify-content: space-between;
+       margin:0;
    }
    hr{
     border:1.5px solid black;

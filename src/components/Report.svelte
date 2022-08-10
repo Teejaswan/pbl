@@ -160,7 +160,7 @@ let links = [{name:"Home",link:"/home"},
         background-color: #E9ECFD;
         border-radius: 1.5vw;
         padding: auto;
-        box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.25);
+        box-shadow: -2px 0px 7px 0px rgb(0 0 0 / 25%);
     }
     .con1{
         display: flex;
@@ -216,7 +216,7 @@ let links = [{name:"Home",link:"/home"},
         background-color: #E9ECFD;
         border-radius: 1.5vw;
         padding: auto;
-        box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.25);
+        box-shadow: -2px 0px 7px 0px rgb(0 0 0 / 25%);
     }
     .tm{
         display: flex;
@@ -264,7 +264,7 @@ let links = [{name:"Home",link:"/home"},
         flex-direction: column;
         width:80%;
         border-radius: 5vw;
-        box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.25);
+        box-shadow: -2px 0px 7px 0px rgb(0 0 0 / 25%);
     }
     .con3{
         display: flex;
@@ -320,7 +320,7 @@ let links = [{name:"Home",link:"/home"},
         width:80vw;
         height:100vh;
         background: #FFFFFF;
-        box-shadow: 0px 0px 20.5751px rgba(0, 0, 0, 0.25);
+        box-shadow: -2px 0px 7px 0px rgb(0 0 0 / 25%);
         padding:auto;
     }
     .p1{
@@ -348,7 +348,7 @@ let links = [{name:"Home",link:"/home"},
         width:50%;
         height:25%;
         background-color: #FFFFFF;
-        filter: drop-shadow(0px 0px 20px rgba(0, 0, 0, 0.5));
+        box-shadow: -2px 0px 7px 0px rgb(0 0 0 / 25%);
         border-radius: 1.5vw;
         font-size:1.5vw;
     }
@@ -380,7 +380,7 @@ let links = [{name:"Home",link:"/home"},
         width:80%;
         background-color: #FFFFFF;
         border-radius: 1.5vw;
-        filter: drop-shadow(0px 0px 20px rgba(0, 0, 0, 0.5));
+        box-shadow: -2px 0px 7px 0px rgb(0 0 0 / 25%);
     }
     .last{
         display: flex;

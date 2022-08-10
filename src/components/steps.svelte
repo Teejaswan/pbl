@@ -85,7 +85,7 @@
     border-radius: 2em;
     background: #E1FF27;
     padding:0 1rem 0 1rem;
-    box-shadow: -5px 36px 75px -25px rgba(42, 42, 43, 0.41);
+    box-shadow: -2px 0px 7px 0px rgb(0 0 0 / 25%);
     transition: height 0.5s ease-in-out;
   }
   .inner2{
@@ -97,7 +97,7 @@
     display:flex;
     justify-content: center;
     align-items: center;
-    box-shadow: 5px 36px 75px 25px rgba(42, 42, 43, 0.41);
+    box-shadow: -2px 0px 7px 0px rgb(0 0 0 / 25%);
     font-size: calc(0.75rem + 0.5vmin);
   }
   .content{

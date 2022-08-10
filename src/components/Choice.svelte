@@ -34,7 +34,7 @@
     height: 5vh;
     text-decoration: none;
     border-radius: 2em;
-    box-shadow: 5px 5px 10px 0px #a26868;
+    box-shadow: -2px 0px 7px 0px rgb(0 0 0 / 25%);
     transition: all 300ms ease-in-out;
     margin: 1em;
   }
@@ -59,7 +59,7 @@
     align-items: center;
     flex-direction: column;
     border-radius: 40px;
-    box-shadow: 0.8em 0.8em 2em -0.3em #cbced1;
+    box-shadow: -2px 0px 7px 0px rgb(0 0 0 / 25%);
   }
   .outer {
     display: flex;

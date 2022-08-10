@@ -98,7 +98,7 @@
     padding: 2.5em;
     transform: skew(-14deg);
     border-radius: 1em;
-    box-shadow: 0 0 10px 0 black;
+    box-shadow: -2px 0px 7px 0px rgb(0 0 0 / 25%);
   }
   .illustration {
     min-width: 30vw;
@@ -148,7 +148,7 @@
     width:80vw;
     height:12vh;
     margin:2em 2em 0 2em;
-    box-shadow: 0 0 10px 0 black;
+    box-shadow: -2px 0px 7px 0px rgb(0 0 0 / 25%);
     border-radius: 0.5em 0.5em 0 0;
     
    }

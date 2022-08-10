@@ -31,7 +31,7 @@
     background-color: #d36767;
     margin: 5em;
     border-radius: 1em;
-    box-shadow: -5px 36px 75px -25px #db9bd3;
+    box-shadow: -2px 0px 7px 0px rgb(0 0 0 / 25%);
   }
   .outerContainer {
     display: flex;

@@ -84,7 +84,7 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    box-shadow: 0.8em 0.8em 2em -0.3em #cbced1;
+    box-shadow: -2px 0px 7px 0px rgb(0 0 0 / 25%);
     gap: 2em;
     padding-block: 6em;
   }
@@ -107,7 +107,7 @@
   .password {
     border-radius: 2em;
     border: 1px solid black;
-    box-shadow: 8px 8px 8px #bdbfc2;
+    box-shadow: -2px 0px 7px 0px rgb(0 0 0 / 25%);
     background-color: #fff;
     display: flex;
     padding: 0.5em;
@@ -139,7 +139,7 @@
     width: 25vh;
     height: 5vh;
     border-radius: 2em;
-    box-shadow: 5px 5px 10px 0px #a26868;
+    box-shadow: -2px 0px 7px 0px rgb(0 0 0 / 25%);
     transition: all 300ms ease-in-out;
   }
   .login:hover {
@@ -209,7 +209,7 @@
     height: 55.6vh;
     border-radius: 0 1em 0 0;
     padding: 0 6em 0 0;
-    box-shadow: 0.8em 0.8em 2em -0.3em rgb(189, 188, 188);
+    box-shadow: -2px 0px 7px 0px rgb(0 0 0 / 25%);
   }
   h3 {
     font-family: "Lato", sans-serif;
@@ -248,7 +248,7 @@
     justify-content: left;
     padding-left: 0.6vw;
     z-index: 3;
-    /* box-shadow: 0.2em 0.3em 2em -0.3em rgb(104, 103, 103); */
+    /* box-shadow: -2px 0px 7px 0px rgb(0 0 0 / 25%); */
   }
 
   .header {
@@ -257,7 +257,7 @@
     height: 6vh;
     margin: 0;
     position: absolute;
-    /* box-shadow: 0.4em 0.5em 2em -0.3em rgb(104, 103, 103); */
+    /* box-shadow: -2px 0px 7px 0px rgb(0 0 0 / 25%); */
   }
   h2 {
     outline-color: #6273cb;

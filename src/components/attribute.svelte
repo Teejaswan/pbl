@@ -93,7 +93,7 @@
     width: 17vw;
     height: 17vw;
     margin: 1vw;
-    box-shadow: 0 2vw 5vw -1vw rgb(89, 87, 87);
+    box-shadow: -2px 0px 7px 0px rgb(0 0 0 / 25%);
   }
   .inner {
     justify-content: center;

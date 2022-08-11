@@ -32,7 +32,7 @@
     flex-direction: row;
     clip-path: polygon(0 0, 100% 0%, 100% 50%, 0 25%);
     justify-content: space-between;
-    box-shadow: 10px 0 0 0 solid black;
+    box-shadow: -2px 0px 7px 0px rgb(0 0 0 / 25%);
   }
   .container-wrap {
     filter: drop-shadow(-1px 0 10px rgba(104, 104, 4, 0.5));

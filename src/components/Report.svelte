@@ -1,32 +1,43 @@
 <script>
 import NavBar from "./NavBar.svelte";
+import Pie from "./pie.svelte"
+// Picture imports 
+import CheckImg from "../assets/check.png";
+import ProImg from "../assets/pro.svg"
+
 let title = "Progress";
 let links = [{name:"Home",link:"/home"},
              {name:"Profile",link:"/profile"},
              {name:"Posts",link:"/posts"},
              {name:"Workspace",link:"/user/student/todo"}
             ];
+            // @ts-ignore
 </script> 
+
 <NavBar {title} {links}/>
 <body>
     <div class="b1">
         <div class="b1l">
             <p style="font-size:2.5vw;text-align:center;">A LITTLE PROGRESS<br>EACH DAY SUMS UP TO<br>GREAT SUCCESS.</p>
             <p style="font-size:1.5vw;text-align:center;">A single place to manage and keep track<br>of all your projects </p>
-            <img src="pro.svg" alt="pro">
+            <img src={ProImg} alt="pro" style="height:50%;width:80%;">
         </div>
         <div class="b1r">
             <div class="b1rcon">
                 <div class="con1">
+                    <img src={CheckImg} alt="pro" style="height:40%;width:10%;">
                     <p>See your overall progress</p>
                 </div>
                 <div class="con1">
+                    <img src={CheckImg} alt="pro" style="height:40%;width:10%;">
                     <p>Get your personalized report</p>
                 </div>
                 <div class="con1">
+                    <img src={CheckImg} alt="pro" style="height:40%;width:10%;">
                     <p>Get your personalized report</p>
                 </div>
                 <div class="con1">
+                    <img src={CheckImg} alt="pro" style="height:40%;width:10%;">
                     <p>Get your personalized report</p>
                 </div>
             </div>
@@ -51,7 +62,7 @@ let links = [{name:"Home",link:"/home"},
                 <div class="mem">
                     <p style="font-size:1.5vw;">Member3</p>
                 </div>
-                <div class="mem">
+                <div class="memlast">
                     <p style="font-size:1.5vw;">Member3</p>
                 </div>
             </div>
@@ -59,18 +70,18 @@ let links = [{name:"Home",link:"/home"},
         <div class="b3r">
             <div class="b3r1">
                 <div class="con3">
-                    <div class="con31">
+                    <div class="con311">
                         <p style="color:white;font-size:1.5vw;"><b>Problem<br>Statement</b></p>
                     </div>
-                    <div class="con32">
+                    <div class="con321">
                         <p style="font-size:1.5vw;"><b>The Problem Statement</b></p>
                     </div>
                 </div>
                 <div class="con3">
-                    <div class="con31">
+                    <div class="con312">
                         <p style="color:white;font-size:1.5vw;"><b>Solution</b></p>
                     </div>
-                    <div class="con32">
+                    <div class="con322">
                         <p style="font-size:1.5vw;"><b>The Solution</b></p>
                     </div>
                 </div>
@@ -79,18 +90,41 @@ let links = [{name:"Home",link:"/home"},
     </div>
     <div class="progress">
         <div class="p1">
-            <div class="pcon"></div>
-            <div class="pcon"></div>
-            <div class="pcon"></div>
+            <div class="pcon">
+                <div class="phead">Completed</div>
+                <div class="pbody"><b>20</b></div>
+            </div>
+            <div class="pcon">
+                <div class="phead">On progress</div>
+                <div class="pbody"><b>10</b></div>
+            </div>
+            <div class="pcon">
+                <div class="phead">Overdue</div>
+                <div class="pbody"><b>2</b></div>
+            </div>
         </div>
-        <div class="p2"></div>
+        <div class="p2">
+            <div class="pie">
+                <div style="height:80%;width:80%;">
+                    <Pie />
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="last">
+        <div class="lasthead"></div>
+        <div class="lastcon"></div>
     </div>
 </body>
 <style>
+    
+
     body{
         display: flex;
         align-items: center;
         flex-direction: column;
+        justify-content: space-between;
+        margin-bottom:3vw;
     }
     .b1{
         display: flex;
@@ -99,15 +133,14 @@ let links = [{name:"Home",link:"/home"},
         width:80%;
         height:60vh;
         margin: auto;
-        background-color: aqua;
     }
     .b1l{
         display: flex;
         flex-direction: column;
         align-items: center;
-        justify-content: center;
+        justify-content: space-between;
         width:50%;
-        background-color: brown;
+        height: 100%;
     }
     .b1r{
         display: flex;
@@ -115,6 +148,7 @@ let links = [{name:"Home",link:"/home"},
         align-items: center;
         justify-content: center;
         width:50%;
+        height: 100%;
         margin: auto;
     }
     .b1rcon{
@@ -126,23 +160,24 @@ let links = [{name:"Home",link:"/home"},
         background-color: #E9ECFD;
         border-radius: 1.5vw;
         padding: auto;
-        box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.25);
+        box-shadow: -2px 0px 7px 0px rgb(0 0 0 / 25%);
     }
     .con1{
         display: flex;
         width:80%;
         justify-content: space-between;
         align-items: center;
-        font-size: 1.5vw;
+        font-size: 1.3vw;
+        height:100%;
     }
     .b2{
         display: flex;
-        justify-content: space-between;
+        justify-content: left;
         align-items: center;
-        width:80%;
-        height:40vh;
+        width:90%;
+        height:60vh;
         margin: auto;
-        background-color: red;
+        margin-top:2vw;
     }
     h4{
         font-family: "Lato", sans-serif;
@@ -181,7 +216,7 @@ let links = [{name:"Home",link:"/home"},
         background-color: #E9ECFD;
         border-radius: 1.5vw;
         padding: auto;
-        box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.25);
+        box-shadow: -2px 0px 7px 0px rgb(0 0 0 / 25%);
     }
     .tm{
         display: flex;
@@ -199,6 +234,13 @@ let links = [{name:"Home",link:"/home"},
         width:100%;
         padding:auto;
         border-bottom:1px solid;
+    }
+    .memlast{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width:100%;
+        padding:auto;
     }
     .b3l{
         display: flex;
@@ -222,7 +264,7 @@ let links = [{name:"Home",link:"/home"},
         flex-direction: column;
         width:80%;
         border-radius: 5vw;
-        box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.25);
+        box-shadow: -2px 0px 7px 0px rgb(0 0 0 / 25%);
     }
     .con3{
         display: flex;
@@ -230,7 +272,7 @@ let links = [{name:"Home",link:"/home"},
         justify-content: center;
         width:100%;
     }
-    .con31{
+    .con311{
         display: flex;
         align-items: center;
         justify-content: center;
@@ -238,8 +280,19 @@ let links = [{name:"Home",link:"/home"},
         height:20vh;
         background-color: #6273CB;
         border-bottom:1px solid;
+        border-radius:1.5vw 0 0 0;
     }
-    .con32{
+    .con312{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width:30%; 
+        height:20vh;
+        background-color: #6273CB;
+        border-bottom:1px solid;
+        border-radius:0 0 0 1.5vw;
+    }
+    .con321{
         display: flex;
         align-items: center;
         justify-content: center;
@@ -247,6 +300,17 @@ let links = [{name:"Home",link:"/home"},
         height:20vh;
         background-color: #E9ECFD ;
         border-bottom:1px solid;
+        border-radius:0 1.5vw 0 0;
+    }
+    .con322{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width:70%; 
+        height:20vh;
+        background-color: #E9ECFD ;
+        border-bottom:1px solid;
+        border-radius:0 0 1.5vw 0;
     }
     .progress{
         display: flex;
@@ -256,33 +320,91 @@ let links = [{name:"Home",link:"/home"},
         width:80vw;
         height:100vh;
         background: #FFFFFF;
-        box-shadow: 0px 0px 20.5751px rgba(0, 0, 0, 0.25);
+        box-shadow: -2px 0px 7px 0px rgb(0 0 0 / 25%);
         padding:auto;
     }
     .p1{
         display: flex;
         align-items: center;
-        justify-content: center;
+        justify-content: space-evenly;
         flex-direction: column;
         width:50%;
         height:100%;
-        background-color: #e1ff27;
     }
     .p2{
         display: flex;
+        flex-direction: column;
         align-items: center;
         justify-content: center;
         flex-direction: column;
         width:50%;
         height:100%;
-        background-color: red;
     }
     .pcon{
         display: flex;
+        flex-direction: column;
         align-items: center;
         justify-content: center;
-        width:35%;
-        height:30%;
-        filter: drop-shadow(0px 0px 20px rgba(0, 0, 0, 0.5));
+        width:50%;
+        height:25%;
+        background-color: #FFFFFF;
+        box-shadow: -2px 0px 7px 0px rgb(0 0 0 / 25%);
+        border-radius: 1.5vw;
+        font-size:1.5vw;
+    }
+    .phead{
+        display: flex; 
+        justify-content: center;
+        align-items: center;
+        height:45%;
+        width:100%;
+        border-radius: 1.5vw 1.5vw 0 0;
+        background-color: #6273CB;
+        color:#FFFFFF;
+        font-size: 1.5vw;
+    }
+    .pbody{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width:100%;
+        height:55%;
+        background-color: #FFFFFF;
+        border-radius: 0 0 1.5vw 1.5vw;
+    }
+    .pie{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height:60%;
+        width:80%;
+        background-color: #FFFFFF;
+        border-radius: 1.5vw;
+        box-shadow: -2px 0px 7px 0px rgb(0 0 0 / 25%);
+    }
+    .last{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background-color:#E9ECFD;
+        height:80vh;
+        width:80vw;
+        margin-top: 2vw;
+    }
+    .lasthead{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #6273CB;
+        width:100%;
+        height:15%;
+    }
+    .lastcon{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width:100%;
+        height:85%;
     }
 </style>

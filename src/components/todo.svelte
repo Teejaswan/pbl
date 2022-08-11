@@ -164,7 +164,7 @@ let links = [{name:"Home",link:"/home"},
   flex-direction: column;
   width:28rem;
   height:26.5rem;
-  box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.25);
+  box-shadow: -2px 0px 7px 0px rgb(0 0 0 / 25%);
 }
 .head{
   display:flex;

@@ -1,5 +1,5 @@
 <script>
-  let data = fetch("http://localhost:3000/api/proposals")
+  let proposals = fetch("http://localhost:3000/api/proposals")
     .then((json) => json.json())
     .then((a) => {
       return a.proposals;
@@ -49,12 +49,12 @@
 </Route>
 <Route path="/user/teamprofile">
   <Teamprofile />
-  </Route>
+</Route>
 <Route path="/login">
   <Login />
 </Route>
 <Route path="/posts">
-  <Posts {data} />
+  <Posts {proposals} />
 </Route>
 <Route path="/user/:type/:username" let:meta>
   <User username={meta.params.username} type={meta.params.type} />

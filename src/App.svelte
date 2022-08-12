@@ -5,15 +5,6 @@
       return a.proposals;
     });
 
-  /*  async function data() {
-    let json = await (
-      await fetch("http://localhost:3000/api/proposals")
-    ).json();
-    console.log(json);
-  }
-  let json = data();
-//  console.log(JSON.stringify(json));*/
-
   import { Route, router } from "tinro";
   import Attribute from "./components/attribute.svelte";
   import Header from "./components/Header.svelte";

@@ -255,9 +255,18 @@ app.get("/users/:name/:password", (req, res) => {
 app.get("/proposals", (req, res) => {
   res.json({ proposals });
 });
+
+app.use(express.urlencoded());
+
+app.post("/proposals", (req, res) => {
+  proposals.push(JSON.parse(req.body));
+  res.send({ proposals });
+});
+
 app.get("/user/student", (req, res) => {
   res.send("Hello");
 });
+
 // listen to the port
 app.listen(port, () => {
   console.log(

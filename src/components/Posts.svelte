@@ -1,7 +1,9 @@
-<script>
+<script lang="ts">
   let title = "POSTS";
   import NavBar from "./NavBar.svelte";
   import PBL from "../assets/PBL.svg";
+  import { fade } from "svelte/transition";
+
   let links = [
     { name: "HOME", link: "/home" },
     { name: "PROFILE", link: "/profile" },
@@ -10,100 +12,179 @@
 
   export let proposals;
 
+  let promise;
+
   async function setProposals() {
-    let p = await proposals;
-    if (p) {
-      return p;
-    }
+    promise = await proposals;
+    console.log(promise);
   }
-  let promise = setProposals();
-  $: console.log(promise);
+
+  setProposals();
+
+  let formVisible = false;
+  function input() {
+    formVisible = true;
+  }
+  function revert() {
+    formVisible = false;
+  }
+
+  const newProposal = {
+    title: "",
+    description: "",
+    queries: "",
+    teamId: JSON.parse(localStorage.getItem("team")).no,
+  };
+
+  function proposeNew() {
+    console.log(newProposal, "proposed");
+    formVisible = false;
+  }
+
+  const teamId = JSON.parse(localStorage.getItem("team")).no;
 </script>
 
-<div class="home">
-  <NavBar {title} {links} />
-  <div class="container">
-    <div class="inner">
-      <div class="lime-background">
-        <div class="info-card">
-          <p class="heading">PLACE TO PROPOSE YOUR IDEAS AND GET UPVOTES</p>
-          <p class="description">
-            Submit your ideas and get better ideas and approvals from officials
-          </p>
+<div id="outer">
+  {#if formVisible}
+    <div id="input-div-wrapper" transition:fade>
+      <!-- <form id="input-div" on:submit|preventDefault={proposeNew}>
+        <input
+          type="text"
+          placeholder="problem"
+          bind:value={newProposal.title}
+          required
+        />
+        <input
+          type="text"
+          placeholder="solution"
+          bind:value={newProposal.description}
+          required
+        />
+        <input
+          type="text"
+          placeholder="queries"
+          bind:value={newProposal.queries}
+          required
+        />
+        <button type="submit">Submit</button>
+        <button on:click={revert}>Close</button>
+      </form> -->
+      <form
+        id="input-div"
+        method="post"
+        action="http://localhost:3000/api/proposals"
+      >
+        <input type="text" placeholder="problem" name="title" required />
+        <input type="text" placeholder="solution" name="description" required />
+        <input type="text" placeholder="queries" name="queries" required />
+        <input type="text" name="teamId" value={teamId} readonly hidden />
+        <button type="submit">Submit</button>
+        <button on:click={revert}>Close</button>
+      </form>
+    </div>
+  {/if}
+  <div class="home">
+    <NavBar {title} {links} />
+    <div class="container">
+      <div class="inner">
+        <div class="lime-background">
+          <div class="info-card">
+            <p class="heading">PLACE TO PROPOSE YOUR IDEAS AND GET UPVOTES</p>
+            <p class="description">
+              Submit your ideas and get better ideas and approvals from
+              officials
+            </p>
+          </div>
         </div>
       </div>
-    </div>
-    <div class="illustration">
-      <img src={PBL} alt="PBL management" />
+      <div class="illustration">
+        <img src={PBL} alt="PBL management" />
+      </div>
     </div>
   </div>
-</div>
-<div class="ideas">
-  <div class="idea">
-    <h2>PROPOSED IDEAS</h2>
-    <div class="table">
-      {#await promise then p}
-        {#each p as post}
-          <button class="name">
-            <div class="number">
-              <h3>Team - {post.teamId}</h3>
-            </div>
-            <div class="proposal">
-              <h3>{post.title}</h3>
-            </div>
-            <div class="icon" />
-          </button>
-          <div class="post">
-            <div class="display">
-              <div class="statement">
-                <h3>PROBLEM STATEMENT</h3>
+  <div class="ideas">
+    <div class="idea">
+      <h2>PROPOSED IDEAS</h2>
+      <button class="icon" on:click={input}>+</button>
+      <div class="table">
+        {#if !!promise}
+          {#each promise as post}
+            <div class="name">
+              <div class="number">
+                <h3>Team - {post.teamId}</h3>
               </div>
-              <div class="space">
-                {post.description}
+              <div class="proposal">
+                <h3>{post.title}</h3>
               </div>
             </div>
-            <div class="display">
-              <div class="solution">
-                <h3>PROPOSED SOLUTION</h3>
-              </div>
-              <div class="space">
-                {post.description}
-              </div>
-            </div>
-            <div class="display">
-              <div class="queries">
-                <h3>QUERIES</h3>
-              </div>
-              <div class="space">
-                {post.queries}
-              </div>
-            </div>
-          </div>
-          <div class="comment">
-            <div class="head">
-              <h3>Comments</h3>
-            </div>
-
-            <div class="suggestions">
-              {#each post.comments as comments}
-                <div class="nice">
-                  <h3>{comments.comment}</h3>
-                  <h4>{comments.by}</h4>
+            <div class="post">
+              <div class="display">
+                <div class="statement">
+                  <h3>PROBLEM STATEMENT</h3>
                 </div>
-                <hr />
-              {/each}
+                <div class="space">
+                  {post.description}
+                </div>
+              </div>
+              <div class="display">
+                <div class="solution">
+                  <h3>PROPOSED SOLUTION</h3>
+                </div>
+                <div class="space">
+                  {post.description}
+                </div>
+              </div>
+              <div class="display">
+                <div class="queries">
+                  <h3>QUERIES</h3>
+                </div>
+                <div class="space">
+                  {post.queries}
+                </div>
+              </div>
             </div>
-          </div>
-        {/each}
-      {/await}
+            <div class="comment">
+              <div class="head">
+                <h3>Comments</h3>
+              </div>
+
+              <div class="suggestions">
+                {#each post.comments as comments}
+                  <div class="nice">
+                    <h3>{comments.comment}</h3>
+                    <h4>{comments.by}</h4>
+                  </div>
+                  <hr />
+                {/each}
+              </div>
+            </div>
+          {/each}
+        {/if}
+      </div>
     </div>
   </div>
 </div>
 
-<!-- {#await promise then p}
-  <div>{p[0].title}</div>
-{/await} -->
 <style>
+  #outer {
+    position: relative;
+  }
+  #input-div-wrapper {
+    position: absolute;
+    min-width: 100%;
+    min-height: 100%;
+    display: grid;
+    background-color: rgba(0, 0, 0, 0.5);
+
+    z-index: 10;
+    place-content: center;
+  }
+  #input-div {
+    opacity: 1;
+    padding: 2em;
+    z-index: 11;
+    background: rgba(0, 0, 0, 1);
+  }
   .info-card {
     background: #6273cb;
     height: 30vh;
@@ -139,6 +220,7 @@
     flex-direction: row;
   }
   .home {
+    position: relative;
     background: #e9ecfd;
     height: 100vh;
   }

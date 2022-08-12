@@ -17,7 +17,6 @@
     }
   }
   let promise = setProposals();
-  $: console.log(promise);
 </script>
 
 <div class="home">

@@ -1,5 +1,6 @@
 {
   "name": "pbl-backend",
+  "type": "module",
   "version": "0.0.0",
   "description": "simple backend server for pbl-project frontend",
   "main": "index.js",

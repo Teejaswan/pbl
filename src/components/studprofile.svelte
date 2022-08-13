@@ -195,7 +195,240 @@
     z-index: -2;
     /*border-radius: 0 0 60px 60px;*/
   }
+
+  .content{
+   display: flex;
+   flex-direction:row;
+   justify-content: space-around;
+   align-items: center;
+   width:100vw;
+   height: 13vh; 
+   font-size: clamp(1em 2em 3em);
+   font-weight:700;
+   overflow:hidden;
+  } 
+  .right{
+    display:flex;
+    flex-direction:row;
+    justify-content:space-evenly;
+    font-weight:700;
+    font-size:2vh;
+    width:40vw;
+  }
+  .left{
+    font-weight:700;
+    font-size:2.2vh;
+    width:40vw;
+  }
+  .container{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    overflow:hidden;
+    height:100vh;
+  }
+  .left1{
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    width:40vw;
+    font-size: 3vh;
+    font-family:sans-serif ;
+  }
+h2{
+  margin-block-start:0.1em;
+  margin-block-end:0.1em;
+  font-size:2em;
+}
+#lines1{
+  margin-block-start:0.3em;
+  margin-block-end:0.1em;
+  font-size: clamp(1em 2em 3em); 
+}
+#lines2{
+  margin-block-start:0.1em;
+  margin-block-end:0.1em;
+  font-size: clamp(1em 2em 3em);
+}
+#quote{
+  font-size: clamp(1em 2em 3em);
+}
+.bottom{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  font-size: clamp(1em 2em 3em);
+  place-items:center;
+  border-radius:0 0 1em 1em;
+}
+.top{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  background-color:#6273CB;
+  font-size: clamp(1em 2em 3em);
+  width:40vw;
+  height:10vh;
+  border-radius:1em 1em 0 0;
+}
+.right1{
+  display:flex;
+  flex-direction :column;
+  justify-content:center;
+  align-items:center;
+  width:40vw;
+  border-radius:1em;
+  box-shadow:0 0 1.5em 0 #a8a9a8;
+}
+.one{
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  width:20vw;
+  border-right:solid #9d9e9d 0.1em;
+}
+.two{
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  width:20vw;
+}
+.m1{
+  border-bottom:solid #9d9e9d 0.1em;
+  font-size: clamp(1em 2em 3em);
+  width:20vw;
+  height:12vh;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  background-color:#E9ECFD;
+}
+.m2{
+  width:20vw;
+  height:12vh;
+  font-size: clamp(1em 2em 3em);
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  background-color:#E9ECFD;
+}
+h3{
+  margin-block-start:0.2em;
+  margin-block-end:0.2em;
+}
+
+.body2{
+  height:100vh;
+  overflow: hidden;
+}
+.outer{
+  display:flex;
+  padding:5em;
+  width:100vw;
+  height:20vh;
+  justify-content:space-between;
+  align-items:center;
+  background-color:#E9ECFD;
+}
+.container2{
+  height:100vh;
+  background-color:#E9ECFD;
+}
+.inner3{
+  clip-path: polygon(0 0, 100% 0%, 80% 100%, 0% 100%);
+  background-color: #E1FF27;
+  width:34vh;
+  margin:10px;
+}
+.inner4{
+  clip-path: polygon(0 0, 100% 0%, 80% 100%, 0% 100%);
+  background-color: #6273CB;
+  width:24vh;
+  padding:20px;
+  
+}
+.inner2{
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  font-weight:700;
+  font-size: 3vh;
+  font-family:sans-serif ;
+  width:50vw;
+  margin-top:220px;
+}
+.left2{
+  display:flex;
+  justify-content:space-evenly;
+  align-items:center;    
+  flex-direction:row;
+  font-size: clamp(1em 2em 3em);
+  width:50vw;
+}
+.container2{
+  display:grid;
+  place-items:center;
+  grid-template-columns:1fr 1fr;
+  overflow:hidden;
+  height:70vh;
+}
+.box1{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  flex-direction:column;
+  width:25vh;
+  height:25vh;
+  background-color:#fff;
+  padding:1em;
+  border-radius:1em;
+  box-shadow:0 0 1.5em 0 #a8a9a8;
+}
+.box2{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  flex-direction:column;
+  width:25vh;
+  height:25vh;
+  background-color:#fff;
+  padding:1em;
+  border-radius:1em;
+  box-shadow:0 0 1.5em 0 #a8a9a8;
+}
+#lines3{
+  margin-block-start:2em;
+  margin-block-end:0.1em;
+  width:auto;
+  font-size: clamp(1em 2em 3em); 
+}
+#lines4{
+  margin-block-start:0.1em;
+  margin-block-end:0.1em;
+  font-size: clamp(1em 2em 3em);
+}
+#quote1{
+  font-size: clamp(1em 2em 3em);
+}
+.Outer{
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
+  padding:2em 8em 0 8em;
+}
+.table{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+   }
+   
   .content {
+
     display: flex;
     flex-direction: row;
     justify-content: space-around;

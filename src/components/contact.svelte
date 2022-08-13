@@ -1,5 +1,6 @@
 <script>
   import { Route } from "tinro";
+  import robot from "../assets/Robot.svg";  
 </script>
 
 <!-- <div class="container">
@@ -77,9 +78,22 @@
     <a href="https://www.kct.ac.in/">www.kct.ac.in</a>
     <a href="https://www.kct.ac.in/">www.kct.ac.in</a>
   </div>
+  <div class="container3">
+    <img src={robot} alt="fiygbfijyfguy" />
+  </div>
 </div>
 
 <style>
+
+  .container{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    padding:1vw 0 0 6vw;
+    width:100vw;
+    height:40vh;
+    background-color:#E9ECFD;
+  }
   .container {
     font-family: sans-serif;
     display: grid;
@@ -88,6 +102,7 @@
     width: 100vw;
     height: 40vh;
     background-color: #e9ecfd;
+
   }
   .inner1 {
     clip-path: polygon(0 0, 100% 0%, 80% 100%, 0% 100%);
@@ -122,6 +137,19 @@
   }
   .container1 {
     filter: drop-shadow(1.25em 0.75em 1.5em rgba(64, 64, 65, 0.41));
+  }
+
+  img{
+    width:50vh;
+    height:50vh;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .container3{
+    display:flex;
+    justify-content: center;
+    align-items: center;
   }
   a {
     cursor: pointer;

@@ -28,7 +28,7 @@
     <div class="container1">
       <div class="content">
         <h3>WELCOME TO A PLATFORM FOR MAKING YOUR PROJECT WORK EASIER</h3>
-        <img src={Login2} alt="fiygbfijyfguy" />
+        <img src={Login2} alt="fiygbfijyfguy" id="work"/>
       </div>
     </div>
     <div class="container2">
@@ -89,7 +89,7 @@
   h3 {
     font-family: "Lato", sans-serif;
     color: black;
-    font-size: calc(1em + 1vmin);
+    font-size: clamp(0.1em 2em 3em);
   }
   .container1 {
     display: flex;
@@ -187,5 +187,9 @@
   }
   .space {
     height: 0.5vw;
+  }
+  #work{
+    width:10em;
+    height:10em;
   }
 </style>

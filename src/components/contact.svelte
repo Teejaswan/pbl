@@ -111,14 +111,16 @@
     align-items: center;
     padding:1vw 0 0 6vw;
     width:100vw;
-    height:40vh;
+    height:50vh;
     font-family:sans-serif;
     background-color:#E9ECFD;
+    overflow:hidden;
   }
   .inner1 {
     clip-path: polygon(0 0, 100% 0%, 80% 100%, 0% 100%);
     background-color: #e1ff27;
     width: 24vh;
+    margin-top:5em;
   }
   .inner2 {
     clip-path: polygon(0 0, 100% 0%, 80% 100%, 0% 100%);
@@ -202,10 +204,87 @@
   @media only screen and (max-width: 360px) {
     .container {
       display: block;
-      height: 55vh;
+      height: 70vh;
+      padding:0;
     }
     a {
       margin: 1.6vw;
+    }
+    .phone{
+      padding:0;
+      justify-content: left;
+    }
+    .mail{
+      padding:0;
+      justify-content: left;
+    }
+    .twitter{
+      padding:0;
+    }
+    .facebook{
+      padding:0;
+    }
+    .insta{
+      padding:0;
+    }
+    .container3{
+      display:none;
+    }
+
+  }
+  @media only screen and (max-width: 570px) {
+    #robot{
+      width:0;
+    }
+    .phone{
+      padding:0;
+    }
+    .mail{
+      padding:0;
+    }
+    .twitter{
+      padding:0;
+    }
+    .facebook{
+      padding:0;
+    }
+    .insta{
+      padding:0;
+    }
+    .container{
+      justify-content:space-evenly;
+      padding:0;
+    }
+    .container3{
+      display:none;
+    }
+    
+  }
+  @media only screen and (max-width: 680px){
+    .phone{
+      padding:0;
+    }
+    .mail{
+      padding:0;
+    }
+    .twitter{
+      padding:0;
+    }
+    .facebook{
+      padding:0;
+    }
+    .insta{
+      padding:0;
+    }
+    #robot{
+      width:0;
+    }
+    .container{
+      justify-content: space-evenly;
+      padding:0;
+    }
+    .container3{
+      display:none;
     }
   }
 </style>

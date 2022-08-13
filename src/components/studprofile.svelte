@@ -29,7 +29,7 @@
       <h2 id="quote">PROGRESS.</h2>
       <h4 id="lines1">A single place to manage and keep track</h4>
       <h4 id="lines2">of all your projects</h4>
-      <img src={Work} alt="fiygbfijyfguy" />
+      <img src={Work} alt="fiygbfijyfguy" id="work"/>
     </div>
     <div class="right1">
       <div class="top">
@@ -802,6 +802,10 @@ h3{
       font-size: 2vh;
       width: 100vw;
       font-family: sans-serif;
+    }
+    #work{
+      width:0;
+      height:0;
     }
     .one {
       width: 22.5vh;

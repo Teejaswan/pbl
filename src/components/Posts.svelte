@@ -271,8 +271,6 @@
   .home {
     position: relative;
     background: #e9ecfd;
-    height: 100vh;
-    padding-bottom: 30vh;
   }
   .heading,
   .description {

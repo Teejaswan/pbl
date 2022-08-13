@@ -1,18 +1,9 @@
 <script>
-  let data = fetch("http://localhost:3000/api/proposals")
+  let proposals = fetch("http://localhost:3000/api/proposals")
     .then((json) => json.json())
     .then((a) => {
       return a.proposals;
     });
-
-  /*  async function data() {
-    let json = await (
-      await fetch("http://localhost:3000/api/proposals")
-    ).json();
-    console.log(json);
-  }
-  let json = data();
-//  console.log(JSON.stringify(json));*/
 
   import { Route, router } from "tinro";
   import Attribute from "./components/attribute.svelte";
@@ -30,10 +21,11 @@
   import Mentor from "./components/Mentor.svelte";
   import User from "./components/User.svelte";
   import Posts from "./components/Posts.svelte";
-  import Report from "./components/Report.svelte";
+
   router.mode.hash();
 
   window["ab"] = (_) => router.goto("/user/student");
+  const steps = document.getElementById("steps");
 </script>
 
 <Route path="/">
@@ -49,12 +41,12 @@
 </Route>
 <Route path="/user/teamprofile">
   <Teamprofile />
-  </Route>
+</Route>
 <Route path="/login">
   <Login />
 </Route>
 <Route path="/posts">
-  <Posts {data} />
+  <Posts {proposals} />
 </Route>
 <Route path="/user/:type/:username" let:meta>
   <User username={meta.params.username} type={meta.params.type} />
@@ -72,9 +64,6 @@
 
 <Route path="/mentor">
   <Mentor />
-</Route>
-<Route path="/report">
-  <Report />
 </Route>
 
 <style>

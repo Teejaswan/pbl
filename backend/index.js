@@ -1,186 +1,12 @@
-const express = require("express");
+import express, { urlencoded } from "express";
+import initDB from "./db/index.js";
+
 const app = express();
+app.use(urlencoded({ extended: true }));
+
 const port = 4000;
 
-const users = [
-  {
-    name: "M1",
-    type: "mentor",
-    id: 0,
-  },
-  {
-    name: "HOD",
-    type: "hod",
-    id: 1,
-  },
-  {
-    name: "S1",
-    type: "student",
-    id: 2,
-  },
-  {
-    name: "S2",
-    type: "student",
-    id: 3,
-  },
-  {
-    name: "S3",
-    type: "student",
-    id: 4,
-  },
-  {
-    name: "S4",
-    type: "student",
-    id: 5,
-  },
-  {
-    name: "S5",
-    type: "student",
-    id: 6,
-  },
-  {
-    name: "S6",
-    type: "student",
-    id: 7,
-  },
-  {
-    name: "M2",
-    type: "mentor",
-    id: 8,
-  },
-  {
-    name: "S7",
-    type: "student",
-    id: 9,
-  },
-];
-
-const pass = [
-  "pass1",
-  "pass2",
-  "pass3",
-  "pass4",
-  "pass5",
-  "pass6",
-  "pass7",
-  "pass8",
-  "pass9",
-  "pass10",
-];
-
-const teams = [
-  {
-    no: 1,
-    mentor: 0,
-    members: [2, 4, 6],
-    tasks: [
-      {
-        name: "task1",
-        due: "03-06-2022",
-        status: "pending",
-        assignees: [6, 2],
-        projectId: 1,
-      },
-      {
-        name: "task2",
-        due: "03-06-2022",
-        status: "completed",
-        assignees: [4, 2],
-        projectId: 1,
-      },
-      {
-        name: "task3",
-        due: "02-06-2022",
-        status: "overdue",
-        assignees: [2, 4, 6],
-        projectId: 2,
-      },
-      {
-        name: "task3",
-        due: "05-06-2022",
-        status: "completed",
-        assignees: [4],
-        projectId: 2,
-      },
-    ],
-    projects: [
-      {
-        title: "project1",
-        statement: "statement1",
-        id: 0,
-      },
-      {
-        title: "project2",
-        statement: "statement2",
-        id: 2,
-      },
-    ],
-  },
-  {
-    no: 2,
-    mentor: 8,
-    members: [1, 3, 5, 7],
-    // tasks: [
-    //   {
-    //     name: "task-1",
-    //     due: "03-06-2022",
-    //     status: "pending",
-    //     assignees: [1, 3, 5],
-    //   },
-    //   {
-    //     name: "task-2",
-    //     due: "03-06-2022",
-    //     status: "completed",
-    //     assignees: [1, 7],
-    //   },
-    // ],
-  },
-];
-
-const proposals = [
-  {
-    title: "proposal1",
-    description: "description1",
-    upVotes: 2,
-    comments: [
-      {
-        comment: "comment1",
-        by: 0,
-      },
-      {
-        comment: "comment2",
-        by: 8,
-      },
-    ],
-    teamId: 1,
-    queries: "dku hdjy gduyg dj du fytdjbkduy du",
-  },
-  {
-    title: "proposal2",
-    description: "description2",
-    upVotes: 1,
-    comments: [
-      {
-        comment: "comment3",
-        by: 1,
-      },
-    ],
-    teamId: 1,
-  },
-  {
-    title: "proposal-1",
-    description: "description-1",
-    upVotes: 2,
-    comments: [
-      {
-        comment: "comment-1",
-        by: 0,
-      },
-    ],
-    teamId: 2,
-    queries: "dkugdkjdbjdg uduy gduy udy gudyg duy gduy dyt ",
-  },
-];
+const db = initDB();
 
 function findProject(id, projects) {
   return projects.find((project) => project.id === id);
@@ -207,29 +33,31 @@ function groupTasks(tasks, projects) {
 
   return tasks;
 }
-console.log(groupTasks(teams[0].tasks, teams[0].projects));
+
 function findUser(id) {
-  return users.find((user) => user.id === id);
+  return db.users.find((user) => user.id === id);
 }
 
 // get team based on user id and replace mentor id with mentor name and members with users
 function findTeam(id) {
-  const team = teams.find((team) => team.members.includes(id));
+  const team = db.teams.find((team) => team.members.includes(id));
   team.mentor = findUser(team.mentor);
   team.tasks = groupTasks(team.tasks, team.projects);
   team.members = team.members.map((member) => findUser(member));
   return team;
 }
 
+/** *GET Requests* **/
+
 // retrieve user data
 app.get("/users/:name/:password", (req, res) => {
   let name = req.params.name;
   let password = req.params.password;
 
-  let user = users.find((user) => user.name === name);
+  let user = db.users.find((user) => user.name === name);
 
   if (user) {
-    if (pass[user.id] === password) {
+    if (db.pass[user.id] === password) {
       switch (user.type) {
         case "mentor":
           res.send({ user });
@@ -253,11 +81,65 @@ app.get("/users/:name/:password", (req, res) => {
 });
 
 app.get("/proposals", (req, res) => {
-  res.json({ proposals });
+  res.json({ proposals: db.proposals });
 });
+
 app.get("/user/student", (req, res) => {
   res.send("Hello");
 });
+
+/** *POST Requests* **/
+app.post("/user/new/:type", (req, res) => {
+  const type = req.params.type;
+  const { name, pass } = req.body;
+
+  db.newUser({ name, pass, type });
+  res.end({ success: true });
+});
+
+app.post("/proposals", (req, res) => {
+  db.addProposals(req.body);
+  res.end({ success: true });
+});
+
+app.post("/team/:id/project", (req, res)=> {
+  db.addProject(req.params.id, req.body)
+})
+
+/*
+// This is not necessary as patch request to the proposals endpoint will update the proposal
+app.post("/proposals/:id/comment", (req, res) => {
+  const id = req.params.id;
+  const comments = db.proposals[id].comments;
+  comments.push(req.body.comment);
+  db.updateProposal(id, { comments });
+  res.end({ success: true });
+});
+
+app.post("/proposals/:id/upvote", (req, res) => {
+  const id = req.params.id;
+  db.updateProposal(id, { upvotes: db.proposals[id].upvotes++ });
+  res.end({ success: true });
+});
+*/
+
+/** *PATCH Requests* **/
+app.patch("/proposals/:id", (req, res) => {
+  db.updateProposal(req.params.id, req.body);
+  res.end({ success: true });
+});
+
+app.patch("user/change/pass", (req, res) => {
+  const { name, pass } = req.body;
+  res.end({ success: db.changePass(name, pass) });
+});
+
+/** *DELETE Requests* **/
+app.delete("/proposals/:id", (req, res) => {
+  db.deleteProposal(req.params.id);
+  res.end({ success: true });
+});
+
 // listen to the port
 app.listen(port, () => {
   console.log(

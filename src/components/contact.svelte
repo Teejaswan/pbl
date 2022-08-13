@@ -62,17 +62,17 @@
 
 <div class="container">
   <div class="container1">
-  <div class="inner1">
-    <div class="inner2">
-      <h3>CONTACT US</h3> 
+    <div class="inner1">
+      <div class="inner2">
+        <h3>CONTACT US</h3>
+      </div>
+    </div>
+    <div class="inner3">
+      <h4>0422-1234567</h4>
+      <a href="https://www.kct.ac.in/">www.kct.ac.in</a>
     </div>
   </div>
-  <div class="inner3">
-    <h4>0422-1234567</h4>
-    <a href="https://www.kct.ac.in/">www.kct.ac.in</a>
-  </div>
-  </div>
-  
+
   <div class="container2">
     <a href="https://www.kct.ac.in/">www.kct.ac.in</a>
     <a href="https://www.kct.ac.in/">www.kct.ac.in</a>
@@ -84,6 +84,7 @@
 </div>
 
 <style>
+
   .container{
     display:flex;
     justify-content: space-between;
@@ -93,40 +94,51 @@
     height:40vh;
     background-color:#E9ECFD;
   }
-  .inner1{
+  .container {
+    font-family: sans-serif;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 1vw 0 0 6vw;
+    width: 100vw;
+    height: 40vh;
+    background-color: #e9ecfd;
+
+  }
+  .inner1 {
     clip-path: polygon(0 0, 100% 0%, 80% 100%, 0% 100%);
-    background-color: #E1FF27;
-    width:24vh;
+    background-color: #e1ff27;
+    width: 24vh;
   }
-  .inner2{
+  .inner2 {
     clip-path: polygon(0 0, 100% 0%, 80% 100%, 0% 100%);
-    background-color: #6273CB;
-    width:22vh;
-    padding:0.2px;
+    background-color: #6273cb;
+    width: 22vh;
+    padding: 0.2px;
   }
-  .inner3{
-    display:flex;
-    flex-direction:column;
+  .inner3 {
+    display: flex;
+    flex-direction: column;
     justify-content: space-evenly;
-    margin-top:3em;
+    margin-top: 3em;
   }
-  h3{
-    text-align:left;
-    padding-left:1em;
-    font-size: calc(0.75em + 0.5vmin);    
+  h3 {
+    text-align: left;
+    padding-left: 1em;
+    font-size: calc(0.75em + 0.5vmin);
   }
-  h4{
-    padding-bottom:2em;
-    font-size:1.2em;
+  h4 {
+    padding-bottom: 2em;
+    font-size: 1.2em;
   }
-  .container2{
-    display:flex;
-    flex-direction:column;
+  .container2 {
+    display: flex;
+    flex-direction: column;
     justify-content: space-evenly;
   }
-  .container1{
-    filter: drop-shadow(1.25em .75em 1.5em rgba(64, 64, 65, 0.41));
+  .container1 {
+    filter: drop-shadow(1.25em 0.75em 1.5em rgba(64, 64, 65, 0.41));
   }
+
   img{
     width:50vh;
     height:50vh;
@@ -139,19 +151,19 @@
     justify-content: center;
     align-items: center;
   }
-  a{
-    cursor:pointer;
-    color:black;
+  a {
+    cursor: pointer;
+    color: black;
     text-decoration: none;
-    font-size:1.2em;
+    font-size: 1.2em;
   }
-  @media only screen and (max-width:360px){
-   .container{
-    display:block;
-    height:55vh;
-   }
-   a{
-    margin:1.6vw;
-   }
+  @media only screen and (max-width: 360px) {
+    .container {
+      display: block;
+      height: 55vh;
+    }
+    a {
+      margin: 1.6vw;
+    }
   }
 </style>

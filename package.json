@@ -24,6 +24,7 @@
   "main": "vite.config.js",
   "dependencies": {
     "chart.js": "^3.9.1",
+    "chartjs": "^0.3.24",
     "fetch": "^1.1.0",
     "material-symbols": "^0.2.0",
     "yarn": "^1.22.19"

@@ -195,7 +195,7 @@
     z-index: -2;
     /*border-radius: 0 0 60px 60px;*/
   }
-<<<<<<< HEAD
+
   .content{
    display: flex;
    flex-direction:row;
@@ -426,10 +426,9 @@ h3{
     flex-direction: column;
     align-items: center;
    }
-   .name{
-=======
+   
   .content {
->>>>>>> ad31326a576484ef7b4bef45c75eae00a964ed32
+
     display: flex;
     flex-direction: row;
     justify-content: space-around;

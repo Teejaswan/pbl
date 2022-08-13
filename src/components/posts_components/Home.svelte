@@ -1,6 +1,6 @@
 <script>
   let title = "POSTS";
-  import NavBar from "../NavBar.svelte";
+  import { router } from "tinro";
   import PBL from "../../assets/PBL.svg";
   let links = [
     { name: "HOME", link: "/home" },
@@ -20,7 +20,20 @@
 </script>
 
 <div class="home">
-  <NavBar {title} {links} />
+  <nav>
+    <div class="title" />
+    <div class="title-content">
+      <div class="title-left">
+        <h2>Team Name</h2>
+      </div>
+      <div class="title-right">
+        <h4 on:click={(_) => router.goto("/")}>Home</h4>
+        <h4 on:click={(_) => router.goto("/profile")}>Profile</h4>
+
+        <h4 on:click={(_) => router.goto("/posts")}>Posts</h4>
+      </div>
+    </div>
+  </nav>
   <div class="container">
     <div class="inner">
       <div class="lime-background">
@@ -91,6 +104,45 @@
 </div>
 
 <style>
+  .title {
+    width: 100vw;
+    background-color: #e1ff27;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0;
+    height: 20vh;
+    top: -3vh;
+    position: absolute;
+    clip-path: polygon(0 1%, 100% 0, 100% 100%, 0 75%);
+    z-index: -2;
+    /*border-radius: 0 0 60px 60px;*/
+  }
+  .title-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 100vw;
+    height: 13vh;
+    font-size: clamp(1em 2em 3em);
+    font-weight: 700;
+    overflow: hidden;
+  }
+  .title-right {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    font-weight: 700;
+    font-size: 2vh;
+    width: 40vw;
+  }
+  .title-left {
+    font-weight: 700;
+    font-size: 2.2vh;
+    width: 40vw;
+  }
   .info-card {
     background: #6273cb;
     height: 30vh;

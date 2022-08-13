@@ -1,6 +1,6 @@
 <script>
   import { router } from "tinro";
-  import Login1 from "../assets/login1.jpg";    
+  import Login2 from "../assets/Login2.svg";    
 
   let user = {
     name: "",
@@ -28,7 +28,7 @@
     <div class="container1">
       <div class="content">
         <h3>WELCOME TO A PLATFORM FOR MAKING YOUR PROJECT WORK EASIER</h3>
-        
+        <img src={Login2} alt="fiygbfijyfguy" />
       </div>
     </div>
     <div class="container2">
@@ -79,6 +79,12 @@
     border-radius: 0 1em 0 0;
     padding: 0 6em 0 0;
     box-shadow: -2px 0px 7px 0px rgb(0 0 0 / 25%);
+  }
+  .content{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
   }
   h3 {
     font-family: "Lato", sans-serif;

@@ -1,5 +1,9 @@
 <script>
   import { router } from "tinro";
+  import Delete from "../assets/Delete.svg";
+  import Edit from "../assets/Edit.svg";
+  import Task from "../assets/Task.svg";
+  import Plus from "../assets/Plus.svg";
 </script>
 
 <body>
@@ -23,6 +27,7 @@
   <div class="bodytodo">
     <div class="work">
       <p style="font-size:1.5rem;"><b>WORKSPACE</b></p>
+      <img src={Plus} alt="fiygbfijyfguy" id="plus"/>    
     </div>
     <div class="content">
       <div class="c1">
@@ -62,7 +67,12 @@
                 </div>
               </div>
             </div>
-            <div class="bottom" />
+            <div class="bottom" >
+              <img src={Delete} alt="fiygbfijyfguy" id="one" />
+              <img src={Edit} alt="fiygbfijyfguy" id="one"/>
+              <img src={Task} alt="fiygbfijyfguy" id="one"/>
+            </div>
+
           </div>
         </div>
       </div>
@@ -103,7 +113,11 @@
                 </div>
               </div>
             </div>
-            <div class="bottom" />
+            <div class="bottom">
+              <img src={Delete} alt="fiygbfijyfguy" id="one"/>
+              <img src={Edit} alt="fiygbfijyfguy" id="one"/>
+              <img src={Task} alt="fiygbfijyfguy" id="one"/>
+            </div>
           </div>
         </div>
       </div>
@@ -219,6 +233,8 @@
   }
   .work {
     display: flex;
+    justify-content: space-between;
+    align-items: center;
     width: 90rem;
   }
   .content {
@@ -331,6 +347,8 @@
   }
   .bottom {
     display: flex;
+    justify-content: right;
+    align-items: center;
     background-color: #e1ff27;
     height: 20%;
     border-radius: 0 0 2rem 2rem;
@@ -343,6 +361,12 @@
     margin-left: 1.3rem;
     margin-top: 1.5rem;
     border-radius: 2rem;
+  }
+  #one{
+    width:5vh;
+  }
+  #plus{
+    margin-right:35em;
   }
   @media only screen and (max-width: 1000px) {
     .content {

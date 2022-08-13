@@ -1,6 +1,11 @@
 <script>
   import { Route } from "tinro";
-  import robot from "../assets/Robot.svg";  
+  import robot from "../assets/robot.png";  
+  import Phone from "../assets/phone.svg";  
+  import Mail from "../assets/Mail.svg";
+  import Facebook from "../assets/Facebook.svg";
+  import Instagram from "../assets/Instagram.svg";
+  import Twitter from "../assets/Twitter.svg";
 </script>
 
 <!-- <div class="container">
@@ -68,19 +73,34 @@
       </div>
     </div>
     <div class="inner3">
-      <h4>0422-1234567</h4>
-      <a href="https://www.kct.ac.in/">www.kct.ac.in</a>
+      <div class="phone">
+        <img src={Phone} alt="fiygbfijyfguy" id="phone"/>
+        <h4>0422-1234567</h4>
+      </div>
+      <div class="mail">
+        <img src={Mail} alt="fiygbfijyfguy" id="mail"/>
+        <a href="https://www.kct.ac.in/">www.kct.ac.in</a>
+      </div>
     </div>
   </div>
 
   <div class="container2">
-    <a href="https://www.kct.ac.in/">www.kct.ac.in</a>
-    <a href="https://www.kct.ac.in/">www.kct.ac.in</a>
-    <a href="https://www.kct.ac.in/">www.kct.ac.in</a>
+    <div class="facebook">
+      <img src={Facebook} alt="fiygbfijyfguy" id="facebook"/>
+      <a href="https://www.facebook.com/KCT.edu/" target="blank">@KCT.edu</a>
+    </div>
+    <div class="insta">
+      <img src={Instagram} alt="fiygbfijyfguy" id="instagram"/>
+      <a href="https://www.instagram.com/kct_84" target="blank">@kct_84</a>
+    </div>
+    <div class="twitter">
+      <img src={Twitter} alt="fiygbfijyfguy" id="twitter"/>
+      <a href="https://twitter.com/KCTOfficial " target="blank">@KCTOFFICIAL</a>  
+    </div>
   </div>
-  <div class="container3">
-    <img src={robot} alt="fiygbfijyfguy" />
-  </div>
+   <div class="container3">
+    <img src={robot} alt="fiygbfijyfguy" id="robot" />
+   </div>
 </div>
 
 <style>
@@ -92,17 +112,8 @@
     padding:1vw 0 0 6vw;
     width:100vw;
     height:40vh;
+    font-family:sans-serif;
     background-color:#E9ECFD;
-  }
-  .container {
-    font-family: sans-serif;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    padding: 1vw 0 0 6vw;
-    width: 100vw;
-    height: 40vh;
-    background-color: #e9ecfd;
-
   }
   .inner1 {
     clip-path: polygon(0 0, 100% 0%, 80% 100%, 0% 100%);
@@ -127,21 +138,21 @@
     font-size: calc(0.75em + 0.5vmin);
   }
   h4 {
-    padding-bottom: 2em;
     font-size: 1.2em;
   }
   .container2 {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
+    align-items: flex-start;
   }
   .container1 {
     filter: drop-shadow(1.25em 0.75em 1.5em rgba(64, 64, 65, 0.41));
   }
 
-  img{
-    width:50vh;
-    height:50vh;
+  #robot{
+    width:15vh;
+    margin-right:10em;
     display:flex;
     justify-content: center;
     align-items: center;
@@ -157,6 +168,37 @@
     text-decoration: none;
     font-size: 1.2em;
   }
+  .phone{
+    display:flex;
+    justify-content:space-evenly;
+    align-items: center;
+    padding:1em;
+  }
+  .mail{
+    display:flex;
+    justify-content:space-evenly;
+    align-items: center;
+    padding:1em;
+  }
+  .facebook{
+    display:flex;
+    justify-content:space-evenly;
+    align-items: center;
+    padding:1em;
+  }
+  .insta{
+    display:flex;
+    justify-content:space-evenly;
+    align-items: center;
+    padding:1em;
+  }
+  .twitter{
+    display:flex;
+    justify-content:space-evenly;
+    align-items: center;
+    padding:1em;
+  }
+
   @media only screen and (max-width: 360px) {
     .container {
       display: block;

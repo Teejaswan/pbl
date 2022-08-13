@@ -2,7 +2,8 @@
   import Pie from "./pie.svelte";
   // Picture imports
   import CheckImg from "../assets/check.png";
-  import ProImg from "../assets/pro.svg";
+  import Progress from "../assets/Progress.svg";
+  import Download from "../assets/Download.svg"
   import { router } from "tinro";
 
   // @ts-ignore
@@ -32,7 +33,7 @@
       <p style="font-size:1.5vw;text-align:center;">
         A single place to manage and keep track<br />of all your projects
       </p>
-      <img src={ProImg} alt="pro" style="height:50%;width:80%;" />
+      <img src={Progress} alt="pro" style="height:50%;width:80%;" />
     </div>
     <div class="b1r">
       <div class="b1rcon">
@@ -58,6 +59,7 @@
   <div class="b2">
     <div class="report" />
     <h4>Report</h4>
+    <img src={Download} alt="fiygbfijyfguy" />
   </div>
   <div class="b3">
     <div class="b3l">
@@ -227,9 +229,9 @@
   }
   .b2 {
     display: flex;
-    justify-content: left;
+    justify-content: space-between;
     align-items: center;
-    width: 90%;
+    width: 70%;
     height: 60vh;
     margin: auto;
     margin-top: 2vw;

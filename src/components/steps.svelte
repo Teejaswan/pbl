@@ -127,6 +127,7 @@
   }
   .outer {
     background-color: #eee;
+    font-family:sans-serif;
   }
   @keyframes -global-scroll1 {
     0% {

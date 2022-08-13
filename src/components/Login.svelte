@@ -1,6 +1,6 @@
 <script>
   import { router } from "tinro";
-  import Login1 from "../assets/login1.jpg";
+  import Login1 from "../assets/login1.jpg";    
 
   let user = {
     name: "",
@@ -28,7 +28,7 @@
     <div class="container1">
       <div class="content">
         <h3>WELCOME TO A PLATFORM FOR MAKING YOUR PROJECT WORK EASIER</h3>
-        <!--img-->
+        
       </div>
     </div>
     <div class="container2">

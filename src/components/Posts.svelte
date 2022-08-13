@@ -252,7 +252,6 @@
   }
   .illustration {
     min-width: 30vw;
-    min-height: 30vw;
   }
   .lime-background {
     display: grid;
@@ -275,6 +274,7 @@
     position: relative;
     background: #e9ecfd;
     height: 100vh;
+    padding-bottom: 30vh;
   }
   .heading,
   .description {

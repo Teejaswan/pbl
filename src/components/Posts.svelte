@@ -4,7 +4,7 @@
   import PBL from "../assets/PBL.svg";
   import { fade } from "svelte/transition";
   import { router } from "tinro";
-
+  import Icon from "./icon.svelte";
   export let proposals;
 
   let promise = [];
@@ -114,7 +114,9 @@
   <div class="ideas">
     <div class="idea">
       <h2>PROPOSED IDEAS</h2>
-      <button class="icon" on:click={input}>+</button>
+      <div class="icon">
+      <Icon on:click={input} icon="add"></Icon>
+    </div>
       <div class="table">
         {#if !!promise}
           {#each promise as post}
@@ -310,10 +312,10 @@
     width: 66vw;
     text-align: center;
   }
-  .icon {
+  /* .icon {
     background-color: #e9ecfd;
     width: 12vw;
-  }
+  } */
   .post {
     background-color: #e1ff27;
     width: 80vw;
@@ -377,4 +379,5 @@
     border: 1.5px solid black;
     width: 80%;
   }
+ 
 </style>

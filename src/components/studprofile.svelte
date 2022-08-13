@@ -456,6 +456,7 @@ h3{
 #lines3{
   margin-block-start:2em;
   margin-block-end:0.1em;
+  width:auto;
   font-size: clamp(1em 2em 3em); 
 }
 #lines4{

@@ -1,5 +1,6 @@
 <script>
   import { Route } from "tinro";
+  import robot from "../assets/Robot.svg";  
 </script>
 
 <!-- <div class="container">
@@ -77,12 +78,16 @@
     <a href="https://www.kct.ac.in/">www.kct.ac.in</a>
     <a href="https://www.kct.ac.in/">www.kct.ac.in</a>
   </div>
+  <div class="container3">
+    <img src={robot} alt="fiygbfijyfguy" />
+  </div>
 </div>
 
 <style>
   .container{
-    display:grid;
-    grid-template-columns:1fr 1fr;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
     padding:1vw 0 0 6vw;
     width:100vw;
     height:40vh;
@@ -121,6 +126,18 @@
   }
   .container1{
     filter: drop-shadow(1.25em .75em 1.5em rgba(64, 64, 65, 0.41));
+  }
+  img{
+    width:50vh;
+    height:50vh;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .container3{
+    display:flex;
+    justify-content: center;
+    align-items: center;
   }
   a{
     cursor:pointer;

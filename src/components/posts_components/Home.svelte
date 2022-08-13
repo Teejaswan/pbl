@@ -179,7 +179,6 @@
   }
   .home {
     background: #e9ecfd;
-    height: 100vh;
   }
   .heading,
   .description {

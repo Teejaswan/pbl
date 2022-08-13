@@ -102,6 +102,10 @@ app.post("/proposals", (req, res) => {
   res.end({ success: true });
 });
 
+app.post("/team/:id/project", (req, res)=> {
+  db.addProject(req.params.id, req.body)
+})
+
 /*
 // This is not necessary as patch request to the proposals endpoint will update the proposal
 app.post("/proposals/:id/comment", (req, res) => {

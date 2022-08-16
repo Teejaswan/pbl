@@ -1,6 +1,7 @@
 <script>
   import Icon from "./icon.svelte";
   import NavBar from "./NavBar.svelte";
+  import Plus from "../assets/Plus.svg";
   const user = JSON.parse(localStorage.getItem("user"));
 </script>
 <div class="container">
@@ -15,11 +16,14 @@
     </div>
   </div>
   <div class="box">
-  <div class="box1">
+   <div class="box1">
     <div class="box2">
       <h4>PBL TEAMS</h4>
-      </div>
-</div>
+    </div>
+   </div>
+   <div class="plus">
+      <img src={Plus} alt="fiygbfijyfguy" id="plus"/>
+    </div>
 </div>
 <div class="total">
   <div class="profile">
@@ -231,6 +235,9 @@
   }
   .box{
     margin:2em;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
   }
   .box1{
     clip-path: polygon(0 0, 100% 0%, 80% 100%, 0% 100%);
@@ -292,6 +299,9 @@
   }
   h4{
     font-size: calc(0.9rem+1vmin);
+  }
+  #plus{
+    margin-right:5em;
   }
   .link{
     display: flex;

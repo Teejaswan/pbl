@@ -1,5 +1,8 @@
 <script>
   import { router } from "tinro";
+  import Work from "../assets/Work.svg"
+  import Rocket from "../assets/Rocket.svg"
+  import Plus from  "../assets/Plus.svg"
 </script>
 
 <div class="body1">
@@ -26,7 +29,7 @@
       <h2 id="quote">PROGRESS.</h2>
       <h4 id="lines1">A single place to manage and keep track</h4>
       <h4 id="lines2">of all your projects</h4>
-      <!-- <img -->
+      <img src={Work} alt="fiygbfijyfguy" id="work"/>
     </div>
     <div class="right1">
       <div class="top">
@@ -102,11 +105,11 @@
         <h3>started on:05-06-2021</h3>
       </div>
       <div class="box2">
-        <!-- svg -->
+        <img src={Plus} alt="fiygbfijyfguy" />
       </div>
     </div>
     <div class="right2">
-      <!-- svg -->
+      <img src={Rocket} alt="fiygbfijyfguy" />
     </div>
   </div>
 </div>
@@ -235,6 +238,9 @@
     width:40vw;
     font-size: 3vh;
     font-family:sans-serif ;
+  }
+  .right2{
+    margin-left:8em;
   }
 h2{
   margin-block-start:0.1em;
@@ -796,6 +802,10 @@ h3{
       font-size: 2vh;
       width: 100vw;
       font-family: sans-serif;
+    }
+    #work{
+      width:0;
+      height:0;
     }
     .one {
       width: 22.5vh;

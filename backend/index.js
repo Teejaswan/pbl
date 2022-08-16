@@ -98,13 +98,14 @@ app.post("/user/new/:type", (req, res) => {
 });
 
 app.post("/proposals", (req, res) => {
+  console.log(req.body);
   db.addProposals(req.body);
-  res.end({ success: true });
+  res.end();
 });
 
-app.post("/team/:id/project", (req, res)=> {
-  db.addProject(req.params.id, req.body)
-})
+app.post("/team/:id/project", (req, res) => {
+  db.addProject(req.params.id, req.body);
+});
 
 /*
 // This is not necessary as patch request to the proposals endpoint will update the proposal
@@ -129,7 +130,7 @@ app.patch("/proposals/:id", (req, res) => {
   res.end({ success: true });
 });
 
-app.patch("user/change/pass", (req, res) => {
+app.patch("/user/change/pass", (req, res) => {
   const { name, pass } = req.body;
   res.end({ success: db.changePass(name, pass) });
 });
@@ -138,6 +139,12 @@ app.patch("user/change/pass", (req, res) => {
 app.delete("/proposals/:id", (req, res) => {
   db.deleteProposal(req.params.id);
   res.end({ success: true });
+});
+
+app.delete("/team/:teamId/project/:id", (req, res) => {
+  const { teamId, id } = req.params;
+  db.deleteProject(teamId, id);
+  req.end({ success: true });
 });
 
 // listen to the port

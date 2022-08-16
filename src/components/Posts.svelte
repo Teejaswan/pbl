@@ -73,8 +73,10 @@
         <input type="text" placeholder="solution" name="description" required />
         <input type="text" placeholder="queries" name="queries" required />
         <input type="text" name="teamId" value={teamId} readonly hidden />
-        <button type="submit">Submit</button>
-        <button on:click={revert}>Close</button>
+        <div class="input-buttons">
+          <button type="submit">Submit</button>
+          <button on:click={revert}>Close</button>
+        </div>
       </form>
     </div>
   {/if}
@@ -86,10 +88,10 @@
             <h2>Team Name</h2>
           </div>
           <div class="title-right">
-            <h4 on:click={(_) => router.goto("/")}>Home</h4>
-            <h4 on:click={(_) => router.goto("/profile")}>Profile</h4>
+            <h4 on:click={() => router.goto("/")}>Home</h4>
+            <h4 on:click={() => router.goto("/profile")}>Profile</h4>
 
-            <h4 on:click={(_) => router.goto("/posts")}>Posts</h4>
+            <h4 on:click={() => router.goto("/posts")}>Posts</h4>
           </div>
         </div>
       </div>
@@ -114,9 +116,9 @@
   <div class="ideas">
     <div class="idea">
       <h2>PROPOSED IDEAS</h2>
-      <div class="icon">
-      <Icon on:click={input} icon="add"></Icon>
-    </div>
+      <div class="icon" on:click={input}>
+        <Icon icon="add" />
+      </div>
       <div class="table">
         {#if !!promise}
           {#each promise as post}
@@ -160,13 +162,15 @@
               </div>
 
               <div class="suggestions">
-                {#each post.comments as comments}
-                  <div class="nice">
-                    <h3>{comments.comment}</h3>
-                    <h4>{comments.by}</h4>
-                  </div>
-                  <hr />
-                {/each}
+                {#if !!post.comments}
+                  {#each post.comments as comments}
+                    <div class="nice">
+                      <h3>{comments.comment}</h3>
+                      <h4>{comments.by}</h4>
+                    </div>
+                    <hr />
+                  {/each}
+                {/if}
               </div>
             </div>
           {/each}
@@ -226,16 +230,51 @@
     min-width: 100%;
     min-height: 100%;
     display: grid;
+    align-items: center;
     background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(1em);
 
     z-index: 10;
     place-content: center;
+    position: fixed;
+    overflow: hidden;
   }
+
+  .input-buttons {
+    display: flex;
+    gap: 2em;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    border-radius: 1em;
+    align-items: center;
+  }
+
+  form input {
+    padding: 0.5em 1em;
+    border-radius: 0.5em;
+    outline: 0;
+    border: 0;
+    opacity: 0.75;
+  }
+
+  form button {
+    border: 0;
+    outline: 0;
+    border-radius: 0.5em;
+    padding: 0.5em 1em;
+    background-color: rgba(0, 0, 0, 0.25);
+    color: white;
+  }
+
   #input-div {
     opacity: 1;
     padding: 2em;
     z-index: 11;
-    background: rgba(0, 0, 0, 1);
+    background: rgba(0, 0, 0, 0.5);
   }
   .info-card {
     background: #6273cb;
@@ -379,5 +418,4 @@
     border: 1.5px solid black;
     width: 80%;
   }
- 
 </style>

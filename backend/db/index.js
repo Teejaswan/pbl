@@ -47,8 +47,15 @@ class DB {
     return false;
   }
 
-  addProposals(proposal= {title, description, teamId, queries}) {
-    this.proposals.push({title, description, queries, comments: [], teamId, upVotes:0});
+  addProposals({ title, description, queries, teamId }) {
+    this.proposals.push({
+      title,
+      description,
+      queries,
+      comments: [],
+      teamId,
+      upVotes: 0,
+    });
     this.sync();
   }
 
@@ -63,9 +70,14 @@ class DB {
   }
 
   addProject(teamId, project = { title, statement }) {
-    const id = this.teams[teamId].projects.length
-    this.teams[teamId].projects.push({title, statement, id})
-    this.sync()
+    const id = this.teams[teamId].projects.length;
+    this.teams[teamId].projects.push({ title, statement, id });
+    this.sync();
+  }
+
+  deleteProject(teamId, id) {
+    this.teams[teamId].projects.splice(id, 1);
+    this.sync();
   }
 }
 

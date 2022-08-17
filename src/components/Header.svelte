@@ -7,21 +7,38 @@
   function steps() {
     dispatch("stepsScroll");
   }
+  let login = true;
+  if (localStorage.getItem("user")) {
+    login = false;
+  }
+
+  let user = JSON.parse(localStorage.getItem("user"));
 </script>
 
 <nav>
-  <div class="title" />
-  <div class="content">
-    <h3>PBL MADE EASY</h3>
+  <div class="shadow1">
+    <div class="title" />
 
-    <button class="login" on:click={(_) => router.goto("/login")}>Login</button>
+    <div class="content">
+      <h3>PBL MADE EASY</h3>
+      {#if !login}
+        <button
+          class="login"
+          on:click={(_) => router.goto(`/${user.type}/profile`)}>Profile</button
+        >
+      {:else}
+        <button class="login" on:click={(_) => router.goto("/login")}
+          >Login</button
+        >
+      {/if}
+    </div>
   </div>
 </nav>
 <div class="outer">
   <div class="shadow">
     <div class="left">
-      <div class="innerleft">
-        <div class="container">
+      <div class="shadow">
+        <div class="innerleft">
           <h1>PBL Projects</h1>
           <p>
             Problem-Based Learning is a method of learning in which complex
@@ -48,7 +65,10 @@
     height: 100vh;
   }
   .shadow {
-    filter: drop-shadow(1.25em 0.75em 2em rgba(87, 87, 88, 0.41));
+    filter: drop-shadow(6px 0 5px rgba(87, 87, 88, 0.41));
+  }
+  .shadow1 {
+    filter: drop-shadow(0 4px 6px rgba(87, 87, 88, 0.41));
   }
   .title {
     width: 100vw;
@@ -59,6 +79,7 @@
     align-items: center;
     margin: 0;
     height: 20vh;
+
     top: -3vh;
     position: absolute;
     clip-path: polygon(0 1%, 100% 0, 100% 100%, 0 75%);
@@ -84,13 +105,14 @@
     clip-path: polygon(0 0, 100% 0, 80% 100%, 0% 100%);
     background-color: #6273cb;
     display: flex;
+    flex-direction: column;
     flex: wrap;
     width: 44vw;
     height: 40vh;
     padding: 0.5rem 0 2rem 1rem;
   }
   p {
-    color: rgb(0, 0, 0);
+    color: white;
     padding: 0 2em 0 1em;
     font-size: 1.25em;
     width: 70%;
@@ -103,6 +125,7 @@
   }
   img {
     width: 40vw;
+    filter: drop-shadow(0px 0 10px rgba(87, 87, 88, 0.41));
   }
   h3 {
     font-size: 1em;
@@ -124,6 +147,7 @@
     background-color: #e1ff27;
     width: 8.5vh;
     height: 4vh;
+    font-weight: 550;
     padding: 0 4vw 0 2vw;
     border-radius: 1em;
     transition: all 300ms ease-in-out;
@@ -132,6 +156,11 @@
   button:active {
     background-color: #e1ff27;
     transform: translateY(2px);
+  }
+
+  button:hover {
+    background-color: #6273cb;
+    color: white;
   }
 
   h4 {

@@ -58,11 +58,11 @@
 <Route path="/user/student/progress">
   <Progress />
 </Route>
-<Route path="/profile">
+<Route path="/student/profile">
   <Studprofile />
 </Route>
 
-<Route path="/mentor">
+<Route path="/mentor/profile">
   <Mentor />
 </Route>
 

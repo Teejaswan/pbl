@@ -1,7 +1,7 @@
 <script>
   import { Route } from "tinro";
-  import robot from "../assets/robot.png";  
-  import Phone from "../assets/phone.svg";  
+  import robot from "../assets/robot.png";
+  import Phone from "../assets/phone.svg";
   import Mail from "../assets/Mail.svg";
   import Facebook from "../assets/Facebook.svg";
   import Instagram from "../assets/Instagram.svg";
@@ -67,60 +67,63 @@
 
 <div class="container">
   <div class="container1">
-    <div class="inner1">
-      <div class="inner2">
-        <h3>CONTACT US</h3>
+    <div class="inner-container">
+      <div class="inner1">
+        <div class="inner-container">
+          <div class="inner2">
+            <h3>CONTACT US</h3>
+          </div>
+        </div>
       </div>
     </div>
     <div class="inner3">
-      <div class="phone">
-        <img src={Phone} alt="fiygbfijyfguy" id="phone"/>
+      <div class="contact">
+        <img src={Phone} alt="fiygbfijyfguy" id="phone" />
         <h4>0422-1234567</h4>
       </div>
-      <div class="mail">
-        <img src={Mail} alt="fiygbfijyfguy" id="mail"/>
+      <div class="contact">
+        <img src={Mail} alt="fiygbfijyfguy" id="mail" />
         <a href="https://www.kct.ac.in/">www.kct.ac.in</a>
       </div>
     </div>
   </div>
 
   <div class="container2">
-    <div class="facebook">
-      <img src={Facebook} alt="fiygbfijyfguy" id="facebook"/>
+    <div class="contact">
+      <img src={Facebook} alt="fiygbfijyfguy" id="facebook" />
       <a href="https://www.facebook.com/KCT.edu/" target="blank">@KCT.edu</a>
     </div>
-    <div class="insta">
-      <img src={Instagram} alt="fiygbfijyfguy" id="instagram"/>
+    <div class="contact">
+      <img src={Instagram} alt="fiygbfijyfguy" id="instagram" />
       <a href="https://www.instagram.com/kct_84" target="blank">@kct_84</a>
     </div>
-    <div class="twitter">
-      <img src={Twitter} alt="fiygbfijyfguy" id="twitter"/>
-      <a href="https://twitter.com/KCTOfficial " target="blank">@KCTOFFICIAL</a>  
+    <div class="contact">
+      <img src={Twitter} alt="fiygbfijyfguy" id="twitter" />
+      <a href="https://twitter.com/KCTOfficial " target="blank">@KCTOFFICIAL</a>
     </div>
   </div>
-   <div class="container3">
+  <div class="container3">
     <img src={robot} alt="fiygbfijyfguy" id="robot" />
-   </div>
+  </div>
 </div>
 
 <style>
-
-  .container{
-    display:flex;
+  .container {
+    display: flex;
     justify-content: space-between;
     align-items: center;
-    padding:1vw 0 0 6vw;
-    width:100vw;
-    height:50vh;
-    font-family:sans-serif;
-    background-color:#E9ECFD;
-    overflow:hidden;
+    padding: 1vw 0 0 6vw;
+    width: 100vw;
+    height: 50vh;
+    font-family: sans-serif;
+    background-color: #e9ecfd;
+    overflow: hidden;
   }
   .inner1 {
     clip-path: polygon(0 0, 100% 0%, 80% 100%, 0% 100%);
     background-color: #e1ff27;
     width: 24vh;
-    margin-top:5em;
+    margin-top: 5em;
   }
   .inner2 {
     clip-path: polygon(0 0, 100% 0%, 80% 100%, 0% 100%);
@@ -137,6 +140,7 @@
   h3 {
     text-align: left;
     padding-left: 1em;
+    color: white;
     font-size: calc(0.75em + 0.5vmin);
   }
   h4 {
@@ -148,19 +152,19 @@
     justify-content: space-evenly;
     align-items: flex-start;
   }
-  .container1 {
-    filter: drop-shadow(1.25em 0.75em 1.5em rgba(64, 64, 65, 0.41));
+  .inner-container {
+    filter: drop-shadow(4px 0 5px rgba(64, 64, 65, 0.41));
   }
 
-  #robot{
-    width:15vh;
-    margin-right:10em;
-    display:flex;
+  #robot {
+    width: 15vh;
+    margin-right: 10em;
+    display: flex;
     justify-content: center;
     align-items: center;
   }
-  .container3{
-    display:flex;
+  .container3 {
+    display: flex;
     justify-content: center;
     align-items: center;
   }
@@ -169,122 +173,72 @@
     color: black;
     text-decoration: none;
     font-size: 1.2em;
-  }
-  .phone{
-    display:flex;
-    justify-content:space-evenly;
-    align-items: center;
-    padding:1em;
-  }
-  .mail{
-    display:flex;
-    justify-content:space-evenly;
-    align-items: center;
-    padding:1em;
-  }
-  .facebook{
-    display:flex;
-    justify-content:space-evenly;
-    align-items: center;
-    padding:1em;
-  }
-  .insta{
-    display:flex;
-    justify-content:space-evenly;
-    align-items: center;
-    padding:1em;
-  }
-  .twitter{
-    display:flex;
-    justify-content:space-evenly;
-    align-items: center;
-    padding:1em;
+    transition: all ease-in-out 300ms;
   }
 
+  .contact {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 1em;
+    gap: 1em;
+    font-weight: 600;
+  }
+  a:hover {
+    text-decoration: underline;
+    color: #6273cb;
+  }
+  img:not(#robot) {
+    height: 2em;
+  }
   @media only screen and (max-width: 360px) {
     .container {
       display: block;
       height: 70vh;
-      padding:0;
+      padding: 0;
     }
     a {
       margin: 1.6vw;
     }
-    .phone{
-      padding:0;
+    .contact {
+      padding: 0;
       justify-content: left;
-    }
-    .mail{
-      padding:0;
-      justify-content: left;
-    }
-    .twitter{
-      padding:0;
-    }
-    .facebook{
-      padding:0;
-    }
-    .insta{
-      padding:0;
-    }
-    .container3{
-      display:none;
     }
 
+    .container3 {
+      display: none;
+    }
   }
   @media only screen and (max-width: 570px) {
-    #robot{
-      width:0;
+    #robot {
+      width: 0;
     }
-    .phone{
-      padding:0;
+    .contact {
+      padding: 0;
     }
-    .mail{
-      padding:0;
-    }
-    .twitter{
-      padding:0;
-    }
-    .facebook{
-      padding:0;
-    }
-    .insta{
-      padding:0;
-    }
-    .container{
-      justify-content:space-evenly;
-      padding:0;
-    }
-    .container3{
-      display:none;
-    }
-    
-  }
-  @media only screen and (max-width: 680px){
-    .phone{
-      padding:0;
-    }
-    .mail{
-      padding:0;
-    }
-    .twitter{
-      padding:0;
-    }
-    .facebook{
-      padding:0;
-    }
-    .insta{
-      padding:0;
-    }
-    #robot{
-      width:0;
-    }
-    .container{
+
+    .container {
       justify-content: space-evenly;
-      padding:0;
+      padding: 0;
     }
-    .container3{
-      display:none;
+    .container3 {
+      display: none;
+    }
+  }
+  @media only screen and (max-width: 680px) {
+    .contact {
+      padding: 0;
+    }
+
+    #robot {
+      width: 0;
+    }
+    .container {
+      justify-content: space-evenly;
+      padding: 0;
+    }
+    .container3 {
+      display: none;
     }
   }
 </style>

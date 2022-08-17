@@ -83,8 +83,9 @@
     justify-content: center;
     align-items: center;
     display: flex;
+
     height: 40vh;
-    width: 100vw;
+    max-width: 100vw;
   }
 
   .container {
@@ -117,14 +118,10 @@
     color: rgb(48, 47, 47);
     text-align: center;
   }
-  .lower:hover {
-    margin-top: 5em;
-    box-shadow: -2px 0px 7px 0px rgb(0 0 0 / 25%);
+  .inner1:hover {
+    box-shadow: 0px 4px 10px 4px rgb(0 0 0 / 25%);
   }
-  .upper:hover {
-    margin-top: 1em;
-    box-shadow: -2px 0px 7px 0px rgb(0 0 0 / 25%);
-  }
+
   .inner {
     justify-content: center;
     align-items: center;
@@ -134,14 +131,18 @@
     border-radius: 1em 1em 1em 1em;
     height: 17vw;
     width: 17vw;
+    box-shadow: 0px 4px 10px 1px rgb(0 0 0 / 25%);
     background-color: #6273cb;
+    transition: all ease-in-out 400ms;
   }
   .inner2 {
     height: 4vw;
     width: 17vw;
+
     border-radius: 1em 1em 0 0;
     background-color: #e1ff27;
     font-size: calc(0.75rem + 0.5vmin);
+    transition: all ease-in-out 400ms;
   }
   .inner3 {
     display: flex;

@@ -17,7 +17,7 @@
 
   import Progress from "./components/progress.svelte";
   import Studprofile from "./components/studprofile.svelte";
-  import Teamprofile from "./components/teamprofile.svelte";
+  import Teamprofile from "./components/Teamprofile.svelte";
   import Mentor from "./components/Mentor.svelte";
   import User from "./components/User.svelte";
   import Posts from "./components/Posts.svelte";

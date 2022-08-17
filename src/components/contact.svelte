@@ -1,7 +1,7 @@
 <script>
   import { Route } from "tinro";
   import robot from "../assets/robot.png";
-  import Phone from "../assets/phone.svg";
+  import Phone from "../assets/Phone.svg";
   import Mail from "../assets/Mail.svg";
   import Facebook from "../assets/Facebook.svg";
   import Instagram from "../assets/Instagram.svg";

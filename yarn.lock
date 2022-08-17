@@ -161,14 +161,11 @@ chart.js@^3.9.1:
   resolved "https://registry.npmjs.org/chart.js/-/chart.js-3.9.1.tgz"
   integrity sha512-Ro2JbLmvg83gXF5F4sniaQ+lTbSv18E+TIf2cOeiH1Iqd2PGFOtem+DUufMZsCJwFE7ywPOpfXFBwRTGq7dh6w==
 
-<<<<<<< HEAD
-=======
 chartjs@^0.3.24:
   version "0.3.24"
   resolved "https://registry.yarnpkg.com/chartjs/-/chartjs-0.3.24.tgz#3addeb5ae3606b3e89e346c27d52ca158416e93d"
   integrity sha512-h6G9qcDqmFYnSWqjWCzQMeOLiypS+pM6Fq2Rj7LPty8Kjx5yHonwwJ7oEHImZpQ2u9Pu36XGYfardvvBiQVrhg==
 
->>>>>>> ad31326a576484ef7b4bef45c75eae00a964ed32
 cliui@^7.0.2:
   version "7.0.4"
   resolved "https://registry.npmjs.org/cliui/-/cliui-7.0.4.tgz"

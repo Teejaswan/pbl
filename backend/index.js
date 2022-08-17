@@ -47,6 +47,10 @@ function findTeam(id) {
   return team;
 }
 
+function findTeamsByMentor(id) {
+  return db.teams.filter((team) => team.mentor.id === id);
+}
+
 /** *GET Requests* **/
 
 // retrieve user data
@@ -60,7 +64,7 @@ app.get("/users/:name/:password", (req, res) => {
     if (db.pass[user.id] === password) {
       switch (user.type) {
         case "mentor":
-          res.send({ user });
+          res.send({ user, teams: findTeamsByMentor(user.id) });
           break;
 
         case "hod":
@@ -94,13 +98,13 @@ app.post("/user/new/:type", (req, res) => {
   const { name, pass } = req.body;
 
   db.newUser({ name, pass, type });
-  res.end({ success: true });
+  res.sendStatus(200);
 });
 
 app.post("/proposals", (req, res) => {
   console.log(req.body);
   db.addProposals(req.body);
-  res.end();
+  res.sendStatus(200);
 });
 
 app.post("/team/:id/project", (req, res) => {
@@ -114,37 +118,38 @@ app.post("/proposals/:id/comment", (req, res) => {
   const comments = db.proposals[id].comments;
   comments.push(req.body.comment);
   db.updateProposal(id, { comments });
-  res.end({ success: true });
+  res.sendStatus(200)
 });
 
 app.post("/proposals/:id/upvote", (req, res) => {
   const id = req.params.id;
   db.updateProposal(id, { upvotes: db.proposals[id].upvotes++ });
-  res.end({ success: true });
+  res.sendStatus(200)
 });
 */
 
 /** *PATCH Requests* **/
 app.patch("/proposals/:id", (req, res) => {
   db.updateProposal(req.params.id, req.body);
-  res.end({ success: true });
+  res.sendStatus(200);
 });
 
 app.patch("/user/change/pass", (req, res) => {
   const { name, pass } = req.body;
-  res.end({ success: db.changePass(name, pass) });
+  if (db.changePass(name, pass)) res.sendStatus(200);
+  else res.sendStatus(403);
 });
 
 /** *DELETE Requests* **/
 app.delete("/proposals/:id", (req, res) => {
   db.deleteProposal(req.params.id);
-  res.end({ success: true });
+  res.sendStatus(200);
 });
 
 app.delete("/team/:teamId/project/:id", (req, res) => {
   const { teamId, id } = req.params;
   db.deleteProject(teamId, id);
-  req.end({ success: true });
+  res.sendStatus(200);
 });
 
 // listen to the port

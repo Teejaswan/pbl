@@ -2,6 +2,7 @@
   let title = "POSTS";
   import NavBar from "./NavBar.svelte";
   import PBL from "../assets/PBL.svg";
+  import deleteIcon from "../assets/Delete.svg";
   import { fade } from "svelte/transition";
   import { router } from "tinro";
   import Icon from "./icon.svelte";
@@ -28,7 +29,7 @@
     title: "",
     description: "",
     queries: "",
-    teamId: JSON.parse(localStorage.getItem("team")).no,
+    teamId: JSON.parse(localStorage.getItem("team"))?.no,
   };
 
   function proposeNew() {
@@ -36,7 +37,7 @@
     formVisible = false;
   }
 
-  const teamId = JSON.parse(localStorage.getItem("team")).no;
+  const teamId = JSON.parse(localStorage.getItem("team"))?.no;
 </script>
 
 <div id="outer">
@@ -121,7 +122,7 @@
       </div>
       <div class="table">
         {#if !!promise}
-          {#each promise as post}
+          {#each promise as post, index}
             <div class="name">
               <div class="number">
                 <h3>Team - {post.teamId}</h3>
@@ -129,6 +130,18 @@
               <div class="proposal">
                 <h3>{post.title}</h3>
               </div>
+              <img
+                src={deleteIcon}
+                alt="delete icon"
+                style="width:2em;"
+                on:click={async () => {
+                  await fetch(`/api/proposals/${index}`, {
+                    method: "DELETE",
+                  });
+                  location.reload();
+                }}
+                class="delete"
+              />
             </div>
             <div class="post">
               <div class="display">
